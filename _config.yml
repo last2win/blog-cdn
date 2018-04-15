@@ -83,12 +83,12 @@ repository: zhang0peter/zhang0peter.github.io
 #      Comments    #
 # ---------------- #
 # support provider: disqus, gitment, gitalk
-comments_provider: gitalk
+comments_provider: disqus
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: 
+    username: zhang0peter
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: mzlogin
@@ -101,7 +101,7 @@ gitalk:
     owner: zhang0peter
     repo: blog-comments
     clientID: 067528935212ebd86648
-    clientSecret: 2473e7989d2457b029314216df9cf7bc538e94fb
+    clientSecret: 39612ccc3cdec211e1289f24a61ddbc82c5fd735
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
