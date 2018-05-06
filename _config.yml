@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://zhangsidan.com
+url: https://zhangsidan.com
 date_format: "ordinal"
 title: "张思淡的个人博客"
 subtitle: "记录生活"
