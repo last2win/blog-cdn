@@ -6,6 +6,7 @@ categories: Python
 description: ""
 keywords: Python
 ---
+## 本文最后更新于2018-6-20，可能会因为没有更新而失效。如已失效或需要修正，请联系我！
 今天在用Python写程序时突然想起了Python变量作用域的问题，代码如下：  <br/>
 {% highlight Python %}
 def run():

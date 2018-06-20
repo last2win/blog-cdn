@@ -7,6 +7,7 @@ description: ""
 keywords: Python
 ---
 # bilibili-following-spider
+## 本文最后更新于2018-6-20，可能会因为没有更新而失效。如已失效或需要修正，请联系我！
 项目地址：https://github.com/zhang0peter/bilibili-following-spider
 我突发奇想，想爬取我关注的人，我关注的人关注的人，我关注的人关注的人关注的人等。  
 代码很简单，在 [bilibili-following-spider.py](https://github.com/zhang0peter/bilibili-following-spider/blob/master/bilibili-following-spider.py)  

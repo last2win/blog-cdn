@@ -6,6 +6,7 @@ categories: Python
 description: ""
 keywords: Python
 ---
+## 本文最后更新于2018-6-20，可能会因为没有更新而失效。如已失效或需要修正，请联系我！
 早上在用Flask框架时出现了这个问题，我在源代码里写的是  <br/>
 {% highlight Python %}
 @app.route('/hello')
