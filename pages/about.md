@@ -2,7 +2,7 @@
 layout: page
 title: About
 description: zhang0peter的个人博客
-keywords: Zhang Peter
+keywords: Zhang0Peter
 comments: true
 menu: 关于
 permalink: /about/
