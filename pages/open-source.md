@@ -40,7 +40,7 @@ permalink: /open-source/
                         </span>
                         <span class="meta-info" title="Last updated：{{ repo.updated_at }}">
                             <span class="octicon octicon-clock"></span>
-                            <time datetime="{{ repo.updated_at }}">{{ repo.updated_at    date: '%Y-%m-%d' }}</time>
+                            <time datetime="{{ repo.updated_at }}">{{ repo.updated_at |   date: '%Y-%m-%d' }}</time>
                         </span>
                     </div>
                 </div>
