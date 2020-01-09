@@ -7,3 +7,7 @@ keywords: keyword1, keyword2
 ---
 
 Content here
+
+{% highlight Python %}
+
+{% endhighlight %}  
