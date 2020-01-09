@@ -1,15 +1,16 @@
 ---
 layout: page
 title: About
-description: 张思淡的个人博客
+description: zhang0peter的个人博客
 keywords: Zhang Peter
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-浙大2016级信安学生，喜欢使用Python。  
-联系我：zhang@zhangsidan.com 
+浙大学生，喜欢使用Python。            
+即将入职拼多多。        
+联系我：zhang0peter@foxmail.com                     
 
 
 ## 联系
