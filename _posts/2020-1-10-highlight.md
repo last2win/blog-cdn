@@ -1,7 +1,7 @@
 ---
 layout: post
-title: template page
-categories: [cate1, cate2]
+title: GitHub 博客-- Jekyll--代码高亮
+categories: [git, 杂类]
 description: some word here
 keywords: keyword1, keyword2
 ---
