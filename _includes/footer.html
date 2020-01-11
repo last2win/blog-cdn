@@ -1,7 +1,7 @@
     <footer class="container">
         <div class="site-footer" role="contentinfo">
             <div class="copyright left mobile-block">
-                    © 2018
+                    © 2020
                     <span title="{{ site.author}}">{{ site.author }}</span>
                     <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
             </div>
@@ -26,9 +26,9 @@
         </div>
     </footer>
     <!-- / footer -->
-    <script src="{{ site.url }}/assets/vendor/share.js/dist/js/share.min.js"></script>
-    <script src="{{ site.url }}/assets/js/geopattern.js"></script>
-    <script src="{{ site.url }}/assets/js/prism.js"></script>
+    <script async src="{{ site.url }}/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script async src="{{ site.url }}/assets/js/geopattern.js"></script>
+    <script async src="{{ site.url }}/assets/js/prism.js"></script>
     <link rel="stylesheet" href="{{ site.url }}/assets/css/globals/prism.css">
     <script>
       jQuery(document).ready(function($) {
@@ -41,15 +41,15 @@
     </script>
 
     {% if page.mermaid %}
-    <script src="{{ site.url }}/assets/js/mermaid.min.js"></script>
+    <script async src="{{ site.url }}/assets/js/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     {% endif %}
 
     {% if page.sequence %}
-    <script src="{{ site.url }}/assets/js/webfont.js"></script>
-    <script src="{{ site.url }}/assets/js/snap.svg-min.js"></script>
-    <script src="{{ site.url }}/assets/js/underscore-min.js"></script>
-    <script src="{{ site.url }}/assets/vendor/js-sequence-diagrams/dist/sequence-diagram-min.js"></script>
+    <script async src="{{ site.url }}/assets/js/webfont.js"></script>
+    <script async src="{{ site.url }}/assets/js/snap.svg-min.js"></script>
+    <script async src="{{ site.url }}/assets/js/underscore-min.js"></script>
+    <script async src="{{ site.url }}/assets/vendor/js-sequence-diagrams/dist/sequence-diagram-min.js"></script>
     <link rel="stylesheet" href="{{ site.url }}/assets/vendor/js-sequence-diagrams/dist/sequence-diagram-min.css">
     <script>
       $(".language-sequence").sequenceDiagram({theme: 'simple'});
