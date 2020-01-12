@@ -13,11 +13,6 @@ keywords: keyword1, keyword2
 
 
 
-```js
-var i=1
-```
-
-
 
 ![图片]({% link /images/posts/2020-1-10.png %})
 
