@@ -13,7 +13,7 @@ keywords: Linux
 *   [Linux: 使用bash命令ls按时间排序 - zhangpeterx的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/93165265)             
 *   [在WinSCP中使用sudo进行sftp，不用输入密码，获得root权限 - zhangpeterx的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95001286)                        
 *   [Linux下使用tee既在屏幕上显示输出，又把输出写进文件 - zhangpeterx的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/90573567)             
-*   [技术|Linux 下如何处理包含空格和特殊字符的文件名](https://linux.cn/article-5777-1.html)                   
+*   [技术 Linux 下如何处理包含空格和特殊字符的文件名](https://linux.cn/article-5777-1.html)                   
 *   [Debian/Ubuntu/Raspbian 时间同步 - zhangpeterx的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/84134141)                       
 *   [在centos上通过yum直接安装最新版gcc和开发工具 - zhangpeterx的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96141900)             
 *   [Linux系统16进制形式查看二进制文件 - zhangpeterx的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95448494)                   
