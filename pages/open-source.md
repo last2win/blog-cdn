@@ -7,7 +7,7 @@ permalink: /open-source/
 ---
 
 {% if site.github.public_repositories != null %}
-{% assign sorted_repos = site.github.public_repositories  |  sort: 'stargazers_count'|    reverse %}
+{% assign sorted_repos = site.github.public_repositories | sort: 'stargazers_count'| reverse %}
 
 <section class="container">
     <header class="text-center">
@@ -40,7 +40,7 @@ permalink: /open-source/
                         </span>
                         <span class="meta-info" title="Last updated：{{ repo.updated_at }}">
                             <span class="octicon octicon-clock"></span>
-                            <time datetime="{{ repo.updated_at }}">{{ repo.updated_at |   date: '%Y-%m-%d' }}</time>
+                            <time datetime="{{ repo.updated_at }}">{{ repo.updated_at | date: '%Y-%m-%d' }}</time>
                         </span>
                     </div>
                 </div>
