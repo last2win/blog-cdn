@@ -24,5 +24,5 @@ keywords: C++
 *   [C++ 汇编代码查看 - zhangpeterx的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/100120219)                       
 *   [C++ 协程介绍[译] - zhangpeterx的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/100138656)             
 *   [Compiler Explorer](https://godbolt.org/)                   
-*   []()                       
+*   [在CLion中运行Ninja项目 - zhangpeterx的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95810640)                  *   []()                       
 *   []()             
