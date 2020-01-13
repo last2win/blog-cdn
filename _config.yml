@@ -124,3 +124,9 @@ simple_jekyll_search:
 google:
     analytics_id: UA-114841473-2
 excerpt_separator: ""
+# ---------------- #
+#    sitemap       #
+# ---------------- #
+url: "https://zhang0peter.com" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap
