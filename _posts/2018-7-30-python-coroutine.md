@@ -1,11 +1,10 @@
 ---
 layout: post
 title: 线程，协程对比和Python爬虫实战说明
-categories: [Python,coroutine]
+categories: [Python]
 description: 用Python说明线程与协程的区别
-keywords: Python,coroutine,thread,spider
+keywords: Python, coroutine, thread, spider
 ---
-## 本文最后更新于2018-7-30，可能会因为没有更新而失效。如已失效或需要修正，请联系我！  
 ## 这篇文章写的是我对线程和协程的理解，有错误之处欢迎指出。  
 举一个餐馆的例子。我们把一个餐厅当做一个进程，如果这个餐厅只有1个服务员，那么这个餐厅是
 单线程的；如果这个餐厅有2个服务员，那么这个餐厅是双线程的。
@@ -14,20 +13,44 @@ keywords: Python,coroutine,thread,spider
 是非阻塞的。  
 **实现了非阻塞的线程我们称之为协程，也就是说协程是依赖线程的存在**。  
 下面就是Python的爬虫实战对比  
-先是单线程爬虫：
-图片  
-当total为100时，花费了38秒的时间。  
-然后是单线程协程爬虫：  
-图片
-当total为100时，花费了38秒的时间。   
-然后是多线程爬虫：  
-图片  
-当total为100，线程数为4时，只花费了9秒的时间，刚好是单线程时间的四分之一。
-最后是多线程协程爬虫：  
-图片
+
+*本来想使用aiohttp库的，但为了对比效果更好，我使用requests库*  
+
+我先写了一个本地的flask应用，在返回网页前等待3秒模拟真实网络爬虫  
+
+![flask-run]({% link /images/python-coroutine-master/flask-run.png %})    
+
+单线程爬虫：  
+
+![single-thread]({% link /images/python-coroutine-master/single-thread.png %})  
+
+共花费**301**秒   
+
+多线程爬虫：   
+
+![mult-thread]({% link /images/python-coroutine-master/mult-thread.png %}) 
+
+共花费**75**秒   
+ 
+单线程协程爬虫：  
+
+![single-coroutine]({% link /images/python-coroutine-master/single-coroutine.png %})    
+
+只花费**9**秒    
+
+可以看出单线程的协程爬虫速度已经非常快了  
 
 
+多线程协程爬虫：    
 
+![mult-coroutine]({% link /images/python-coroutine-master/mult-coroutine.png %})      
+
+只花费**3**秒    
+
+## 总结 
+**多线程和协程结合，能够使得爬虫的速度达到极致**   
+   
+   
 
 
 参考资料：  
