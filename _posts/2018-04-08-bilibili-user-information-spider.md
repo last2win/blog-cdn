@@ -2,11 +2,11 @@
 layout: post
 title:  "B站3亿用户信息爬虫（mid号，昵称，性别，关注，粉丝，等级"
 date:   2018-04-08 02:35:18 +0800
-categories: bilibili
+categories: [bilibili, Python]
 description: ""
-keywords: bilibili
+keywords: bilibili, Python, 爬虫
 ---
-## 本文最后更新于2018-6-20，可能会因为没有更新而失效。如已失效或需要修正，请联系我！
+
 之前写了B站视频信息的爬虫，然后就想到了爬取B站的用户信息。    
 在2018年3月11号，B站的第3亿用户诞生了。    
 
