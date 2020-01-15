@@ -11,9 +11,5 @@ keywords: bilibili, Python, 爬虫
 ***          
 {% endraw %}
 
-
-
-
-![图片]({% link /images/posts/2020-1-10.png %})
-
+详细内容参考：[B站2千万视频信息爬虫_zhang0peter的博客-CSDN博客](https://zhang0peter.blog.csdn.net/article/details/83419311)
 
