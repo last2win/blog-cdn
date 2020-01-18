@@ -17,11 +17,15 @@ keywords: visitor-count, view-count, LeanCloud
 
 因为实在GitHub上搭建的静态博客，不能像WordPress一样操作操作php和数据库，自然只能借助第三方工具。
 
+网上有个问答：[html - Is that real show count view pages with use Jekyll? - Stack Overflow](https://stackoverflow.com/questions/51075898/is-that-real-show-count-view-pages-with-use-jekyll)
+
 ## LeanCloud
 
 网上有很多人推荐使用 LeanCloud 进行访问量的统计，比如说这篇文章：[jekyll使用LeanCloud记录文章的访问次数](https://priesttomb.github.io/%E6%97%A5%E5%B8%B8/2017/11/06/jekyll%E4%BD%BF%E7%94%A8LeanCloud%E8%AE%B0%E5%BD%95%E6%96%87%E7%AB%A0%E7%9A%84%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/)    
 
 和这篇文章：[添加阅读量统计 | ZFB 博客](https://blog.whuzfb.cn/blog/2019/01/05/blog_reading_counter/)
+
+你也可以使用基于LeanCloud进行开发的Valine：[文章阅读量统计 | Valine](https://valine.js.org/visitor.html)
 
 我本来也想用 LeanCloud 进行记录，但我在注册的时候告诉我要实名认证，输入姓名和身份证，还要支付宝授权`美味书签（北京）信息技术有限公司`读取我的认证信息和人脸照片。这我绝对不能忍，还要我的人脸照片，这是想做什么。
 
@@ -36,6 +40,29 @@ keywords: visitor-count, view-count, LeanCloud
 <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 ```
 
+非常方便，图方便的博主可以使用不蒜子。
+
+我最终没有选择不蒜子是因为访问量的统计是存在它的服务器上，我自己是查看不到的。
+
+## 各类分析工具
+
+比如说：[Google Analytics（分析）](https://analytics.google.com/)
+
+如果你使用谷歌分析，那么自然可以在谷歌分析上看到你网站的访问量以及各种数据。
+
+我看到了另一款新的工具：[Simple Analytics - Simple, clean, and privacy-friendly analytics](https://simpleanalytics.com)
+
+这也是一款网页浏览量分析工具，吸引我的特点是支持使用json获取统计到的数据。
+
+使用示例如下：
+```js
+$.ajax({
+  url: "https://simpleanalytics.com/zhang0peter.com.json",
+  success: function(data) {
+      $("#site_pv").text(data.pageviews);
+  }
+});
+```
 
 ## 其他工具
 
