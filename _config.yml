@@ -72,7 +72,6 @@ plugins:
     - rouge
 #     - jekyll-html-pipeline
     - jekyll-paginate
-    - jekyll-sitemap
     - jekyll-feed
     - jemoji
 #     - jekyll-mentions
