@@ -1,6 +1,6 @@
 ---
 layout: post
-title: template page
+title: "title"
 categories: [cate1, cate2]
 description: ""
 keywords: keyword1, keyword2

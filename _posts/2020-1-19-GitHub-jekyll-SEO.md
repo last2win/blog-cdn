@@ -1,9 +1,9 @@
 ---
 layout: post
-title: jekyll 博客对搜索引擎的SEO提升方法
+title: jekyll 博客对搜索引擎的SEO提升方法--head中的meta标签和Jekyll SEO Tag
 categories: [博客]
-description: ""
-keywords: jekyll, GitHub
+description: "GitHub:jekyll 博客对搜索引擎的SEO提升方法--head中的meta标签和Jekyll SEO Tag,SEO,百度,谷歌,搜索引擎,排名提升,网站优化,关键词"
+keywords: jekyll, GitHub, Jekyll SEO Tag,SEO,百度,谷歌,搜索引擎,排名提升,网站优化,关键词
 ---
 
 此文首发于我的个人博客：[zhang0peter的个人博客](https://zhang0peter.com)         
@@ -45,6 +45,4 @@ meta tag还有一个常用的用法：
 参考：
 
 *   [无用的keywords - xiaOp的博客](https://xiaoiver.github.io/coding/2017/07/23/%E6%97%A0%E7%94%A8%E7%9A%84keywords.html)
-*   [10 Must do Jekyll SEO optimizations | Webjeda](https://blog.webjeda.com/optimize-jekyll-seo/)
-*   []()
-*   []()
+*   [10 Must do Jekyll SEO optimizations  Webjeda](https://blog.webjeda.com/optimize-jekyll-seo/)
