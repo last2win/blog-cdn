@@ -2,7 +2,7 @@
 layout: post
 title: B站2千万视频信息爬虫
 categories: [bilibili, Python]
-description: some word here
+description: "Python-bilibili-B站2千万视频信息爬虫"
 keywords: bilibili, Python, 爬虫
 ---
 

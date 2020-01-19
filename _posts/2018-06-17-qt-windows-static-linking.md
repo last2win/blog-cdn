@@ -1,11 +1,10 @@
 ---
 layout: post
 title: Qt5.10.1在Windows平台下进行静态编译
-categories: [QT, windows]
-description: 花费了一下午的时间进行QT的静态编译
+categories: [Windows]
+description: "花费了一下午的时间进行QT的静态编译 QT,windows,static linking vs2017"
 keywords: QT,windows,static linking
 ---
-## 本文最后更新于2018-6-20，可能会因为没有更新而失效。如已失效或需要修正，请联系我！
 Qt静态编译的最大好处就是可以直接产生能够不依靠多余的dll运行的exe文件，
 而且exe文件会比动态编译的要小上很多。
 

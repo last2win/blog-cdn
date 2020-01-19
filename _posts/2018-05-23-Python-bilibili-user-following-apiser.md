@@ -3,7 +3,7 @@ layout: post
 title:  "爬取B站我关注的人关注的人关注的人关注的人"
 date:   2018-05-22 14:35:18 +0800
 categories: [Python]
-description: ""
+description: "Python 爬虫 爬取B站我关注的人关注的人 bilibili"
 keywords: Python
 ---
 

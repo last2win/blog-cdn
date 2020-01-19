@@ -3,8 +3,8 @@ layout: post
 title:  "Python变量作用域问题"
 date:   2018-04-18 14:35:18 +0800
 categories: Python
-description: ""
-keywords: Python
+description: "Python变量作用域问题：global不能跨文件，全局变量不存在"
+keywords: Python, global
 ---
 ## 本文最后更新于2018-6-20，可能会因为没有更新而失效。如已失效或需要修正，请联系我！
 今天在用Python写程序时突然想起了Python变量作用域的问题，代码如下：  <br/>

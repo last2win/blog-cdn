@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 爬取好奇心日报
-categories: [Python,好奇心日报]
-description: 用Python爬取好奇心日报的评论和分享数
-keywords: Python,好奇心日报
+title: 用Python爬取好奇心日报
+categories: [Python]
+description: 用Python爬取好奇心日报的评论和分享数-爬虫
+keywords: Python
 ---
 ## 本文最后更新于2018-7-25，可能会因为没有更新而失效。如已失效或需要修正，请联系我！
 

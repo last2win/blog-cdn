@@ -2,8 +2,8 @@
 layout: post
 title:  "B站3亿用户信息爬虫（mid号，昵称，性别，关注，粉丝，等级"
 date:   2018-04-08 02:35:18 +0800
-categories: [bilibili, Python]
-description: ""
+categories: [Python]
+description: "Python-bilibili-爬虫-B站3亿用户信息"
 keywords: bilibili, Python, 爬虫
 ---
 

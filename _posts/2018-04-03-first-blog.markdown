@@ -2,8 +2,8 @@
 layout: post
 title:  "第一篇博客"
 date:   2018-04-03 22:35:18 +0800
-categories: blog
-description: ""
+categories: [博客]
+description: "基于GitHub的博客，使用的是Jekyll"
 keywords: blog
 ---
 终于搭建好了基于GitHub的博客，使用的是Jekyll。  

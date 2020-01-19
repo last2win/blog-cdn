@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 解决tensorflow报错ValueError Variable conv1/weights already exists, disallowed.
+title: "Python-解决tensorflow报错ValueError: Variable conv1/weights already exists, disallowed. Did you mean to set reuse=True or reuse=tf.AUTO_REUSE in VarScope? Originally defined at:"
 categories: [Python, 行走的问题解决机]
-description: ""
+description: "Python-解决tensorflow报错ValueError: Variable conv1/weights already exists, disallowed. Did you mean to set reuse=True or reuse=tf.AUTO_REUSE in VarScope? Originally defined at:"
 keywords: Python, tensorflow
 ---
 

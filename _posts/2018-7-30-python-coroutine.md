@@ -2,7 +2,7 @@
 layout: post
 title: 线程，协程对比和Python爬虫实战说明
 categories: [Python]
-description: 用Python说明线程与协程的区别
+description: 用Python说明线程与协程的区别--coroutine-thread
 keywords: Python, coroutine, thread, spider
 ---
 ## 这篇文章写的是我对线程和协程的理解，有错误之处欢迎指出。  

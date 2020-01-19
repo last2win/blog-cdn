@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode 1115. Print FooBar Alternately--多线程并发问题--Java解法--CyclicBarrier, synchronized, Semaphore 信号量
 categories: [LeetCode]
-description: Java多种解法保证线程的执行顺序一致
+description: LeetCode 1115. Print FooBar Alternately--多线程并发问题--Java解法--CyclicBarrier, synchronized, Semaphore 信号量--Java多种解法保证线程的执行顺序一致
 keywords: LeetCode, CyclicBarrier, Semaphore, synchronized
 ---
 

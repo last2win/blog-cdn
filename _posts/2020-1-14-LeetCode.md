@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode 1117. Building H2O --Java解法--多线程保证执行顺序--AtomicInteger 
 categories: [LeetCode]
-description: 使用 AtomicInteger 保证原子性和有序性
+description: LeetCode 1117. Building H2O --Java解法--多线程保证执行顺序--AtomicInteger-使用 AtomicInteger 保证原子性和有序性
 keywords: LeetCode, AtomicInteger, Java
 ---
 

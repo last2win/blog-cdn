@@ -3,7 +3,7 @@ layout: post
 title:  "解决UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte问题"
 date:   2018-04-15 02:35:18 +0800
 categories: Python
-description: ""
+description: "Python 报错解决：UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte "
 keywords: Python
 ---
 ## 本文最后更新于2018-6-20，可能会因为没有更新而失效。如已失效或需要修正，请联系我！
