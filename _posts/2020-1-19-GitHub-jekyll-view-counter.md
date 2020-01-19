@@ -65,7 +65,7 @@ keywords: Jekyll,博客,统计访问量, 阅读量工具, LeanCloud, 不蒜子, 
     <span id="container_site_pv">本站总访问量<span id="site_pv"></span>次</span>
 
 ```
-你可以通过json获取网站的访问量来先是在网站上。
+你可以通过json获取网站的访问量来显示在网站上。
 
 ## 其他工具
 
