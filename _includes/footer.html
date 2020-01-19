@@ -6,16 +6,15 @@
       <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
     </div>
 
-<script type="text/javascript">
-$.ajax({
-  url: "https://simpleanalytics.com/zhang0peter.com.json",
-  success: function(data) {
-      $("#site_pv").text(data.pageviews);
-  }
-});
-</script>
-
-<span id="container_site_pv">本站总访问量<span id="site_pv"></span>次</span>
+    <script type="text/javascript">
+      $.ajax({
+        url: "https://simpleanalytics.com/zhang0peter.com.json",
+        success: function (data) {
+          $("#site_pv").text(data.pageviews);
+        }
+      });
+    </script>
+    <span id="container_site_pv">本站总访问量<span id="site_pv"></span>次</span>
 
 
 
