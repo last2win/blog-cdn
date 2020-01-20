@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "anaconda-spyder-ipython终端控制台无法停止问题解决"
+title: "anaconda-spyder-ipython终端控制台无法停止程序--问题解决"
 categories: [行走的问题解决机]
 description: "anaconda-spyder-ipython终端控制台无法停止问题解决"
 keywords: Python, anaconda, spyder, ipython
