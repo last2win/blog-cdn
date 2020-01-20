@@ -35,9 +35,3 @@ http://www.qdaily.com/comments/article/38425/0.json
 **爬虫代码在 [qdaily-spider](https://github.com/zhang0peter/qdaily-spider/blob/master/qdaily-spider.py)**    
 **生成词云代码在 [qdaily-comment](https://github.com/zhang0peter/qdaily-spider/blob/master/qdaily-comment.py)**    
 **生成文章id与分享数关系图的代码在 [qdaily-share](https://github.com/zhang0peter/qdaily-spider/blob/master/qdaily-share.py)**    
-爬虫代码：  
-![code1.png](https://github.com/zhang0peter/qdaily-spider/blob/master/code1.png)  
-![code2.png](https://github.com/zhang0peter/qdaily-spider/blob/master/code2.png)  
-![code3.png](https://github.com/zhang0peter/qdaily-spider/blob/master/code3.png)  
-![code4.png](https://github.com/zhang0peter/qdaily-spider/blob/master/code4.png)  
-![code5.png](https://github.com/zhang0peter/qdaily-spider/blob/master/code5.png)  
