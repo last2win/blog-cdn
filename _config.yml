@@ -53,7 +53,7 @@ navs:
 # ---------------- #
 #       RSS        #
 # ---------------- #
-subscribe_rss: /feed.xml
+subscribe_rss: /atom.xml
 feed:
   path: feed.xml
 # ---------------- #
