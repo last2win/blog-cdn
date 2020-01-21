@@ -54,7 +54,8 @@ navs:
 #       RSS        #
 # ---------------- #
 subscribe_rss: /feed.xml
-
+feed:
+  path: feed.xml
 # ---------------- #
 #      Jekyll      #
 # ---------------- #
@@ -70,11 +71,12 @@ permalink: /:year/:month/:day/:title/
 plugins:
     - jekyll-github-metadata
     - rouge
-#     - jekyll-html-pipeline
     - jekyll-paginate
     - jekyll-feed
     - jemoji
+    - jekyll-seo-tag
 #     - jekyll-mentions
+#     - jekyll-html-pipeline
 collections:
     wiki:
         output: true
