@@ -5,21 +5,21 @@
       <span title="{{ site.author}}">{{ site.author }}</span>
       <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
     </div>
-    <!-- simpleanalytics  统计脚本
+    <!-- simpleanalytics  统计脚本-->
     <script type="text/javascript">
       $.ajax({
         url: "https://simpleanalytics.com/zhang0peter.com.json?start=2020-01-01",
         success: function (data) {
-          $("#site_pv").text(data.pageviews);
+          $("#site_uv").text(data.pageviews);
         }
       });
     </script>
-    <span id="container_site_pv">本站总访问量<span id="site_pv"></span>次</span>
--->
-
+    <span id="container_site_uv">本站总访问量<span id="site_uv"></span>次</span>
+    <!---->
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <!--  不蒜子统计脚本
     <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-
+-->
     <ul class="site-footer-links right mobile-hidden">
       <li>
         <a href="javascript:window.scrollTo(0,0)">TOP</a>
