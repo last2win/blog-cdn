@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Linux/ubuntu server 18.04 安装远程桌面--vnc server"
+title: "Linux/ubuntu server 18.04 安装远程桌面--vnc server-tightvncserver"
 categories: [Linux]
 description: "Linux，ubuntu，remote desktop, vnc, ubuntu server, windows，GUI，terminal， vnc server，Xrdp Server，图形界面，X Server"
 keywords: Linux,ubuntu, remote desktop, vnc, ubuntu server, windows, GUI, terminal,  vnc server, Xrdp Server

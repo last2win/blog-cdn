@@ -21,7 +21,7 @@ keywords: Linux
 *   [在CentOS/Debian/Ubuntu上编译安装最新版 GCC 8 ， cmake 3 和ninja_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96103611)             
 *   [在CentOS/Debian/Ubuntu上编译安装最新版gnu make 和GNU binutils (as and ld)_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96135667)                   
 *   [一日一技：在Linux系统中如何查询正在运行的程序的路径](https://mp.weixin.qq.com/s?__biz=MzI2MzEwNTY3OQ==&mid=2648978154&idx=1&sn=53488342b4b67fbd97ffd73affd69fd5&chksm=f2506f0ac527e61c8b7cd11e13aff279fa7e29f1f9bacbe990c012274f73e3dd48f5f8edfd89&mpshare=1&scene=23&srcid=0119f0M6FbJ86dEq34KZNtb2&sharer_sharetime=1579425817650&sharer_shareid=19fe229c09c2cd2c6445c2856dcf3d6d#rd)             
-*   []()                   
+*   [利用X11 Forwarding运行VPS上的图形界面软件 - Tech Notes of Code Monkey](https://blog.finaltheory.me/note/X11-Forwarding-GUI.html)                            
 *   []()                       
 *   []()             
 *   []()                   
