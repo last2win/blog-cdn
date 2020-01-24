@@ -15,6 +15,6 @@ keywords: keyword1, keyword2
 
 
 
-![图片]({% link /images/posts/2020-1-10.png %})
+![图片]({% link /images/posts/error.png %})
 
 
