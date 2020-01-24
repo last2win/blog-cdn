@@ -8,8 +8,7 @@ menu: 关于
 permalink: /about/
 ---
 
-学生，喜欢使用Python。                     
-即将入职拼多多。        
+学生，喜欢使用Python。                           
 联系我：zhang0peter@foxmail.com                     
 
 
