@@ -46,6 +46,8 @@ _includes/footer.html                                         |    99 |  329.29K
 _layouts/wiki.html                                            |     7 |   55.61K | 0.130
 ```
 
+具体优化教程参考这位大佬：[How I'm using Jekyll in 2017 - Made Mistakes](https://mademistakes.com/articles/using-jekyll-2017/)
+
 想要加快编译只有一种方法：`jekyll serve --incremental`，可以增量编译。
 
 当你修改一个文件后，它会自动排除没修改过的文件。
