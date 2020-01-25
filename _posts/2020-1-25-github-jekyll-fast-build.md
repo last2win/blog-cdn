@@ -12,7 +12,7 @@ keywords: GitHub, jekyll
 ***          
 {% endraw %}
 
-我的jeykll静态博客部署在GitHub上，平时自己本地测试的时候运行命令`jekyll serve`即可启动：
+我的jekyll静态博客部署在GitHub上，平时自己本地测试的时候运行命令`jekyll serve`即可启动：
 ```sh
 C:\Users\peter\Documents\GitHub\zhang0peter.github.io>jekyll serve
 Configuration file: C:/Users/peter/Documents/GitHub/zhang0peter.github.io/_config.yml
