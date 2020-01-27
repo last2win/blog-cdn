@@ -88,4 +88,4 @@ compress_html:
 
 更多内容参考：
 - [Inline CSS in Jekyll — SitePoint](https://www.sitepoint.com/inline-css-in-jekyll/)
-
+- [Jekyll Speed Improvements](https://brototyp.de/blog/jekyll-speed-improvements/)
