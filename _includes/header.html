@@ -70,35 +70,18 @@
   {% if page.date %}
   <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
   {% endif %}
-  <script src="{{ site.url }}/assets/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="{{ site.url }}/assets/js/jquery-ui.js"></script>
-  <script src="{{ site.url }}/assets/js/main.js"></script>
-  <!--<script async data-ad-client="ca-pub-5033499242151397"
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-  <!--
-  <script data-ad-client="pub-5033499242151397" async src="https://pagead2.googlesyndication
-.com/pagead/js/adsbygoogle.js"></script>-->
-  <script data-ad-client="ca-pub-5033499242151397" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <meta name="baidu-site-verification" content="coWtJoj5ZQ" />
 
   {% seo %}
 
-  <script>
-    //百度站长平台网页自动推送工具
-    (function () {
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
+  <meta name="baidu-site-verification" content="coWtJoj5ZQ" />
+
+  <script src="{{ site.url }}/assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="{{ site.url }}/assets/js/jquery-ui.js"></script>
+  <script src="{{ site.url }}/assets/js/main.js"></script>
+  <script data-ad-client="ca-pub-5033499242151397" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!--百度站长平台网页自动推送工具-->
+  <script async src='https://zz.bdstatic.com/linksubmit/push.js'></script>
 
 </head>
 
