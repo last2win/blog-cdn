@@ -1,16 +1,18 @@
-{% capture styles %}
-{% include  assets/vendor/primer-css/css/primer.css %}
-{% include  assets/vendor/primer-markdown/dist/user-content.min.css %}
-{% include  assets/css/components/collection.css %}
-{% include  assets/css/components/repo-card.css %}
-{% include  assets/css/sections/repo-list.css %}
-{% include  assets/css/sections/mini-repo-list.css %}
-{% include  assets/css/components/boxed-group.css %}
-{% include  assets/vendor/share.js/dist/css/share.min.css %}
-{% include  assets/css/globals/responsive.css %}
-{% include  assets/css/posts/index.css %}
-{% endcapture %}
 
-<style>
+
+<style type="text/css">
+    {% capture styles %}
+    {% include  assets/vendor/primer-css/css/primer.css %}
+    {% include  assets/vendor/primer-markdown/dist/user-content.min.css %}
+    {% include  assets/css/components/collection.css %}
+    {% include  assets/css/components/repo-card.css %}
+    {% include  assets/css/sections/repo-list.css %}
+    {% include  assets/css/sections/mini-repo-list.css %}
+    {% include  assets/css/components/boxed-group.css %}
+    {% include  assets/vendor/share.js/dist/css/share.min.css %}
+    {% include  assets/css/globals/responsive.css %}
+    {% include  assets/css/posts/index.css %}
+    {% endcapture %}
+
     {{ styles | scssify}}
 </style>
