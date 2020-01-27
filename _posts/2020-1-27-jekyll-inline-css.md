@@ -79,6 +79,8 @@ compress_html:
   blanklines: true
   comments: ["<!-- ", " -->"]
 ```
+需要注意的是这个脚本可能不完善。
+
 {% raw %}
 ***          
 {% endraw %}
