@@ -131,3 +131,8 @@ excerpt_separator: ""
 
 plugins:
   - jekyll-sitemap
+# ---------------- #
+#    sass          #
+# ---------------- #
+sass:
+  style: compressed #压缩css
