@@ -9,5 +9,6 @@
 - 使用谷歌的站内搜索替代`Simple-Jekyll-Search`插件，优势：可以全文索引，不用每个网页都加载用于搜索的数据。
 - 修改网页背景色为`#FFF7DB`
 
+更多内容改动见：[About — zhang0peter的个人博客](https://zhang0peter.com/about/)
 
 致谢：本博客基于[mzlogin/mzlogin.github.io: My Blog / Jekyll Themes / GitHub Pages 博客模板](https://github.com/mzlogin/mzlogin.github.io)
