@@ -138,7 +138,7 @@ sass:
   style: compressed #压缩css
 
 compress_html:     #压缩网页
-  clippings:      all
-  comments:       ["<!--", "-->"]
-  endings:        all
-  startings:      [html, head, body]
+#  comments:       ["<!--", "-->"]
+#  blanklines: true
+ # clippings:      all
+# startings:      [html]
