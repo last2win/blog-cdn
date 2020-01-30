@@ -63,7 +63,7 @@ markdown: kramdown
 kramdown:
     input: GFM
 highlighter: rouge
-paginate: 10
+paginate: 13
 lsi: false
 quiet: false
 excerpt_separator: "\n\n"
@@ -142,3 +142,7 @@ compress_html:     #压缩网页
 #  blanklines: true
  # clippings:      all
 # startings:      [html]
+
+
+exclude:
+#    - assets

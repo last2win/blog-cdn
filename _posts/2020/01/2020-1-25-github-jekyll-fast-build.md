@@ -56,6 +56,11 @@ _layouts/wiki.html                                            |     7 |   55.61K
 
 所以总的来说，还是优化被重复编译的文件可以从根本上提高编译速度。
 
+还有一点要提的是ruby在Windows上的jekyll非常慢，慢到不能忍受，关键是jekyll不能多核一起编译，所以不如直接放在linux上编译快。
+
+
+
+
 如果过程中遇到报错：
 ```sh
   Liquid Exception: undefined method `map' for false:FalseClass Did you mean? tap in /_layouts/post.html
