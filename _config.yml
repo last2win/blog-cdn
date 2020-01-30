@@ -69,6 +69,7 @@ quiet: false
 excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
 plugins:
+    - jekyll-include-cache
     - jekyll-github-metadata
     - rouge
     - jekyll-paginate
@@ -144,5 +145,5 @@ compress_html:     #压缩网页
 # startings:      [html]
 
 
-exclude:
+#exclude:
 #    - assets

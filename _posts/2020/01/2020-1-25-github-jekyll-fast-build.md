@@ -54,12 +54,23 @@ _layouts/wiki.html                                            |     7 |   55.61K
 
 需要注意的是，增量编译仍然是实验性功能，也就是说有bug。我就遇到了几次修改文件后结果网页不显示修改后的结果的情况，具体可以参考：[Default Configuration  Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/configuration/incremental-regeneration/)
 
-所以总的来说，还是优化被重复编译的文件可以从根本上提高编译速度。
+
 
 还有一点要提的是ruby在Windows上的jekyll非常慢，慢到不能忍受，关键是jekyll不能多核一起编译，所以不如直接放在linux上编译快。
 
 
 
+使用插件：[benbalter/jekyll-include-cache: A Jekyll plugin to cache the rendering of Liquid includes](https://github.com/benbalter/jekyll-include-cache)防止同样的内容被重复编译:
+
+{% raw %}
+
+把`{% include sidebar-popular-repo.html %}`替换为` {% include_cached sidebar-popular-repo.html %}`。 
+
+   
+{% endraw %}
+使用之后，编译时间从减少到了很多。
+
+所以总的来说，还是优化被重复编译的文件可以从根本上提高编译速度。
 
 如果过程中遇到报错：
 ```sh

@@ -8,3 +8,4 @@ Gemfile.lock
 .jekyll-metadata
 .vscode/settings.json
 _posts/2020/01/2020-1-30-k8s-install-and-use.md
+.jekyll-cache/
