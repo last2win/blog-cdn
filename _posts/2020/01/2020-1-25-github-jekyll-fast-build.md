@@ -55,22 +55,41 @@ _layouts/wiki.html                                            |     7 |   55.61K
 需要注意的是，增量编译仍然是实验性功能，也就是说有bug。我就遇到了几次修改文件后结果网页不显示修改后的结果的情况，具体可以参考：[Default Configuration  Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/configuration/incremental-regeneration/)
 
 
+{% raw %}
+***          
+{% endraw %}
 
+另一个增快编译速度的方法是升级jekyll的版本，原先的`gemfile`中配置如下：
+```sh
+gem 'github-pages', group: :jekyll_plugins
+```
+其中`github-pages`包含的jekyll版本为3.8.5，而实际上最新版已经出到了4.0
+
+替换文件为：
+```sh
+gem 'jekyll', '~> 4.0'
+group :jekyll_plugins do
+    gem "jekyll-feed"
+    gem "jekyll-remote-theme"
+    gem "jekyll-seo-tag"
+    gem "jekyll-sitemap"
+    gem 'jekyll-feed'
+    gem 'jemoji'
+  end
+```
+编译速度直线上升。
+
+参考：[How I reduced my Jekyll build time by 61% | Forestry.io](https://forestry.io/blog/how-i-reduced-my-jekyll-build-time-by-61/)
+
+{% raw %}
+***          
+{% endraw %}
 还有一点要提的是ruby在Windows上的jekyll非常慢，慢到不能忍受，关键是jekyll不能多核一起编译，所以不如直接放在linux上编译快。
 
 
-
-使用插件：[benbalter/jekyll-include-cache: A Jekyll plugin to cache the rendering of Liquid includes](https://github.com/benbalter/jekyll-include-cache)防止同样的内容被重复编译:
-
 {% raw %}
-
-把`{% include sidebar-popular-repo.html %}`替换为` {% include_cached sidebar-popular-repo.html %}`。 
-
-   
+***          
 {% endraw %}
-使用之后，编译时间从减少到了很多。
-
-所以总的来说，还是优化被重复编译的文件可以从根本上提高编译速度。
 
 如果过程中遇到报错：
 ```sh
