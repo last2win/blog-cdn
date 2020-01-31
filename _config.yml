@@ -62,6 +62,7 @@ feed:
 markdown: kramdown
 kramdown:
     input: GFM
+    parse_block_html: true
 highlighter: rouge
 paginate: 13
 lsi: false
