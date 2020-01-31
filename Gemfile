@@ -17,6 +17,7 @@ group :jekyll_plugins do
     gem 'jekyll-paginate'
     gem 'jekyll-feed'
     gem 'jemoji'
+    gem 'jekyll-toc'
   end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

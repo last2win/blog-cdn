@@ -76,6 +76,7 @@ plugins:
     - jekyll-feed
     - jemoji
     - jekyll-seo-tag
+    - jekyll-toc
 #     - jekyll-mentions
 #     - jekyll-html-pipeline
 collections:

@@ -4,7 +4,11 @@ title: "从零开始在ubuntu上安装和使用k8s集群及报错解决"
 categories: [k8s]
 description: "安装docker,配置更新源，安装kubeadm，配置flannel网络，配置集群"
 keywords: kubernetes, ubuntu
+toc: true
 ---
+
+
+
 
 此文首发于我的个人博客：[zhang0peter的个人博客](https://zhang0peter.com)         
 
@@ -72,7 +76,7 @@ The connection to the server localhost:8080 was refused - did you specify the ri
 network:
     ethernets:
         ens33:
-            addresses: [192.168.32.134/24]
+            addresses: [192.168.32.132/24]
             dhcp4: false
             gateway4: 192.168.32.2
             nameservers:
@@ -93,75 +97,31 @@ PING master (192.168.32.132) 56(84) bytes of data.
 64 bytes from master (192.168.32.132): icmp_seq=1 ttl=64 time=0.837 ms
 64 bytes from master (192.168.32.132): icmp_seq=2 ttl=64 time=0.358 ms
 ```
-### 配置Master节点的k8s网络
-创建工作目录：
+### 配置Master节点的k8s，并使用 kubeadm 拉取镜像
+使用`kubeadm init `进行初始化操作：
 ```sh
-mkdir ~/k8s
-cd ~/k8s
-```
-生成配置文件：
-```sh
-ubuntu@master:~/k8s$ kubeadm config print init-defaults ClusterConfiguration > kubeadm.conf
-W0130 00:57:12.673237    9359 validation.go:28] Cannot validate kube-proxy config - no validator is available
-W0130 00:57:12.673539    9359 validation.go:28] Cannot validate kubelet config - no validator is available
-```
-修改文件`kubeadm.conf`中的IP地址
-```sh
-#修改IP地址为master节点的IP地址
-localAPIEndpoint:
-  advertiseAddress: 192.168.32.132
-#配置pod地址
-networking:
-  dnsDomain: cluster.local
-  podSubnet: 10.244.0.0/16
-  serviceSubnet: 10.96.0.0/12
-```
-### 拉取k8s需要的镜像
-由于官方镜像地址被墙，所以我们需要首先获取所需镜像以及它们的版本。然后从国内镜像站获取。
-```sh
-ubuntu@master:~/k8s$ kubeadm config images list --config kubeadm.conf
-W0130 01:31:26.536909   15911 validation.go:28] Cannot validate kube-proxy config - no validator is available
-W0130 01:31:26.536973   15911 validation.go:28] Cannot validate kubelet config - no validator is available
-k8s.gcr.io/kube-apiserver:v1.17.0
-k8s.gcr.io/kube-controller-manager:v1.17.0
-k8s.gcr.io/kube-scheduler:v1.17.0
-k8s.gcr.io/kube-proxy:v1.17.0
-k8s.gcr.io/pause:3.1
-k8s.gcr.io/etcd:3.4.3-0
-k8s.gcr.io/coredns:1.6.5
+#修改IP地址为master节点的IP地址并配置pod地址
+kubeadm init \
+--apiserver-advertise-address=192.168.32.132 \
+--image-repository registry.aliyuncs.com/google_containers  \
+--pod-network-cidr=10.244.0.0/16 
 ```
 ```sh
-#下载全部当前版本的k8s所关联的镜像
-images=(  # 下面的镜像应该去除"k8s.gcr.io/"的前缀，版本换成上面获取到的版本
-kube-apiserver:v1.17.0
-kube-controller-manager:v1.17.0
-kube-scheduler:v1.17.0
-kube-proxy:v1.17.0
-pause:3.1
-etcd:3.4.3-0
-coredns:1.6.5
-)
-
-for imageName in ${images[@]} ; do
-    docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName
-    docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName k8s.gcr.io/$imageName
-    docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName
-done
-```
-### 启动 kubeadm 和 kubelet
-镜像拉取完成后启动：
-```sh
-ubuntu@master:~/k8s$ sudo swapoff -a
-ubuntu@master:~/k8s$ sudo kubeadm init --config ./kubeadm.conf
-W0130 01:33:17.642133   16358 validation.go:28] Cannot validate kube-proxy config - no validator is available
-W0130 01:33:17.642176   16358 validation.go:28] Cannot validate kubelet config - no validator is available
-[init] Using Kubernetes version: v1.17.0
+root@master:/home/ubuntu# kubeadm init \
+> --apiserver-advertise-address=192.168.32.132 \
+> --image-repository registry.aliyuncs.com/google_containers  \
+> --pod-network-cidr=10.244.0.0/16 
+W0131 07:58:41.470780    4096 version.go:101] could not fetch a Kubernetes version from the internet: unable to get URL "https://dl.k8s.io/release/stable-1.txt": Get https://dl.k8s.io/release/stable-1.txt: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+W0131 07:58:41.470831    4096 version.go:102] falling back to the local client version: v1.17.2
+W0131 07:58:41.470908    4096 validation.go:28] Cannot validate kube-proxy config - no validator is available
+W0131 07:58:41.470912    4096 validation.go:28] Cannot validate kubelet config - no validator is available
+[init] Using Kubernetes version: v1.17.2
 [preflight] Running pre-flight checks
 	[WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://kubernetes.io/docs/setup/cri/
-...........
-[addons] Applied essential addon: CoreDNS
-[addons] Applied essential addon: kube-proxy
-
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+........................
 Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
@@ -176,10 +136,10 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join 192.168.32.132:6443 --token abcdef.0123456789abcdef \
-    --discovery-token-ca-cert-hash sha256:b6392e2c7aa72df336e178f3688ba6ca69374937a30a0fe429aaae0ffa76d5f5 
-
+kubeadm join 192.168.32.132:6443 --token uf5mqk.bssr36md2y6b7w7g \
+    --discovery-token-ca-cert-hash sha256:fa6e8c828a4480baf8dba2331bcaad4d30ae593024e0a56258cf22fdde3f897a
 ```
+
 ```sh
 ubuntu@master:~/k8s$   mkdir -p $HOME/.kube
 ubuntu@master:~/k8s$   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -188,9 +148,9 @@ ubuntu@master:~/k8s$   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 创建系统服务并启动
 ```shell
 # 启动kubelet 设置为开机自启动
-$ sudo systemctl enable kubelet
+sudo systemctl enable kubelet
 # 启动k8s服务程序
-$ sudo systemctl start kubelet
+sudo systemctl start kubelet
 ```
 查看启动状况：
 ```sh
@@ -203,8 +163,8 @@ controller-manager   Healthy   ok
 scheduler            Healthy   ok                  
 etcd-0               Healthy   {"health":"true"}  
 ```
-现在只有一个master节点，接下来增加node节点。
-
+现在只有一个master节点。
+### 配置内部通信 flannel 网络(master和node都要配)
 先配置内部通信 flannel 网络：
 ```sh
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
@@ -231,29 +191,28 @@ ubuntu@master:~/k8s$ kubectl get nodes
 NAME     STATUS   ROLES    AGE   VERSION
 master   Ready    master   39m   v1.17.2
 ```
-
+如果没变为ready应该是镜像下载失败，手动下载，镜像版本由当前flannel版本决定。
+```sh
+docker pull quay-mirror.qiniu.com/coreos/flannel:v0.11.0-amd64
+docker tag quay-mirror.qiniu.com/coreos/flannel:v0.11.0-amd64 quay.io/coreos/flannel:v0.11.0-amd64
+```
 ### 配置 node节点
 ```sh
-sudo swapoff -a
 sudo systemctl enable kubelet
 sudo systemctl start kubelet
 ```
 拷贝配置文件到每个node:
 ```sh
 scp /etc/kubernetes/admin.conf ubuntu@node1:/home/ubuntu/
-scp /home/ubuntu/k8s/kube-flannel.yml ubuntu@node1:/home/ubuntu/
-
 scp /etc/kubernetes/admin.conf ubuntu@node2:/home/ubuntu/
-scp /home/ubuntu/k8s/kube-flannel.yml ubuntu@node2:/home/ubuntu/
 ```
 配置并加入节点，加入中的哈希值是之前配置时生成的。
 ```sh
 mkdir -p $HOME/.kube
 sudo cp -i $HOME/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
-sudo kubeadm join 192.168.32.132:6443 --token abcdef.0123456789abcdef \
-    --discovery-token-ca-cert-hash sha256:b6392e2c7aa72df336e178f3688ba6ca69374937a30a0fe429aaae0ffa76d5f5
-kubectl apply -f kube-flannel.yml 
+kubeadm join 192.168.32.132:6443 --token uf5mqk.bssr36md2y6b7w7g \
+    --discovery-token-ca-cert-hash sha256:fa6e8c828a4480baf8dba2331bcaad4d30ae593024e0a56258cf22fdde3f897a
 ```
 查看node是否已经加入到k8s集群中(需要等一段时间才能ready):
 ```sh
@@ -364,6 +323,8 @@ node1    NotReady   <none>   40m    v1.17.2
 node2    NotReady   <none>   39m    v1.17.2
 ```
 
+### node节点一直NotReady，报错 cni.go:237] Unable to update cni config: no networks found in /etc/cni/net.d
+
 如果k8s的node节点一直是`NotReady`状态，那么需要查看日志：
 ```sh
 ubuntu@node1:~/.kube$ journalctl -f -u kubelet
@@ -382,6 +343,7 @@ Jan 30 04:25:18 node1 kubelet[1893]: E0130 04:25:18.671967    1893 kubelet.go:21
 看报错就可以解决问题了。
 
 这里显示的报错是镜像没下载，那么就手动下载。
+
 
 随后又报错如下：
 ```sh
@@ -436,3 +398,38 @@ docker pull quay-mirror.qiniu.com/coreos/flannel:v0.11.0-amd64
 docker tag quay-mirror.qiniu.com/coreos/flannel:v0.11.0-amd64 quay.io/coreos/flannel:v0.11.0-amd64
 ```
 问题解决，参考：[k8s 部署问题解决 - 简书](https://www.jianshu.com/p/f53650a85131)
+
+
+
+### 拉取k8s需要的镜像
+由于官方镜像地址被墙，所以我们需要首先获取所需镜像以及它们的版本。然后从国内镜像站获取。
+```sh
+ubuntu@master:~/k8s$ kubeadm config images list --config kubeadm.conf
+W0130 01:31:26.536909   15911 validation.go:28] Cannot validate kube-proxy config - no validator is available
+W0130 01:31:26.536973   15911 validation.go:28] Cannot validate kubelet config - no validator is available
+k8s.gcr.io/kube-apiserver:v1.17.0
+k8s.gcr.io/kube-controller-manager:v1.17.0
+k8s.gcr.io/kube-scheduler:v1.17.0
+k8s.gcr.io/kube-proxy:v1.17.0
+k8s.gcr.io/pause:3.1
+k8s.gcr.io/etcd:3.4.3-0
+k8s.gcr.io/coredns:1.6.5
+```
+```sh
+#下载全部当前版本的k8s所关联的镜像
+images=(  # 下面的镜像应该去除"k8s.gcr.io/"的前缀，版本换成上面获取到的版本
+kube-apiserver:v1.17.0
+kube-controller-manager:v1.17.0
+kube-scheduler:v1.17.0
+kube-proxy:v1.17.0
+pause:3.1
+etcd:3.4.3-0
+coredns:1.6.5
+)
+
+for imageName in ${images[@]} ; do
+    docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName
+    docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName k8s.gcr.io/$imageName
+    docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName
+done
+```
