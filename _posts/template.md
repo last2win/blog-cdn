@@ -6,7 +6,7 @@ description: ""
 keywords: keyword1, keyword2
 ---
 
-此文首发于我的个人博客：[zhang0peter的个人博客](https://zhang0peter.com)         
+此文首发于我的Jekyll博客：[zhang0peter的个人博客](https://zhang0peter.com)         
 
 {% raw %}
 ***          
@@ -15,6 +15,6 @@ keywords: keyword1, keyword2
 
 
 
-![图片]({% link /images/posts/error.png %})
+![图片]({% link /images/error.png %})
 
 
