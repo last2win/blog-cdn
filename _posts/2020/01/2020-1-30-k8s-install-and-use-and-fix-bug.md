@@ -16,7 +16,16 @@ toc: true
 {% endraw %}
 这几天在学习K8S的安装和使用，在此记录一下
 
-此文参考了视频教程：[两小时Kubernetes(K8S)从懵圈到熟练——大型分布式集群环境捷径部署搭建_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av57580105)
+此文参考了视频教程：
+
+- [两小时Kubernetes(K8S)从懵圈到熟练——大型分布式集群环境捷径部署搭建_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av57580105)                 
+镜像+讲义+安装包，链接:https://pan.baidu.com/s/1qO697oBuR7TwQ2J8boI3EA  提取码:4mvs
+- [1 天入门 Kubernetes/K8S_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av49783277)         
+docker+k8s+jenkins 视频与课件 https://pan.baidu.com/s/1ZUpqnkwp4B4fDExcVLADrg
+
+
+
+
 
 报错解决在文章最后
 
@@ -223,7 +232,65 @@ node2    Ready      <none>   3h20m   v1.17.2
 ```
 出现报错参考后面的报错解决。
 
-## 部署应用
+## 部署ningx应用，测试集群
+在Kubernetes集群中创建一个pod，验证是否正常运行：
+```sh
+ubuntu@master:~$ kubectl create deployment nginx --image=nginx
+deployment.apps/nginx created
+ubuntu@master:~$ kubectl expose deployment nginx --port=80 --type=NodePort
+service/nginx exposed
+ubuntu@master:~$ kubectl get pod,svc
+NAME                         READY   STATUS              RESTARTS   AGE
+pod/nginx-86c57db685-fjvtk   0/1     ContainerCreating   0          17s
+
+NAME                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+service/kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP        16h
+service/nginx        NodePort    10.106.193.183   <none>        80:32636/TCP   7s
+```
+部署成功：
+```sh
+ubuntu@master:~$ curl 127.0.0.1:32636
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+```
+快速扩容为3副本：
+```sh
+ubuntu@master:~$ kubectl scale deployment nginx --replicas=3
+deployment.apps/nginx scaled
+ubuntu@master:~$ kubectl get pod,svc
+NAME                         READY   STATUS    RESTARTS   AGE
+pod/nginx-86c57db685-fjvtk   1/1     Running   0          3m49s
+pod/nginx-86c57db685-nhd69   1/1     Running   0          34s
+pod/nginx-86c57db685-pq6cz   1/1     Running   0          34s
+
+NAME                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+service/kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP        17h
+service/nginx        NodePort    10.106.193.183   <none>        80:32636/TCP   3m39s
+```
+## 通过yaml部署应用
 
 编写配置文件`mysql-rc.yaml`：
 ```yaml
@@ -262,6 +329,42 @@ mysql-chv9n   1/1     Running   0          5m56s
 ```
 
 集群创建完毕。
+## 部署 Dashboard
+
+```sh
+docker pull registry.aliyuncs.com/google_containers/kubernetes-dashboard-amd64:v1.10.1
+docker tag registry.aliyuncs.com/google_containers/kubernetes-dashboard-amd64:v1.10.1 k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+```
+暴露端口，修改`type: ClusterIP`->`type: NodePort `
+```sh
+kubectl -n kube-system edit service kubernetes-dashboard
+```
+查看开发的端口：
+```sh
+ubuntu@master:~$ kubectl -n kube-system get service kubernetes-dashboard
+NAME                   TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)         AGE
+kubernetes-dashboard   NodePort   10.110.2.129   <none>        443:31391/TCP   23m
+```
+访问网址:`https://master:31391`即可打开面板：
+```sh
+Kubernetes 仪表板
+
+Kubeconfig
+请选择您已配置用来访问集群的 kubeconfig 文件，请浏览配置对多个集群的访问一节，了解更多关于如何配置和使用 kubeconfig 文件的信息
+
+令牌
+每个服务帐号都有一条保密字典保存持有者令牌，用来在仪表板登录，请浏览验证一节，了解更多关于如何配置和使用持有者令牌的信息
+```
+创建service account并绑定默认cluster-admin管理员集群角色：
+```sh
+kubectl create serviceaccount dashboard-admin -n kube-system
+kubectl create clusterrolebinding dashboard-admin --clusterrole=cluster-admin --serviceaccount=kube-system:dashboard-admin
+kubectl describe secrets -n kube-system $(kubectl -n kube-system get secret | awk '/dashboard-admin/{print $1}')
+```
+拿到token登录dashboard.
+
+
 
 
 
@@ -269,6 +372,8 @@ mysql-chv9n   1/1     Running   0          5m56s
 - [kubernetes安装（国内环境） - 知乎](https://zhuanlan.zhihu.com/p/46341911)
 - [两小时Kubernetes(K8S)从懵圈到熟练——大型分布式集群环境捷径部署搭建_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av57580105)
 - [Install and Set Up kubectl - Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [1 天入门 Kubernetes/K8S_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av49783277)
+
 
 ## 报错解决
 
