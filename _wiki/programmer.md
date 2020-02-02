@@ -13,7 +13,7 @@ keywords: 程序员
 *   [mattgodbolt/compiler-explorer: Run compilers interactively from your web browser and interact with the assembly](https://github.com/mattgodbolt/compiler-explorer)                   
 *   [Multi-language programming playground Code LabStack](https://code.labstack.com/)                       
 *   [Awesome-Windows-Windows上优质&精选的最佳应用程序及工具列表](https://github.com/Awesome-Windows/Awesome)             
-*   []()                   
+*   [求笔记软件推荐 - V2EX](https://www.v2ex.com/t/541898)                   
 *   []()                       
 *   []()             
 *   []()                   
