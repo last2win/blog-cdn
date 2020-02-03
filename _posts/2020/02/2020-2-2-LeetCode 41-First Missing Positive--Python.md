@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LeetCode 41. First Missing Positive--Python 解法--数学题-找到不存在的最小正整数-O(1)空间"
+title: "LeetCode 41. First Missing Positive--Python 解法--数学题-找到不存在的最小正整数-O(1)空间复杂度"
 categories: [LeetCode]
 description: "LeetCode 41. First Missing Positive--Python 解法--数学题-找到不存在的最小正整数"
 keywords: LeetCode, Python
