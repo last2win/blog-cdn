@@ -15,7 +15,6 @@ group :jekyll_plugins do
     gem 'jekyll-github-metadata'
     gem 'rouge'
     gem 'jekyll-paginate'
-    gem 'jekyll-feed'
     gem 'jemoji'
     gem 'jekyll-toc'
   end
@@ -24,7 +23,7 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
-gem 'activesupport', '~> 4.1', '>= 4.1.11'
+gem 'activesupport'
 
 
 
