@@ -6,7 +6,7 @@ gem "liquid-c" #提升编译速度
 gem 'jekyll', '~> 4.0'
 
 group :jekyll_plugins do
-    gem "jekyll-archives"
+#    gem "jekyll-archives"
     gem "jekyll-feed"
     gem "jekyll-remote-theme"
     gem "jekyll-seo-tag"
