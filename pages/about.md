@@ -32,7 +32,7 @@ permalink: /about/
 
 Fork后的操作方法参考原始项目的Fork 指南：[Fork 指南](https://github.com/mzlogin/mzlogin.github.io#fork-%E6%8C%87%E5%8D%97)
 
-
+也可参考这篇博客：[在GitHub上搭建GitHub Pages博客-- Jekyll](https://zhang0peter.blog.csdn.net/article/details/103903611)
 
 ## 关于我
 
