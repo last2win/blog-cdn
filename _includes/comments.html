@@ -90,8 +90,14 @@
 </script>
 {% when 'gitalk' %}
 <div id="gitalk-container"></div>
+<!--
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.5.0/gitalk.min.css"
+  integrity="sha256-5MJj8IfwScTpk3YXO1VPUpk7u3txgZVw7ekAZdHB4Ks=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.5.0/gitalk.min.js"
+  integrity="sha256-YflVhgi0XckykgYDTPRRqPONVB05Hc6NC1cZylFXGJM=" crossorigin="anonymous"></script>
 <script>
   var gitalk = new Gitalk({
     id: '{{ page.url | truncate: 50, '' }}',
