@@ -1,7 +1,7 @@
 ---
 layout: null
 comments: false
-title: "随机24点生成器"
+title: "24点小游戏-随机24点生成器"
 ---
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
@@ -10,7 +10,7 @@ title: "随机24点生成器"
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>随机24点生成器 </title>
+    <title>24点小游戏-24点随机生成器 </title>
 
 
 
@@ -26,8 +26,6 @@ title: "随机24点生成器"
     <meta property="og:site_name" content="zhang0peter的个人博客">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
-    <!-- Begin Jekyll SEO tag v2.6.1 -->
-    <title>随机24点生成器 </title>
     <meta name="generator" content="Jekyll v4.0.0" />
     <meta property="og:title" content="随机24点生成器" />
     <meta name="author" content="zhang0peter" />
@@ -45,6 +43,10 @@ title: "随机24点生成器"
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"
         integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
 
+
+    <script async data-ad-client="ca-pub-5033499242151397"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 
@@ -54,6 +56,17 @@ title: "随机24点生成器"
         background-color: #FFF7DB;
     }
 </style>
+
+<h1>24点小游戏</h1><br>
+
+<button onclick="reflesh()">按下按钮刷新数字</button><br>
+
+
+<span id="">数字1：<span id="number1"></span></span><br>
+<span id="">数字2：<span id="number2"></span></span><br>
+<span id="">数字3：<span id="number3"></span></span><br>
+<span id="">数字4：<span id="number4"></span></span><br>
+
 <script>
     var items = [
         [1, 1, 1, 8],
@@ -633,15 +646,5 @@ title: "随机24点生成器"
     }
     reflesh();
 </script>
-<h1>随机24点生成器</h1><br>
-
-<button onclick="reflesh()">按下按钮刷新数字</button><br>
-
-
-<span id="">数字1：<span id="number1"></span></span><br>
-<span id="">数字2：<span id="number2"></span></span><br>
-<span id="">数字3：<span id="number3"></span></span><br>
-<span id="">数字4：<span id="number4"></span></span><br>
-
 
 </html>

@@ -118,6 +118,7 @@
           class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item"
           target="{{ nav.target | default: _self }}" title="{{ nav.label }}">{{ nav.label }}</a>
         {% endfor %}
+        <a href="{{ site.url }}/24-game/" class="site-header-nav-item" target="" title="24点小游戏">24点小游戏</a>
         <a href="{{ site.url }}/atom.xml" class="site-header-nav-item" target="" title="RSS订阅">RSS订阅</a>
       </nav>
     </div>
