@@ -52,20 +52,111 @@ title: "24点小游戏-随机24点生成器"
 
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Float four columns side by side */
+    .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+    }
+
+    /* Remove extra left and right margins, due to padding in columns */
+    .row {
+        margin: 0 -5px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Style the counter cards */
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* this adds the "card" effect */
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+    }
+
+    /* Responsive columns - one column layout (vertical) on small screens */
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
     body {
         background-color: #FFF7DB;
     }
+
+    .button5 {
+        font-size: 24px;
+    }
+
+    .container {
+        display: table;
+        height: 100px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contained {
+        display: table;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+    }
 </style>
+<div class="container">
+    <h1>24点小游戏</h1>
+</div>
 
-<h1>24点小游戏</h1><br>
-
-<button onclick="reflesh()">按下按钮刷新数字</button><br>
-
-
+<br>
+<div class="contained">
+    <button class="button5" onclick="reflesh()">按下按钮刷新数字</button>
+</div>
+<br><br><br>
+<!--
 <span id="">数字1：<span id="number1"></span></span><br>
 <span id="">数字2：<span id="number2"></span></span><br>
 <span id="">数字3：<span id="number3"></span></span><br>
 <span id="">数字4：<span id="number4"></span></span><br>
+
+
+<span id="">数字1</span><span id="">数字2</span><span id="">数字3</span><span id="">数字4</span><br>
+<span id="number1"></span><span id="number2"></span><span id="number3"></span><span id="number4"></span><br>-->
+
+<div class="row">
+    <div class="column">
+        <div class="card">数字1</div>
+        <div class="card" id="number1"></div>
+    </div>
+    <div class="column">
+        <div class="card">数字2</div>
+        <div class="card" id="number2"></div>
+    </div>
+    <div class="column">
+        <div class="card">数字3</div>
+        <div class="card" id="number3"></div>
+    </div>
+    <div class="column">
+        <div class="card">数字4</div>
+        <div class="card" id="number4"></div>
+    </div>
+</div>
+
 
 <script>
     var items = [
