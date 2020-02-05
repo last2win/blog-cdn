@@ -96,7 +96,7 @@ All works done.
 
 百度AI开发平台提供免费的语音识别API接口：[百度智能云-管理中心](https://console.bce.baidu.com/ai/)
 
-注册后获得
+注册后获得API_KEY
 
 百度提供`REST API`和完整的SDK，其中`REST API` 仅支持整段语音识别的模式，即单段语音音频时长不超过60s；完整的SDK识别不限时长。
 
@@ -120,8 +120,8 @@ import os
 
 """ 你的 APPID AK SK """
 APP_ID = '10540827'
-API_KEY = 'PS79KGjFGoUlcuMVY5Lu0srs'
-SECRET_KEY = '963de1bda70666389ed7dce7894594ef'
+API_KEY = 'xxxx'
+SECRET_KEY = 'xxxx'
 
 client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
 
