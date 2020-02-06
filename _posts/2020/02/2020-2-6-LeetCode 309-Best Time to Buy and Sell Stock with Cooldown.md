@@ -18,6 +18,15 @@ LeetCode 所有题目总结：[LeetCode 所有题目总结](https://zhang0peter.
 ***          
 {% endraw %}
 题目地址：[Best Time to Buy and Sell Stock with Cooldown - LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+
+
+买股票系列题目：
+
+*   [LeetCode 121. Best Time to Buy and Sell Stock--Java，Python，C++解法](https://blog.csdn.net/zhangpeterx/article/details/91052006) 
+*   [LeetCode 122. Best Time to Buy and Sell Stock II--贪心--Java,C++,Python解法](https://blog.csdn.net/zhangpeterx/article/details/91126364)
+*   [LeetCode 123. Best Time to Buy and Sell Stock III--Python解法--动态规划--数学题](https://zhang0peter.com/2020/01/30/LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III/)
+*   [LeetCode 309. Best Time to Buy and Sell Stock with Cooldown--Java解法-卖股票系列题目 ](https://zhang0peter.com/2020/02/06/LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown/)
+
 {% raw %}
 ***          
 {% endraw %}
