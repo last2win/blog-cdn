@@ -2,7 +2,7 @@
 layout: post
 title: "Java数组排序： Array-ArrayList-List-Collections.sort()/List.sort()/Arrays.sort()"
 categories: [Java]
-description: ""
+description: "Java数组排序： Array-ArrayList-List-Collections.sort()/List.sort()/Arrays.sort()"
 keywords: Java
 ---
 

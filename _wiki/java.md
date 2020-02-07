@@ -12,7 +12,7 @@ keywords: Java
 *   [IDEA报错总结：修改Java编译版本--maven项目 - zhang0peter的博客](https://zhang0peter.blog.csdn.net/article/details/103643939)             
 *   [jstatd，VisualVM使用和报错解决：Could not create remote object--java.security.AccessControlException: - zhang0peter的博客](https://zhang0peter.blog.csdn.net/article/details/103651098)                   
 *   [Java：获取数组中的子数组的多种方法](https://blog.csdn.net/zhangpeterx/article/details/88716563)                       
-*   []()             
+*   [Java数组排序： Array-ArrayList-List-Collections.sort()/List.sort()/Arrays.sort()](https://zhang0peter.com/2020/02/07/java-array-list-sort/)             
 *   []()                   
 *   []()                       
 *   []()             
