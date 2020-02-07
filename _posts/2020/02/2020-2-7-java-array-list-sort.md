@@ -98,3 +98,26 @@ List中存放的只能是类的对象，或者包装类的对象，如：Long, I
         System.out.println(Arrays.toString(nums));
 ```
 可以看出不管是基本类型数组，还是List，最终都是调用`Arrays.sort`进行最终的排序。
+
+因为函数的对象是基本类型，因此`Arrays.sort`会直接调用函数进行排序，使用的排序算法是`Dual-Pivot Quicksort`:
+
+```java
+    public static void sort(int[] a) {
+        DualPivotQuicksort.sort(a, 0, a.length - 1, null, 0, 0);
+    }
+```
+使用的不是普通的快排，而是双指针快排，最坏的时间复杂度为`O(n log(n))`
+
+看到这里会产生疑问，为什么对List的排序使用算法`TimSort`，而对数组的排序使用算法`Dual-Pivot Quicksort`
+
+网上有个讨论：[algorithm - Comparison between timsort and quicksort - Stack Overflow](https://stackoverflow.com/questions/7770230/comparison-between-timsort-and-quicksort)
+
+快排适合原始数组是因为内存的局部性和缓存。
+
+里面有个推测说，对象数组存放的仅仅是对象的引用，而实际的比较需要从堆中读取对象，因此`TimSort`更合适。
+
+Python中的所有数据都是对象，因此Python的内置排序算法也是`TimSort`：[sorting - What algorithm does python's sorted() use? - Stack Overflow](https://stackoverflow.com/questions/10948920/what-algorithm-does-pythons-sorted-use)
+
+
+
+

@@ -13,6 +13,8 @@ keywords: Java
 *   [jstatd，VisualVM使用和报错解决：Could not create remote object--java.security.AccessControlException: - zhang0peter的博客](https://zhang0peter.blog.csdn.net/article/details/103651098)                   
 *   [Java：获取数组中的子数组的多种方法](https://blog.csdn.net/zhangpeterx/article/details/88716563)                       
 *   [Java数组排序： Array-ArrayList-List-Collections.sort()/List.sort()/Arrays.sort()](https://zhang0peter.com/2020/02/07/java-array-list-sort/)             
+*   [Sort an array in Java - Stack Overflow](https://stackoverflow.com/questions/8938235/sort-an-array-in-java)            
+*   [java - How to sort an ArrayList? - Stack Overflow](https://stackoverflow.com/questions/16252269/how-to-sort-an-arraylist)        
 *   []()                   
 *   []()                       
 *   []()             
