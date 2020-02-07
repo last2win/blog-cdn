@@ -32,6 +32,8 @@ keywords: 博客, keyword2
 <script async src="siteScript.js"></script>
 ```
 `async`或`defer`关键字都可以实现js脚本的异步加载，更多内容参考:[javascript - load scripts asynchronously - Stack Overflow](https://stackoverflow.com/questions/7718935/load-scripts-asynchronously)
+
+但有时候有些js文件不能异步加载，那么我推荐直接在header.html中include进去，比如说jquery.js，直接Include进去，不用异步加载了。
 ## 内嵌与压缩css
 但是对于css文件来说，异步加载就比较困难了，没有js那样的直接异步加载的工具。
 
