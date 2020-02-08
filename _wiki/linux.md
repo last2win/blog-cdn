@@ -24,7 +24,7 @@ keywords: Linux
 *   [利用X11 Forwarding运行VPS上的图形界面软件 - Tech Notes of Code Monkey](https://blog.finaltheory.me/note/X11-Forwarding-GUI.html)                            
 *   [网络测速工具 iperf  须臾之学](https://blog.xizhibei.me/2020/01/13/speed-test-tool-iperf/)                       
 *   [使用ssh连接GitHub上的git服务器](https://zhang0peter.com/2020/02/03/git-github-ssh/)             
-*   []()                   
+*   [在Linux上使用图形界面的GitHub Desktop](https://blog.csdn.net/zhangpeterx/article/details/95889349)                   
 *   []()                       
 *   []()             
 *   []()                   

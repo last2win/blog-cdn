@@ -82,7 +82,7 @@ Java的排序分为2种，一种是ArrayList或者List；另一种则是Array
     }
 ```
 
-至于`TimSort`这种排序算法的具体实现，参考我的这篇博客:[]()
+至于`TimSort`这种排序算法的具体实现，参考这篇博客:[Java内置排序算法：Timsort详解](https://zhang0peter.com/2020/02/07/java-sort-timsort/)
 
 如果想自定义`Comparator`，参考这篇博客：[Java 8 Comparator: How to Sort a List - DZone Java](https://dzone.com/articles/java-8-comparator-how-to-sort-a-list)
 
