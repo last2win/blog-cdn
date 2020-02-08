@@ -5,8 +5,8 @@ baseurl:
 url: "https://zhang0peter.com" # the base hostname & protocol for your site
 date_format: "ordinal"
 title: "zhang0peter的博客"
-subtitle: "记录生活"
-description: "zhang0peter的博客"
+subtitle: "记录学习与生活"
+description: "记录学习与生活"
 keywords: 博客, zhang0peter
 timezone: Asia/Shanghai
 encoding: "utf-8"
