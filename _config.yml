@@ -111,6 +111,8 @@ gitment:
 gitalk:
     owner: zhang0peter
     repo: blog-comments
+    #Github个人访问令牌
+    accessToken: 9e7aac99c4bc13a8dd45eddb120de43ec60c0734 
     clientID: 6da837e021706440cec5
     clientSecret: 5c980b1358826a24b285211604dbe5d053feb892
 # 在使用其它评论组件时可点击显示 Disqus
