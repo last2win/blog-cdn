@@ -2,7 +2,7 @@
 layout: post
 title: "Java内置排序算法：Timsort详解"
 categories: [Java]
-description: ""
+description: "Java内置排序算法：Timsort详解"
 keywords: Java
 ---
 
@@ -12,7 +12,9 @@ keywords: Java
 ***          
 {% endraw %}
 
-今天在看Java的内置排序算法后：[Java数组排序： Array-ArrayList-List-Collections.sort()/List.sort()/Arrays.sort()](https://zhang0peter.com/2020/02/07/java-array-list-sort/)注意到了排序代码的具体实现：
+今天在看Java的内置排序算法后：[Java数组排序： Array-ArrayList-List-Collections.sort()/List.sort()/Arrays.sort()](https://zhang0peter.com/2020/02/07/java-array-list-sort/)
+
+注意到了排序代码的具体实现：
 
 ```java
     public static <T> void sort(T[] a, Comparator<? super T> c) {
