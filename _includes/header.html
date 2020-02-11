@@ -81,11 +81,20 @@
 
 
   <!--<script src="{{ site.url }}/assets/js/main.js"></script>-->
-  <script async data-ad-client="ca-pub-5033499242151397"
+
+  {% if site.google.data-ad-client %}
+  <script async data-ad-client="{{ site.google.analytics_id }}"
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  {% endif %}
+
+
   <!--百度站长平台网页自动推送工具-->
   <script async src='https://zz.bdstatic.com/linksubmit/push.js'></script>
-  <meta name="baidu-site-verification" content="coWtJoj5ZQ" />
+  <!--百度网站认证-->
+  {% if site.baidu-site-verification %}
+  <meta name="baidu-site-verification" content="{{ site.baidu-site-verification }}" />
+  {% endif %}
+
 
 </head>
 
@@ -116,8 +125,6 @@
           class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item"
           target="{{ nav.target | default: _self }}" title="{{ nav.label }}">{{ nav.label }}</a>
         {% endfor %}
-        <a href="{{ site.url }}/24-game/" class="site-header-nav-item" target="" title="24点小游戏">24点小游戏</a>
-        <a href="{{ site.url }}/atom.xml" class="site-header-nav-item" target="" title="RSS订阅">RSS订阅</a>
       </nav>
     </div>
   </header>

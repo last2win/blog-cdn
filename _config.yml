@@ -49,7 +49,12 @@ navs:
   -
     href: /about/
     label: 关于
-
+  -
+    href: /24-game/
+    label: 24点小游戏
+  -
+    href: /atom.xml
+    label: RSS订阅
 # ---------------- #
 #       RSS        #
 # ---------------- #
@@ -130,8 +135,15 @@ simple_jekyll_search:
 # ---------------- #
 #    Analytics     #
 # ---------------- #
+#谷歌分析和谷歌广告：
 google:
     analytics_id: UA-114841473-2
+    data-ad-client: ca-pub-5033499242151397
+
+#百度网站认证
+baidu-site-verification: coWtJoj5ZQ
+
+
 excerpt_separator: ""
 # ---------------- #
 #    sitemap       #
