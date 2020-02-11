@@ -5,7 +5,10 @@
       <span title="{{ site.author}}">{{ site.author }}</span>
       <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
     </div>
+
+    {% if site.url contains 'zhang0peter.com' %}
     <!-- simpleanalytics  统计脚本-->
+    <script async defer src="https://api.zhang0peter.com/app.js"></script>
     <script type="text/javascript">
       $.ajax({
         url: "https://simpleanalytics.com/zhang0peter.com.json?start=2020-01-01",
@@ -15,11 +18,16 @@
       });
     </script>
     <span id="container_site_uv">本站总访问量<span id="site_uv"></span>次</span>
-    <!---->
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <!--  不蒜子统计脚本
+    {% else %}
+    <!--不蒜子统计脚本-->
     <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
--->
+    {% endif %}
+
+
+
+    <!--不蒜子统计脚本-->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
     <ul class="site-footer-links right mobile-hidden">
       <li>
         <a href="javascript:window.scrollTo(0,0)">TOP</a>
@@ -139,7 +147,6 @@
 </div>
 {% endif %}
 
-<script async defer src="https://api.zhang0peter.com/app.js"></script>
 
 
 </body>
