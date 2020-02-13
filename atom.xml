@@ -10,7 +10,7 @@ layout: none
 		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
 		{% for post in site.posts limit:10 %}
 
-  		{% assign flag = false %}
+  				{% assign flag = false %}
 
                 {% for t in post.categories %}{% if t == '行走的问题解决机' %}
                 {% assign flag = true %}
