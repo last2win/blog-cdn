@@ -20,6 +20,7 @@ permalink: /about/
 做的改动如下： 
 - 修改网页背景色为`#FFF7DB`   
 - 增加sitemap，方便搜索引擎索引
+- 对文章页面增加TOC目录      
 - 使用`jekyll 4.0`替换`github-pages`，编译速度大幅增加
 - 使用 cloudflare的CDNJS替换本地的jquery引用
 - 修复Bug：meta 的keywords不起作用，因为原作者用的是Mac，而Mac与Windows平台的换行符不一样 
