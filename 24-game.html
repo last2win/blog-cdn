@@ -2,50 +2,9 @@
 layout: null
 comments: false
 title: "24点小游戏-随机24点生成器"
+description: "24点小游戏-随机24点生成器"
 ---
-<!DOCTYPE html>
-<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>24点小游戏-24点随机生成器 </title>
-
-
-
-    <link rel="canonical" href="https://zhang0peter.com/24-game/">
-    <link rel="alternate" type="application/atom+xml" title="zhang0peter的个人博客" href="https://zhang0peter.com/atom.xml">
-    <link rel="shortcut icon" href="https://zhang0peter.com/favicon.ico">
-    <meta property="og:title" content="随机24点生成器">
-    <meta name="keywords" content="博客, zhang0peter">
-    <meta name="og:keywords" content="博客, zhang0peter">
-    <meta name="description" content="按下刷新二十四点数据数字1：数字2：数字3：数字4：">
-    <meta name="og:description" content="按下刷新二十四点数据数字1：数字2：数字3：数字4：">
-    <meta property="og:url" content="https://zhang0peter.com/24-game/">
-    <meta property="og:site_name" content="zhang0peter的个人博客">
-    <meta property="og:type" content="article">
-    <meta property="og:locale" content="zh_CN" />
-    <meta name="generator" content="Jekyll v4.0.0" />
-    <meta property="og:title" content="随机24点生成器" />
-    <meta name="author" content="zhang0peter" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="description" content="zhang0peter的个人博客" />
-    <meta property="og:description" content="zhang0peter的个人博客" />
-    <link rel="canonical" href="https://zhang0peter.com/24-game/" />
-    <meta property="og:url" content="https://zhang0peter.com/24-game/" />
-    <meta property="og:site_name" content="zhang0peter的个人博客" />
-    <!--百度站长平台网页自动推送工具-->
-    <script async src='https://zz.bdstatic.com/linksubmit/push.js'></script>
-    <meta name="baidu-site-verification" content="coWtJoj5ZQ" />
-
-
-    <script async data-ad-client="ca-pub-5033499242151397"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-</head>
-
-
+{% include header.html %}
 
 <style>
     * {
@@ -62,6 +21,8 @@ title: "24点小游戏-随机24点生成器"
         width: 25%;
         padding: 0 10px;
     }
+
+    .site-header {}
 
     /* Remove extra left and right margins, due to padding in columns */
     .row {
@@ -101,10 +62,6 @@ title: "24点小游戏-随机24点生成器"
             display: block;
             margin-bottom: 20px;
         }
-    }
-
-    body {
-        background-color: #FFF7DB;
     }
 
     .button5 {
@@ -905,25 +862,4 @@ title: "24点小游戏-随机24点生成器"
     reflesh();
 </script>
 
-<script async defer src="https://api.zhang0peter.com/app.js"></script>
-{% if site.google.analytics_id %}
-<div style="display:none">
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', '{{ site.google.analytics_id }}', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-</div>
-{% endif %}
-
-
-{% include jquery.html %}
-
-</html>
+{% include footer.html %}
