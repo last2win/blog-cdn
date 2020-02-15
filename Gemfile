@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 #gem 'github-pages', group: :jekyll_plugins
 
+
 gem "liquid-c" #提升编译速度
 
-gem 'jekyll', '~> 4.0'
+gem 'jekyll'   #, '~> 4.0'
 
 group :jekyll_plugins do
 #    gem "jekyll-archives"
