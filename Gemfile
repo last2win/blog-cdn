@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 #gem 'github-pages', group: :jekyll_plugins
 
+#gem update "--system"
 
 gem "liquid-c" #提升编译速度
 
@@ -16,7 +17,7 @@ group :jekyll_plugins do
     gem 'jekyll-github-metadata'
     gem 'rouge'
     gem 'jekyll-paginate'
-    gem 'jemoji'
+#    gem 'jemoji'
 #    gem 'jekyll-toc'
   end
 

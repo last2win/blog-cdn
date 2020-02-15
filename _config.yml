@@ -83,7 +83,7 @@ plugins:
     - rouge
     - jekyll-paginate
     - jekyll-feed
-    - jemoji
+#    - jemoji
     - jekyll-seo-tag
 #    - jekyll-toc
 #     - jekyll-mentions
