@@ -7,13 +7,6 @@ description: "24点小游戏-随机24点生成器"
 {% include header.html %}
 
 <style>
-    /* Float four colum111s side by side */
-    .colum111 {
-        float: left;
-        width: 25%;
-        padding: 0 10px;
-    }
-
     /* Remove extra left and right margins, due to padding in colum111s */
     .row7 {
         margin: 0 -5px;
@@ -26,12 +19,21 @@ description: "24点小游戏-随机24点生成器"
         clear: both;
     }
 
+
+    /* Float four colum111s side by side */
+    .colum111 {
+        float: left;
+        width: 50%;
+        padding: 0 5px;
+    }
+
+
     /* Style the counter cards */
     .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         /* this adds the "card" effect */
         padding: 3px;
-        font-size: 40px;
+        font-size: 160px;
         text-align: center;
         background-color: #f1f1f1;
     }
@@ -39,16 +41,35 @@ description: "24点小游戏-随机24点生成器"
 
     /* Responsive colum111s - one colum111 layout (vertical) on small screens */
     @media screen and (max-width: 600px) {
-        .colum111 {
+        /* .colum111 {
             width: 100%;
             display: block;
             margin-bottom: 20px;
+        }*/
+
+        .colum111 {
+            float: left;
+            width: 50%;
+            padding: 5 5px;
+        }
+
+        /* Style the counter cards */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            /* this adds the "card" effect */
+            padding: 3px;
+            font-size: 80px;
+            text-align: center;
+            background-color: #f1f1f1;
         }
     }
+
+
 
     .button5 {
         font-size: 24px;
     }
+
 
     .container22 {
         display: table;
@@ -73,25 +94,37 @@ description: "24点小游戏-随机24点生成器"
     <button class="button5" onclick="reflesh()">刷新数字</button>
 </div>
 
-<div class="row7">
-    <div class="colum111">
-        <!--<div class="card2">数字1</div>-->
-        <div class="card" id="number1"></div>
-    </div>
-    <div class="colum111">
-        <!--<div class="card2">数字2</div>>-->
-        <div class="card" id="number2"></div>
-    </div>
-    <div class="colum111">
-        <!--<div class="card2">数字3</div>>-->
-        <div class="card" id="number3"></div>
-    </div>
-    <div class="colum111">
-        <!-- <div class="card2">数字4</div>>-->
-        <div class="card" id="number4"></div>
+<div class="contained22">
+    <div class="row7">
+        <div class="colum111">
+            <!--<div class="card2">数字1</div>-->
+            <div class="card" id="number1"></div>
+        </div>
+        <div class="colum111">
+            <!--<div class="card2">数字2</div>>-->
+            <div class="card" id="number2"></div>
+        </div>
     </div>
 </div>
+
 <br>
+
+<div class="contained22">
+    <div class="row7">
+        <div class="colum111">
+            <!--<div class="card2">数字3</div>>-->
+            <div class="card" id="number3"></div>
+        </div>
+        <div class="colum111">
+            <!-- <div class="card2">数字4</div>>-->
+            <div class="card" id="number4"></div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+
 <div class="contained22">
     <button class="button5" onclick="findSolution()">获得答案</button>
 </div>
