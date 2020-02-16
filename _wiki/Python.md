@@ -11,8 +11,11 @@ keywords: Python
 *   []()                   
 *   []()                       
 *   []()             
-*   []()                   
-*   []()                       
+*   []()  
+
+
+
+*   [Python 超快生成大量随机数的方法](https://blog.csdn.net/zhangpeterx/article/details/96474599)                       
 *   []()             
 *   []()                   
 *   []()                       
