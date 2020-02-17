@@ -37,6 +37,9 @@ keywords: node
 
 打开`chrome://version`，查看`Profile Path`:`C:\Users\peter\AppData\Local\Chromium\User Data\Default`, 删除 `Default`， 剩下的路径是 user_Data_Dir: `C:\Users\peter\AppData\Local\Chromium\User Data`
 
+如果你没有桌面端，或者图像界面，可以把`User Data`目录上传到linux服务器，这样可以直接操作。
+
+
 参考：[User Data Directory](https://chromium.googlesource.com/chromium/src/+/master/docs/user_data_dir.md)
 
 
