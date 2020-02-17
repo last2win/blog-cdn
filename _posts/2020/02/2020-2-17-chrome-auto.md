@@ -33,7 +33,9 @@ keywords: node
 
 手动打开chrome，然后登录谷歌账号，问题解决。
 
+后记：在自动化操作chrome时，需要指定chrome的cache目录，不然就要重新登录。
 
+打开`chrome://version`，查看cache目录。
 
 
 
