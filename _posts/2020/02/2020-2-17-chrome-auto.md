@@ -33,11 +33,11 @@ keywords: node
 
 手动打开chrome，然后登录谷歌账号，问题解决。
 
-后记：在自动化操作chrome时，需要指定chrome的`userDataDir`目录，不然就要重新登录。
+后记：在自动化操作chrome时，需要指定chrome的`userDataDir`目录，不然本地没有cache，就要重新登录。
 
-打开`chrome://version`，查看`Profile Path`:`C:\Users\peter\AppData\Local\Chromium\User Data\Default`, 删除 `Default` 剩下的路径是 user_Data_Dir: `C:\Users\peter\AppData\Local\Chromium\User Data`
+打开`chrome://version`，查看`Profile Path`:`C:\Users\peter\AppData\Local\Chromium\User Data\Default`, 删除 `Default`， 剩下的路径是 user_Data_Dir: `C:\Users\peter\AppData\Local\Chromium\User Data`
 
-
+参考：[User Data Directory](https://chromium.googlesource.com/chromium/src/+/master/docs/user_data_dir.md)
 
 
 
