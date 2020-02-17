@@ -27,7 +27,7 @@ keywords: C++
 *   [在CLion中运行Ninja项目 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95810640)                  *   []()                       
 *   [make 操作技巧指南--gcc版本设置](https://blog.csdn.net/zhangpeterx/article/details/97256638)             
 *   [C++ 随机数生成的2种方法--生成指定范围内的随机数](https://blog.csdn.net/zhangpeterx/article/details/99744937)             
-*   []()             
+*   [在CentOS/Debian/Ubuntu上编译安装最新版 GCC 8 ， cmake 3 和ninja](https://blog.csdn.net/zhangpeterx/article/details/96103611)             
 *   []()             
 *   []()             
 *   []()             
