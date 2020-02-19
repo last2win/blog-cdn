@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Linux/ubuntu server 18.04 安装远程桌面--vnc server-tightvncserver"
+title: "Linux/ubuntu server 18.04 安装远程桌面--vnc server-TigerVNC"
 categories: [Linux]
 description: "Linux，ubuntu，remote desktop, vnc, ubuntu server, windows，GUI，terminal， vnc server，Xrdp Server，图形界面，X Server"
 keywords: Linux,ubuntu, remote desktop, vnc, ubuntu server, windows, GUI, terminal,  vnc server, Xrdp Server
@@ -13,11 +13,6 @@ keywords: Linux,ubuntu, remote desktop, vnc, ubuntu server, windows, GUI, termin
 {% endraw %}
 
 
-关键词：Linux，ubuntu，remote desktop, vnc, ubuntu server, windows，GUI，terminal， vnc server，Xrdp Server，图形界面，X Server
-
-{% raw %}
-***          
-{% endraw %}
 想装桌面端在服务器上的原因是我在终端中开chrome会报错：
 ```sh
 -> # xhost +
@@ -43,27 +38,25 @@ XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server "localhos
 ```
 我的想法是开个远程的桌面，然后就让图形界面的chrome在远程桌面上一直跑着。
 
+桌面端不推荐`xfce4`，因为运行Chrome会有各种稀奇古怪的错误，推荐`gnome`或者`kubuntu`
+```sh
+#安装一个即可
+apt install ubuntu-gnome-desktop
+apt install kubuntu-desktop
+```
+
+
 {% raw %}
 ***          
 {% endraw %}
 我尝试了许多方法，比如说`Xrdp Server`，`vnc server`
 
-最后选择了`tightvncserver`
-```sh
-apt install tightvncserver
-vncserver #设置vnc密码
-vncserver -kill :1
-.........
-```
-具体的安装步骤参考：
+本来打算选择`tightvncserver`，因为有很多文章推荐，但后来在文章：[Linux/ubuntu:Chrome报错解决：Xlib: extension XInputExtension missing on display :1.0](https://zhang0peter.com/2020/02/19/linux-chrome-fix/)中发现`tightvncserver`不好。
 
-{% raw %}
-***          
-{% endraw %}
 
-后记：
 
-我发现`tightvncserver`最后的版本维持在`1.3.10`，是2009年的版本，后续的更新就要花钱了。
+
+发现`tightvncserver`最后的版本维持在`1.3.10`，是2009年的版本，后续的更新就要花钱了。
 
 不知道为什么现在还有那么多文章推荐10年都没更新过的`tightvncserver`，推荐`TigerVNC`，基于`RealVNC 4`和`X.org`，并在2009年脱离父项目`TightVNC`。
 
@@ -97,7 +90,13 @@ Log file is /home/vncviewer/.vnc/ubuntu-s-1vcpu-1gb-sgp1-01:1.log
 
 Use xtigervncviewer -SecurityTypes VncAuth,TLSVnc -passwd /home/vncviewer/.vnc/passwd ubuntu-s-1vcpu-1gb-sgp1-01:1 to connect to the VNC server.
 ```
-
+关闭server：
+```sh
+vncserver -kill :1
+```
+{% raw %}
+***          
+{% endraw %}
 
 
 参考：     
