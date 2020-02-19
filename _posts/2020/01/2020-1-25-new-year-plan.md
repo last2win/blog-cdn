@@ -96,3 +96,12 @@ SS: Moz Spam Score--垃圾评分(Moz Spam Score, SS)，评价与其他站点的�
 OS: Off-Page SEO Score
 
 Alexa: AlexaGlobal Ranking 
+
+
+{% raw %}
+***          
+{% endraw %}
+
+2020-2-19:记录博客流量
+
+![图片]({% link /images/2020/2020-2-19.png %})
