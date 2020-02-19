@@ -55,14 +55,53 @@ vncserver #设置vnc密码
 vncserver -kill :1
 .........
 ```
-具体的安装步骤参考：[How to Install and Configure VNC on Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04)
+具体的安装步骤参考：
 
 {% raw %}
 ***          
 {% endraw %}
 
+后记：
+
+我发现`tightvncserver`最后的版本维持在`1.3.10`，是2009年的版本，后续的更新就要花钱了。
+
+不知道为什么现在还有那么多文章推荐10年都没更新过的`tightvncserver`，推荐`TigerVNC`，基于`RealVNC 4`和`X.org`，并在2009年脱离父项目`TightVNC`。
+
+安装运行：
+```sh
+apt install tigervnc-common tigervnc-scraping-server tigervnc-standalone-server tigervnc-xorg-extension
+```
+
+新建用户专门用来运行vnc，防止泄露不必要的信息。
+
+```sh
+useradd vncviewer
+passwd vncviewer
+mkdir /home/vncviewer
+chown -R vncviewer:root /home/vncviewer
+su - vncviewer
+```
+
+因为默认配置是只允许本地访问，编辑文件`/etc/vnc.conf`，添加
+```sh
+$localhost = "no"
+```
+开启：
+```sh
+vncviewer@ubuntu-s-1vcpu-1gb-sgp1-01:~$ vncserver 
+
+New 'ubuntu-s-1vcpu-1gb-sgp1-01:1 (vncviewer)' desktop at :1 on machine ubuntu-s-1vcpu-1gb-sgp1-01
+
+Starting applications specified in /etc/X11/Xvnc-session
+Log file is /home/vncviewer/.vnc/ubuntu-s-1vcpu-1gb-sgp1-01:1.log
+
+Use xtigervncviewer -SecurityTypes VncAuth,TLSVnc -passwd /home/vncviewer/.vnc/passwd ubuntu-s-1vcpu-1gb-sgp1-01:1 to connect to the VNC server.
+```
+
+
 
 参考：     
+[How to Install and Configure VNC on Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04)         
 [Chrome nacl error in ubuntu 14.04 - Ask Ubuntu](https://askubuntu.com/questions/1002496/chrome-nacl-error-in-ubuntu-14-04)        
 [How to Install the Desktop Components (GUI) on an Ubuntu Server | Linux Training Academy](https://www.linuxtrainingacademy.com/install-desktop-on-ubuntu-server/)          
 [How to Install Xrdp Server (Remote Desktop) on Ubuntu 18.04 | Linuxize](https://linuxize.com/post/how-to-install-xrdp-on-ubuntu-18-04/)                  
