@@ -55,9 +55,52 @@ git config --global --unset user.password
 `Control Panel`->`All Control Panel Items`->`Credential Manager`->`Windows Credentials` 
 或者直接搜索凭据管理器，可以直接修改用户名和密码。
 
+## 使用ssh连接GitHub上的git服务器
 
+先配置git的用户名和邮箱：
+```
+git config --global user.name "your_name"
+git config --global user.email "your_email@xxx.com"
+```
+先查看本地是否已经配置了公钥和私钥，如果已经存在私钥，无需再次生成。
+```
+cd ~/.ssh
+```
+生成密钥：
+```
+-> % ssh-keygen -t rsa -b 4096 -C your_email@xxx.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/ubuntu/.ssh/id_rsa.
+Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:14HZgHvg4z5qnFwlcrUeZ7AzxOpp+cka9oEMPrr04YQ zsd780885029@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|         o.      |
+|        o ==     |
+|       . *o+o    |
+|      . B O.o.   |
+|      .=SO.*.    |
+|     o oBo.      |
+|    Eo===o..     |
+|   . ==+oo+.     |
+|    oo+..o.      |
++----[SHA256]-----+
+```
+生成密钥后拷贝公钥id_rsa.pub的内容，到GitHub上新建ssh的key：GitHub SSH and GPG keys
 
-
+新建完成后就可以登录GitHub了：
+```
+-> % ssh -T git@github.com
+The authenticity of host 'github.com (13.229.188.59)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,13.229.188.59' (RSA) to the list of known hosts.
+Hi zhang0peter! You've successfully authenticated, but GitHub does not provide shell access.
+```
 
 
 {% raw %}
