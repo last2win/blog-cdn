@@ -87,14 +87,14 @@ GitHub使用`letsencrypt`提供的`CAA`证书签名服务：[Certificate Authori
 查询`DNS`:
 
 ```sh
--> % dig caa zhangsidan.com               
+-> % dig caa zhang0peter.com
 ;; ANSWER SECTION:
-zhangsidan.com.		3599	IN	CAA	0 issue "comodoca.com"
-zhangsidan.com.		3599	IN	CAA	0 issue "digicert.com"
-zhangsidan.com.		3599	IN	CAA	0 issue "letsencrypt.org"
-zhangsidan.com.		3599	IN	CAA	0 issuewild "comodoca.com"
-zhangsidan.com.		3599	IN	CAA	0 issuewild "digicert.com"
-zhangsidan.com.		3599	IN	CAA	0 issuewild "letsencrypt.org"
+zhang0peter.com.        3599    IN      CAA     0 issue "comodoca.com"
+zhang0peter.com.        3599    IN      CAA     0 issue "digicert.com"
+zhang0peter.com.        3599    IN      CAA     0 issue "letsencrypt.org"
+zhang0peter.com.        3599    IN      CAA     0 issuewild "comodoca.com"
+zhang0peter.com.        3599    IN      CAA     0 issuewild "digicert.com"
+zhang0peter.com.        3599    IN      CAA     0 issuewild "letsencrypt.org"
 ```
 
 
