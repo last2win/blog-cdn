@@ -35,6 +35,8 @@ Fork后的操作方法参考原始项目的Fork 指南：[Fork 指南](https://g
 
 也可参考这篇博客：[在GitHub上搭建GitHub Pages博客-- Jekyll](https://zhang0peter.blog.csdn.net/article/details/103903611)
 
+其中自定义域名与HTTPS/TLS/CAA配置参考这篇博客：[GitHub Pages博客：自定义域名，HTTPS，CAA](https://zhang0peter.com/2020/02/21/github-pages-https/)        
+
 ## 关于我
 
 {% for website in site.data.social %}
