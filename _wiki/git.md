@@ -10,7 +10,7 @@ keywords: Git
 ## git强行还原
 有时候自己对仓库做了修改，但不需要这些修改，可以强行还原。
 ```js
-git fetch --all && git reset --hard origin/stable && git pull
+git fetch --all && git reset --hard origin/master && git pull
 ```
 ## git 配置代理
 有时候公司内网不能直连外网，需要配置git的网络代理。

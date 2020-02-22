@@ -77,7 +77,7 @@ su - vncviewer
 
 因为默认配置是只允许本地访问，编辑文件`/etc/vnc.conf`，添加
 ```sh
-$localhost = "no"
+$localhost = "no";
 ```
 开启：
 ```sh
