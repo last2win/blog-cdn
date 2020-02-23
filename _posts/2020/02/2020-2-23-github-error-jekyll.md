@@ -47,3 +47,31 @@ zhang0peter.github.io>jekyll serve
 JEKYLL_GITHUB_TOKEN=your_token jekyll serve
 ```
 如果是windows用户，可以把变量增加到系统的环境变量中。
+
+{% raw %}
+***          
+{% endraw %}
+
+如果报错如下：
+
+```sh
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+   GitHub Metadata: No internet connection. GitHub metadata may be missing or incorrect.
+   GitHub Metadata: No internet connection. GitHub metadata may be missing or incorrect.
+   GitHub Metadata: No internet connection. GitHub metadata may be missing or incorrect.
+   GitHub Metadata: No internet connection. GitHub metadata may be missing or incorrect.
+   GitHub Metadata: No internet connection. GitHub metadata may be missing or incorrect.
+   GitHub Metadata: No internet connection. GitHub metadata may be missing or incorrect.
+   GitHub Metadata: No internet connection. GitHub metadata may be missing or incorrect.
+   GitHub Metadata: No internet connection. GitHub metadata may be missing or incorrect.
+   GitHub Metadata: No internet connection. GitHub metadata may be missing or incorrect.
+       Jekyll Feed: Generating feed for posts
+  Liquid Exception: undefined method `map' for false:FalseClass Did you mean? tap in /_layouts/post.html
+                    ------------------------------------------------
+      Jekyll 4.0.0   Please append `--trace` to the `serve` command
+                     for any additional information or backtrace.
+                    ------------------------------------------------
+```
+
+那么在`_config.yml`中添加`github: [metadata]`
