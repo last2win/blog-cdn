@@ -22,3 +22,15 @@ keywords: 程序员
 *   []()             
 *   []()                   
 
+
+convert flv to mp4:
+
+```sh
+ffmpeg -i input.flv -codec copy output.mp4
+```
+
+convert mp4 to mp3:
+
+```sh
+ffmpeg -i input.mp4 output.mp3
+```
