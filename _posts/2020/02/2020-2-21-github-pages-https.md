@@ -70,6 +70,14 @@ When HTTPS is enforced, your site will only be served over HTTPS.
 
 推荐使用国内不需要备案的CDN或者使用 CAA的方法实现HTTPS。
 
+我使用的是`nodecache`，注册链接：[Nodecache](https://console-api.nodecache.com/f?aff=4oMnb3)
+
+*通过该链接注册，送1T流量包*
+
+在配置中新增CDN配置，并在`回源 HOST`中配置为自己的域名，如`zhang0peter.com`
+
+在`https`中上传证书，并开启强制HTTPS。
+
 #### CAA的HTTPS
 
 官方文档：[Troubleshooting custom domains and GitHub Pages - GitHub Help](https://help.github.com/en/github/working-with-github-pages/troubleshooting-custom-domains-and-github-pages#https-errors)
