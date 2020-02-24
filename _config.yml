@@ -67,7 +67,7 @@ feed:
 # ---------------- #
 #      Jekyll      #
 # ---------------- #
-github: [metadata]
+#github: [metadata]
 markdown: kramdown
 kramdown:
     input: GFM
