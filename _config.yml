@@ -76,7 +76,7 @@ kramdown:
  #       block:
   #          line_numbers: true
 highlighter: rouge
-paginate: 13
+paginate: 17
 lsi: false
 quiet: false
 excerpt_separator: "\n\n"
