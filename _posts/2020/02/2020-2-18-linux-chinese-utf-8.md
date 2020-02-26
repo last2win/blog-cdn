@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "解决linux服务器安装桌面后显示中文乱码的问题：ubuntu 18.04 locales zh_CN.UTF-8"
-categories: [Linux]
+categories: [Linux,行走的问题解决机]
 description: "解决linux服务器安装桌面后显示中文乱码的问题"
 keywords: Linux
 ---
