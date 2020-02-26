@@ -15,7 +15,7 @@ permalink: /about/
 {% endraw %}
 此博客基于该模板搭建而成：[My Blog / Jekyll Themes / GitHub Pages 博客模板](https://github.com/mzlogin/mzlogin.github.io)
 
-博客项目地址：[zhang0peter- 基于GitHub的Jeykll静态博客](https://github.com/zhang0peter/zhang0peter.github.io)
+我的博客项目地址：[zhang0peter- 基于GitHub的Jeykll静态博客](https://github.com/zhang0peter/zhang0peter.github.io)
 
 做的改动如下： 
 - 修改网页背景色为`#FFF7DB`   
