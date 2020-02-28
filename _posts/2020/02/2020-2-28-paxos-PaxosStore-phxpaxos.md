@@ -11,7 +11,7 @@ description: "PaxosStore 的编译-grpc 静态编译/static link-运行 PaxosSto
 ***          
 {% endraw %}
 
-## phxpaxos与PaxosStore
+# phxpaxos与PaxosStore
 说道分布式算法，一定会提及paxos，而paxos的框架轮子并没有多少。
 
 在GitHub上的paxos实现，最有名的2个是腾讯开源的`PaxosStore`和`phxpaxos`，这2个库都在微信用过。
@@ -19,7 +19,7 @@ description: "PaxosStore 的编译-grpc 静态编译/static link-运行 PaxosSto
 其中`phxpaxos`这个库2年没更新了，`PaxosStore`这个库2019年还更新过，因此我选择`PaxosStore`。
 
 PaxosStore 项目地址：[Tencent/paxosstore: PaxosStore has been deployed in WeChat production for more than two years, providing storage services for the core businesses of WeChat backend. Now PaxosStore is running on thousands of machines, and is able to afford billions of peak TPS.](https://github.com/Tencent/paxosstore)
-## PaxosStore 的编译
+# PaxosStore 的编译
 下载：
 ```sh
 git clone https://github.com/Tencent/paxosstore.git
@@ -35,6 +35,7 @@ libsqlite3-dev libbz2-dev libreadline-dev zlib1g-dev liblzma-dev liblzo2-dev   \
 libsnappy-dev  liblz4-dev libzstd-dev libgflags-dev  libprotoc-dev
 ```
 
+## PaxosStore-certain 编译
 进入目录`certain`:
 ```sh
 cd certain
@@ -50,7 +51,7 @@ export CXXFLAGS='-Wno-expansion-to-defined -Wno-implicit-fallthrough'
 make REQUIRE_CUSTOM_LIBRARIES_opt=1 static
 ```
 
-### 示例编译
+### 编译
 然后在`network/IOChannel.cpp`添加头文件：
 ```c
 #include<sys/uio.h>
@@ -68,7 +69,7 @@ export CFLAGS='-Wno-implicit-fallthrough'
 ```
 编译成功！！
 
-### 运行 PaxosStore
+### 运行 PaxosStore-certain
 在本地运行3个服务，从而形成分布式
 ```sh
 mkdir /tmp/certain
@@ -93,8 +94,38 @@ Failure with error: code(8001) msg(card not exist)
 ```
 运行成功！！
 
+## PaxosStore-paxoskv 编译
 
-## 后记
+```sh
+git submodule update --init
+cd paxoskv/
+```
+
+### 编译安装 leveldb
+该项目需要`leveldb`，直接编译太麻烦，我选择安装`leveldb`
+```sh
+apt install libleveldb-dev
+```
+
+### 编译 paxoskv
+修改文件`paxoskv/cutils/cqueue.h`，添加头文件：`#include <functional>`
+
+```
+mkdir build
+cd build
+export CXXFLAGS='-std=c++11'
+export CFLAGS='-std=c++11'
+cmake ..
+make 
+```
+
+测试：
+```sh
+./example/membase_paxoskv
+```
+
+
+# 后记
 
 如果没有静态编译，而采用了脚本中的`grpc`编译，会报错如下：
 ```sh
@@ -145,6 +176,38 @@ collect2: error: ld returned 1 exit status
 Makefile:142: recipe for target 'db_tool' failed
 make: *** [db_tool] Error 1
 ```
+
+如果不安装leveldb，会报错：
+```sh
+-- LevelDB: LEVELDB_INCLUDE_DIR-NOTFOUND LEVELDB_LIBRARY-NOTFOUND
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+LEVELDB_INCLUDE_DIR (ADVANCED)
+   used as include directory in directory /home/zhang/paxosstore/paxoskv
+   used as include directory in directory /home/zhang/paxosstore/paxoskv
+   used as include directory in directory /home/zhang/paxosstore/paxoskv
+   used as include directory in directory /home/zhang/paxosstore/paxoskv
+   used as include directory in directory /home/zhang/paxosstore/paxoskv
+   used as include directory in directory /home/zhang/paxosstore/paxoskv
+
+```
+如果不添加头文件，会报错如下：
+```sh
+In file included from /home/zhang/paxosstore/paxoskv/memkv/memloader.cc:25:0:
+/home/zhang/paxosstore/paxoskv/cutils/cqueue.h:181:14: error: ‘std::function’ has not been declared
+         std::function<bool(const std::unique_ptr<EntryType>&)> pred) {
+              ^~~~~~~~
+/home/zhang/paxosstore/paxoskv/cutils/cqueue.h:181:22: error: expected ‘,’ or ‘...’ before ‘<’ token
+         std::function<bool(const std::unique_ptr<EntryType>&)> pred) {
+                      ^
+memkv/CMakeFiles/paxoskv_memkv.dir/build.make:254: recipe for target 'memkv/CMakeFiles/paxoskv_memkv.dir/memloader.cc.o' failed
+make[2]: *** [memkv/CMakeFiles/paxoskv_memkv.dir/memloader.cc.o] Error 1
+CMakeFiles/Makefile2:1223: recipe for target 'memkv/CMakeFiles/paxoskv_memkv.dir/all' failed
+make[1]: *** [memkv/CMakeFiles/paxoskv_memkv.dir/all] Error 2
+Makefile:129: recipe for target 'all' failed
+make: *** [all] Error 2
+```
+
 
 
 参考：
