@@ -30,6 +30,9 @@ git submodule update --init --recursive
 
 编译前的准备工作，安装有用的库：
 ```sh
+apt install make gcc g++ cmake build-essential autoconf libtool pkg-config unzip
+```
+```sh
 apt install zlib1g-dev libssl-dev  libpcap-dev libelf-dev libicu-dev libreadline-dev libtool  libsysfs-dev \
 libsqlite3-dev libbz2-dev libreadline-dev zlib1g-dev liblzma-dev liblzo2-dev   \
 libsnappy-dev  liblz4-dev libzstd-dev libgflags-dev  libprotoc-dev
@@ -47,6 +50,7 @@ cd certain
 grpc静态编译：
 ```sh
 cd third/grpc
+export CFLAGS='-Wno-implicit-fallthrough'
 export CXXFLAGS='-Wno-expansion-to-defined -Wno-implicit-fallthrough'
 make REQUIRE_CUSTOM_LIBRARIES_opt=1 static
 ```
