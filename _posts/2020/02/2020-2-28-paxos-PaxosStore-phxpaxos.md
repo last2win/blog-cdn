@@ -2,7 +2,7 @@
 layout: post
 title: "paxos企业级框架：PaxosStore 编译与报错解决"
 categories: [分布式]
-description: ""
+description: "PaxosStore 的编译-grpc 静态编译/static link-运行 PaxosStore"
 ---
 
 此文首发于我的Jekyll博客：[zhang0peter的个人博客](https://zhang0peter.com)         
