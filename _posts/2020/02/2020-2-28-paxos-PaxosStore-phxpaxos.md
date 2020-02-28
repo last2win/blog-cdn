@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "paxos的企业级框架实现：PaxosStore/phxpaxos"
+title: "paxos企业级框架：PaxosStore 编译与报错解决"
 categories: [分布式]
 description: ""
 ---
@@ -12,12 +12,13 @@ description: ""
 {% endraw %}
 
 ## phxpaxos与PaxosStore
-说道分布式算法，一定会提及paxos，而paxos的轮子并没有多少。
+说道分布式算法，一定会提及paxos，而paxos的框架轮子并没有多少。
 
-在GitHub上的paxos实现，最有名的2个时腾讯开源的`PaxosStore`和`phxpaxos`，这2个库都在WXG用过。
+在GitHub上的paxos实现，最有名的2个是腾讯开源的`PaxosStore`和`phxpaxos`，这2个库都在微信用过。
 
 其中`phxpaxos`这个库2年没更新了，`PaxosStore`这个库2019年还更新过，因此我选择`PaxosStore`。
 
+PaxosStore 项目地址：[Tencent/paxosstore: PaxosStore has been deployed in WeChat production for more than two years, providing storage services for the core businesses of WeChat backend. Now PaxosStore is running on thousands of machines, and is able to afford billions of peak TPS.](https://github.com/Tencent/paxosstore)
 ## PaxosStore 的编译
 下载：
 ```sh
@@ -39,7 +40,7 @@ libsnappy-dev  liblz4-dev libzstd-dev libgflags-dev  libprotoc-dev
 cd certain
 ```
 
-## grpc 静态编译/static link
+### grpc 静态编译/static link
 如果直接进行编译，在编译过程中会报很多`grpc`相关的错误，因此首先自己把grpc编译好。
 
 grpc静态编译：
@@ -51,21 +52,46 @@ make REQUIRE_CUSTOM_LIBRARIES_opt=1 static
 
 ### 示例编译
 然后在`network/IOChannel.cpp`添加头文件：
-```js
+```c
 #include<sys/uio.h>
 ```
+修改`Makefile`，把第40行修改为如下：
+```sh
+DLIBS = -pthread -ldl -lsnappy  -lz -lbz2 -lzstd /usr/lib/x86_64-linux-gnu/liblz4.a
+```
+注意最后的`liblz4.a`要跟你机器上的文件位置一样。
+
 编译：
 ```sh
 export CFLAGS='-Wno-implicit-fallthrough'
 ./build.sh example
 ```
-这里要说的是如果编译过程中报了`grpc`相关的错误，需要自己手动解决。
+编译成功！！
 
-
-
-
-
-
+### 运行 PaxosStore
+在本地运行3个服务，从而形成分布式
+```sh
+mkdir /tmp/certain
+./card_srv -c example/example.conf -p /tmp/certain -i 0 &
+./card_srv -c example/example.conf -p /tmp/certain -i 1 &
+./card_srv -c example/example.conf -p /tmp/certain -i 2 &
+```
+测试：
+```sh
+-> % ./card_tool -X 127.0.0.1:50050 -o Insert -i 12358 -n rock -u 20170001 -b 200
+Done
+-> % ./card_tool -X 127.0.0.1:50050 -o Select -i 12358
+user_name=rock user_id=20170001 balance=200
+Done 
+-> % ./card_tool -X 127.0.0.1:50050 -o Update -i 12358 -d 10
+balance=210
+Done 
+-> % ./card_tool -X 127.0.0.1:50050 -o Delete -i 12358
+Done
+-> % ./card_tool -X 127.0.0.1:50050 -o Select -i 12358      
+Failure with error: code(8001) msg(card not exist)
+```
+运行成功！！
 
 
 ## 后记
@@ -88,7 +114,7 @@ rm src/Certain.pb.cc
 ```
 
 
-编译过程中会报错如下：
+如果没有加上链接参数`-lsnappy  -lz -lbz2 -lzstd /usr/lib/x86_64-linux-gnu/liblz4.a`，编译过程中会报错如下：
 
 ```sh
 g++ -static-libgcc -static-libstdc++ -std=c++11 example/example.pb.o example/example.grpc.pb.o example/Client.o example/Coding.o example/DBImpl.o example/PLogImpl.o example/CertainUserImpl.o example/UserWorker.o example/ServiceImpl.o example/UUIDGenerator.o example/TemporaryTable.o example/CoHashLock.o example/BenchTool.o libcertain.a -o bench_tool ./third/protobuf/src/.libs/libprotobuf.a ./third/libco/lib/libcolib.a ./third/rocksdb/librocksdb.a ./third/grpc/libs/opt/libares.a ./third/grpc/libs/opt/libboringssl.a ./third/grpc/libs/opt/libgpr.a ./third/grpc/libs/opt/libgrpc.a ./third/grpc/libs/opt/libgrpc++.a ./third/grpc/libs/opt/libgrpc++_core_stats.a ./third/grpc/libs/opt/libgrpc++_cronet.a ./third/grpc/libs/opt/libgrpc_cronet.a ./third/grpc/libs/opt/libgrpc++_error_details.a ./third/grpc/libs/opt/libgrpc_plugin_support.a ./third/grpc/libs/opt/libgrpc_unsecure.a ./third/grpc/libs/opt/libgrpc++_unsecure.a ./third/grpc/libs/opt/libz.a -Wl,--no-as-needed ./third/grpc/libs/opt/libgrpc++_reflection.a -Wl,--as-needed -pthread -ldl
@@ -126,3 +152,11 @@ make: *** [db_tool] Error 1
 - 我之前写的博客：[一次失败的尝试：paxosstore示例编译_网络_zhang0peter的博客-CSDN博客](https://zhang0peter.blog.csdn.net/article/details/97614728)
 
 - [Build static library of gRPC  Nan Xiao's Blog](https://nanxiao.me/en/build-static-library-of-grpc/)
+
+
+
+
+
+
+
+
