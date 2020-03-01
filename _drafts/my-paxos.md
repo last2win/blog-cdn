@@ -23,7 +23,7 @@ libsnappy-dev  liblz4-dev libzstd-dev libgflags-dev  libprotoc-dev \
 ```
 安装`grpc`，`protobuf`和`rocksdb`，毕竟编译安装太慢了：
 ```sh
-apt install libgrpc++-dev protobuf-compiler-grpc  librocksdb-dev libprotobuf-dev 
+apt install libgrpc++-dev protobuf-compiler-grpc libprotobuf-dev   librocksdb-dev 
 ```
 
 
