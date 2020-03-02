@@ -427,7 +427,7 @@ node1    NotReady   <none>   40m    v1.17.2
 node2    NotReady   <none>   39m    v1.17.2
 ```
 
-### node节点一直NotReady，报错 cni.go:237] Unable to update cni config: no networks found in /etc/cni/net.d
+### node节点一直NotReady，报错  Unable to update cni config: no networks found in /etc/cni/net.d
 
 如果k8s的node节点一直是`NotReady`状态，那么需要查看日志：
 ```sh
