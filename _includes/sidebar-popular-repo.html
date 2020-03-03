@@ -40,29 +40,10 @@
     </div>
 </a>
 {% endfor %}
-<!--
-<a href="zhang0peter.com" target="_blank" class="card text-center">
-    <div class="thumbnail">
-        <div class="card-image geopattern" data-pattern-id="{{ repo.name }}">
-            <div class="card-image-cell">
-                <h3 class="card-title">
-                    广告位
-                </h3>
-            </div>
-        </div>
-        <div class="caption">
-            <div class="card-description">
-                <p class="card-text">广告位</p>
-            </div>
-            <div class="card-text">
-            </div>
-        </div>
-    </div>
-</a>
--->
 
 {% if site.google.data-ad-client %}
-<!-- 纵向广告 -->
+<!-- 纵向广告 等到博客访问量上来，再放广告 -->
+<!--
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="{{ site.google.data-ad-client }}"
@@ -72,6 +53,7 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+-->
 {% endif %}
 
 {% endif %}
