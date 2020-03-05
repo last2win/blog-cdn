@@ -22,7 +22,7 @@
     {% elsif site.url contains 'zhang0peter' %}
     <script type="text/javascript">
       $.ajax({
-        url: "https://simpleanalytics.com/zhang0peter.com{{ page.url }}.json",
+        url: "https://simpleanalytics.com/zhang0peter.com{{ page.url }}.json?start=2020-01-01",
         success: function (data) {
           $("#site_uv").text(data.pageviews);
         }
