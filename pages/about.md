@@ -31,9 +31,7 @@ permalink: /about/
 - [jekyll静态博客提升访问速度：内嵌CSS，异步加载js，压缩HTML](https://zhang0peter.com/2020/01/27/jekyll-inline-css/)
 
 
-Fork后的操作方法参考原始项目的Fork 指南：[Fork 指南](https://github.com/mzlogin/mzlogin.github.io#fork-%E6%8C%87%E5%8D%97)
-
-也可参考这篇博客：[在GitHub上搭建GitHub Pages博客-- Jekyll](https://zhang0peter.blog.csdn.net/article/details/103903611)
+Fork后的操作方法参考这篇博客：[在GitHub上搭建GitHub Pages博客-- Jekyll](https://zhang0peter.blog.csdn.net/article/details/103903611)
 
 其中自定义域名与HTTPS/TLS/CAA配置参考这篇博客：[GitHub Pages博客：自定义域名，HTTPS，CAA](https://zhang0peter.com/2020/02/21/github-pages-https/)        
 
@@ -46,3 +44,19 @@ Fork后的操作方法参考原始项目的Fork 指南：[Fork 指南](https://g
 {% endfor %}
 
 * 邮箱：[zhang0peter@foxmail.com](mailto:zhang0peter@foxmail.com)
+
+
+## 网站访问量与排名
+
+这个博客的域名于2020年1月开始使用
+
+2020-2-19: 全球排名3百万，中国排名39万
+
+![图片]({% link /images/2020/2020-2-19.png %})
+
+2020-3-6：全球排名285万，中国排名38万
+
+![图片]({% link /images/2020/2020-3-6.png %})
+
+
+
