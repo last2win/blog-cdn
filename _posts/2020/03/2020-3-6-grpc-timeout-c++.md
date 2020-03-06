@@ -23,9 +23,14 @@ oStatus = poStub->Echo(&oCtx, echoRequest, &echoResponse);
 设置超时：
 
 ```c
+unsigned int client_connection_timeout = 5;
+
 ClientContext context;
-time_point deadline = std::chrono::system_clock::now() + 
-    std::chrono::seconds(5);
+
+// Set timeout for API
+std::chrono::system_clock::time_point deadline =
+    std::chrono::system_clock::now() + std::chrono::seconds(client_connection_timeout);
+
 context.set_deadline(deadline);
 ```
 
