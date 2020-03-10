@@ -92,6 +92,7 @@ plugins:
 #    - jekyll-toc
 #     - jekyll-mentions
 #     - jekyll-html-pipeline
+    - jekyll-sitemap   #sitemap
 collections:
     wiki:
         output: true
@@ -153,8 +154,6 @@ excerpt_separator: ""
 #    sitemap       #
 # ---------------- #
 
-plugins:
-  - jekyll-sitemap
 # ---------------- #
 #    压缩CSS与HTML #
 # ---------------- #
