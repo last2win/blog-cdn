@@ -23,6 +23,19 @@ keywords: 程序员
 *   []()                   
 
 
+Windows下使用`ffmpeg`批量转换ts格式视频到mp4格式，并在转换完成后删除原视频
+
+```sh
+$files = Get-ChildItem -Recurse  -Filter *.ts
+echo $files
+foreach ($f in $files){
+    $outfile = $f.FullName.replace(".ts",".mp4") 
+    echo $outfile
+    ffmpeg -i $f.FullName -c copy $outfile 
+    Remove-Item -Path $f.FullName
+}
+```
+
 convert flv to mp4:
 
 ```sh
