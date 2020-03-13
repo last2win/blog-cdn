@@ -93,10 +93,10 @@ plugins:
 #     - jekyll-mentions
 #     - jekyll-html-pipeline
     - jekyll-sitemap   #sitemap
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+# collections:
+#     wiki:
+#         output: true
+#         permalink: /wiki/:path/
 
 repository: zhang0peter/zhang0peter.github.io
 

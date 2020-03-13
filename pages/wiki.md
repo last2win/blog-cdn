@@ -1,19 +1,281 @@
 ---
-layout: page
+layout: post
 title: Wiki
-description: 人越学越觉得自己无知
-keywords: 维基, Wiki
-comments: false
+description: 记多少命令和快捷键会让脑袋爆炸呢？
+comments: true
 menu: 维基
 permalink: /wiki/
 ---
 
 > 记多少命令和快捷键会让脑袋爆炸呢？
 
-<ul class="listing">
-{% for wiki in site.wiki %}
-{% if wiki.title != "Wiki Template" %}
-<li class="listing-item"><a href="{{ site.url }}{{ wiki.url }}">{{ wiki.title }}</a></li>
-{% endif %}
-{% endfor %}
-</ul>
+# Linux
+*   [Linux下tar解压到当前目录，zip压缩,tar压缩，tar解压_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/94862801)                       
+*   [Linux系统vi操作指南 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95672890)             
+*   [在centos上安装最新的glibc - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96116219)                   
+*   [Linux在shell终端中清空DNS缓存,刷新DNS的方法(ubuntu,debian) - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/83895446)                       
+*   [Linux: 使用bash命令ls按时间排序 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/93165265)             
+*   [在WinSCP中使用sudo进行sftp，不用输入密码，获得root权限 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95001286)                        
+*   [Linux下使用tee既在屏幕上显示输出，又把输出写进文件 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/90573567)             
+*   [技术 Linux 下如何处理包含空格和特殊字符的文件名](https://linux.cn/article-5777-1.html)                   
+*   [Debian/Ubuntu/Raspbian 时间同步 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/84134141)                       
+*   [在centos上通过yum直接安装最新版gcc和开发工具 ](https://blog.csdn.net/zhangpeterx/article/details/96141900)             
+*   [Linux系统16进制形式查看二进制文件 ](https://blog.csdn.net/zhangpeterx/article/details/95448494)                   
+*   [Windows使用CLion 远程调试Linux程序 ](https://blog.csdn.net/zhangpeterx/article/details/95809766)                       
+*   [在CentOS/Debian/Ubuntu上编译安装最新版 GCC 8 ， cmake 3 和ninja_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96103611)             
+*   [在CentOS/Debian/Ubuntu上编译安装最新版gnu make 和GNU binutils (as and ld)_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96135667)                   
+*   [一日一技：在Linux系统中如何查询正在运行的程序的路径](https://mp.weixin.qq.com/s?__biz=MzI2MzEwNTY3OQ==&mid=2648978154&idx=1&sn=53488342b4b67fbd97ffd73affd69fd5&chksm=f2506f0ac527e61c8b7cd11e13aff279fa7e29f1f9bacbe990c012274f73e3dd48f5f8edfd89&mpshare=1&scene=23&srcid=0119f0M6FbJ86dEq34KZNtb2&sharer_sharetime=1579425817650&sharer_shareid=19fe229c09c2cd2c6445c2856dcf3d6d#rd)             
+*   [利用X11 Forwarding运行VPS上的图形界面软件 - Tech Notes of Code Monkey](https://blog.finaltheory.me/note/X11-Forwarding-GUI.html)                            
+*   [网络测速工具 iperf  须臾之学](https://blog.xizhibei.me/2020/01/13/speed-test-tool-iperf/)                       
+*   [使用ssh连接GitHub上的git服务器](https://zhang0peter.com/2020/02/03/git-github-ssh/)             
+*   [在Linux上使用图形界面的GitHub Desktop](https://blog.csdn.net/zhangpeterx/article/details/95889349)                   
+*   [Linux查看可执行文件的各个段：.BSS，.TEXT，.DATA的大小](https://blog.csdn.net/zhangpeterx/article/details/102657265)                       
+*   [Linux下的十个好用的命令工具：查看系统版本，显示目录的大小，查看硬盘HDD/SSD，硬盘测速，ssh时自动输入密码，查看程序的内存使用情况，查看I/O的速度，查看ssh密码错误日志，查找文件](https://blog.csdn.net/zhangpeterx/article/details/96279648)             
+*   [linux下bash脚本常用的十个技巧：显示执行脚本花费的时间，在脚本退出时杀死后台运行的程序，在脚本退出时跳出循环，读取命令行参数来决定循环次数](https://blog.csdn.net/zhangpeterx/article/details/96278020)                   
+*   [Linux/ubuntu server 18.04 安装远程桌面--vnc server-tightvncserver](https://zhang0peter.com/2020/01/07/linux-server-vnc/)                       
+*   []()  
+
+# Python
+
+推荐Python课程：                      
+*   [北理工嵩天教授的Python语言程序设计课程](https://www.youtube.com/playlist?list=PLr_PV1S3i8VIf9ACS3VzD80usgH5C5YGN)             
+*   []()                   
+*   []()                       
+*   []()             
+*   []()  
+
+
+
+*   [Python 超快生成大量随机数的方法](https://blog.csdn.net/zhangpeterx/article/details/96474599)             
+
+
+# Windows
+
+*   [WSL系列操作：安装，卸载_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/97616268)                       
+*   [Windows系统下多版本GCC的安装： MinGW Cygwin Msys2 和 VS: MSVC ](https://blog.csdn.net/zhangpeterx/article/details/95591302)             
+*   [Windows使用MSVC，命令行编译，链接64位dll，Python调用](https://blog.csdn.net/zhangpeterx/article/details/100591270)                   
+*   [WSL的openssh-server使用报错：Could not load host key: /etc/ssh/ssh_host_rsa_key](https://blog.csdn.net/zhangpeterx/article/details/95810789)  
+
+# Java
+
+*   [Java源码下载和阅读（JDK1.8/Java 11)_zhang0peter的博客-CSDN博客](https://zhang0peter.blog.csdn.net/article/details/88823585)             
+*   [有关groupId，artifactId和版本的命名约定的指南](https://maven.apache.org/guides/mini/guide-naming-conventions.html)                   
+*   [jetbrains intellij IDEA 常用插件 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/88787181)                       
+*   [IDEA报错总结：修改Java编译版本--maven项目 - zhang0peter的博客](https://zhang0peter.blog.csdn.net/article/details/103643939)             
+*   [jstatd，VisualVM使用和报错解决：Could not create remote object--java.security.AccessControlException: - zhang0peter的博客](https://zhang0peter.blog.csdn.net/article/details/103651098)                   
+*   [Java：获取数组中的子数组的多种方法](https://blog.csdn.net/zhangpeterx/article/details/88716563)                       
+*   [Java数组排序： Array-ArrayList-List-Collections.sort()/List.sort()/Arrays.sort()](https://zhang0peter.com/2020/02/07/java-array-list-sort/)             
+*   [Sort an array in Java - Stack Overflow](https://stackoverflow.com/questions/8938235/sort-an-array-in-java)            
+*   [java - How to sort an ArrayList? - Stack Overflow](https://stackoverflow.com/questions/16252269/how-to-sort-an-arraylist)   
+
+
+
+# C++
+*   [C++预编译头文件 bits/stdc++.h](https://blog.csdn.net/zhangpeterx/article/details/100729005)                       
+*   [C++调用openssl使用sha256，并取结果前64位作为uint64 ](https://blog.csdn.net/zhangpeterx/article/details/99311279)             
+*   [make 操作技巧指南--gcc版本设置 ](https://blog.csdn.net/zhangpeterx/article/details/97256638)                   
+*   [How to calculate a time difference in C++ - Stack Overflow](https://stackoverflow.com/questions/728068/how-to-calculate-a-time-difference-in-c)                       
+*   [How do I create a random alpha-numeric string in C++? - Stack Overflow](https://stackoverflow.com/questions/440133/how-do-i-create-a-random-alpha-numeric-string-in-c)             
+*   [multithreading - Simple example of threading in C++ - Stack Overflow](https://stackoverflow.com/questions/266168/simple-example-of-threading-in-c)                   
+*   [C++ 随机数生成的2种方法--生成指定范围内的随机数 ](https://blog.csdn.net/zhangpeterx/article/details/99744937)                       
+*   [C++ 常用技巧 ](https://blog.csdn.net/zhangpeterx/article/details/99758196)             
+*   [C++ CORE DUMP gdb 调试 ](https://blog.csdn.net/zhangpeterx/article/details/99993012)                   
+*   [Windows和Linux的C/C++ IDE选择 ](https://blog.csdn.net/zhangpeterx/article/details/100009491)                       
+*   [C++ 调试技术：addr2line ](https://blog.csdn.net/zhangpeterx/article/details/99974611)             
+*   [Windows下使用Visual Studio自带的MSVC，命令行编译C/C++程序 ](https://blog.csdn.net/zhangpeterx/article/details/86602394)                   
+*   [C++ 内存泄漏检测：valgrind和AddressSanitizer ](https://blog.csdn.net/zhangpeterx/article/details/100098961)                       
+*   [C++ gdb调试技巧 ](https://blog.csdn.net/zhangpeterx/article/details/100034115)             
+*   [C++ 虚函数个人理解 ](https://blog.csdn.net/zhangpeterx/article/details/100106861)                   
+*   [C++ 汇编代码查看 ](https://blog.csdn.net/zhangpeterx/article/details/100120219)                       
+*   [C++ 协程介绍[译] ](https://blog.csdn.net/zhangpeterx/article/details/100138656)             
+*   [Compiler Explorer](https://godbolt.org/)                   
+*   [在CLion中运行Ninja项目 ](https://blog.csdn.net/zhangpeterx/article/details/95810640)                                      
+*   [make 操作技巧指南--gcc版本设置](https://blog.csdn.net/zhangpeterx/article/details/97256638)             
+*   [C++ 随机数生成的2种方法--生成指定范围内的随机数](https://blog.csdn.net/zhangpeterx/article/details/99744937)             
+*   [在CentOS/Debian/Ubuntu上编译安装最新版 GCC 8 ， cmake 3 和ninja](https://blog.csdn.net/zhangpeterx/article/details/96103611) 
+
+
+# 数据库
+*   [数据库基准测试：database bencnmark --生成大量随机测试数据 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96741226)                       
+*   [数据库可视化工具：metabase/metabase: The simplest, fastest way to get business intelligence and analytics to everyone in your company](https://github.com/metabase/metabase)             
+*   [数据库可视化工具：安装和配置 - Apache Superset文档](https://superset.incubator.apache.org/installation.html)                   
+*   [mysql gui 客户端推荐一个 - V2EX](https://www.v2ex.com/t/565368) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 杂类
+
+                      
+*   [你们都是用什么编程字体的？ - V2EX](https://www.v2ex.com/t/597067)             
+*   [windows-程序员必备的20个软件 — zhang0peter的个人博客](https://zhang0peter.com/2020/01/23/programmer-need/)                   
+*   [介绍 uTools](https://u.tools/docs/guide/about-uTools.html)                       
+*   [时间都去哪了?用RescueTime和WakaTime来记录你的时间](https://luolei.org/track-your-time/)             
+*   [mattgodbolt/compiler-explorer: Run compilers interactively from your web browser and interact with the assembly](https://github.com/mattgodbolt/compiler-explorer)                   
+*   [Multi-language programming playground Code LabStack](https://code.labstack.com/)                       
+*   [Awesome-Windows-Windows上优质&精选的最佳应用程序及工具列表](https://github.com/Awesome-Windows/Awesome)             
+*   [求笔记软件推荐 - V2EX](https://www.v2ex.com/t/541898)                   
+*   [有用薄膜键盘敲代码的吗?比例大概是多少? - V2EX](https://www.v2ex.com/t/565789?p=1)              
+*   [mysql gui 客户端推荐一个 - V2EX](https://www.v2ex.com/t/565368)                              
+*   [各位在用什么邮箱客户端？ - V2EX](https://www.v2ex.com/t/634423)             
+*   []()                   
+*   []()                       
+*   []()             
+*   []()                   
+
+
+Windows下使用`ffmpeg`批量转换ts格式视频到mp4格式，并在转换完成后删除原视频
+
+```sh
+$files = Get-ChildItem -Recurse  -Filter *.ts
+echo $files
+foreach ($f in $files){
+    $outfile = $f.FullName.replace(".ts",".mp4") 
+    echo $outfile
+    ffmpeg -i $f.FullName -c copy $outfile 
+    Remove-Item -Path $f.FullName
+}
+```
+
+convert flv to mp4:
+
+```sh
+ffmpeg -i input.flv -codec copy output.mp4
+```
+
+convert mp4 to mp3:
+
+```sh
+ffmpeg -i input.mp4 output.mp3
+```
+
+
+
+# git
+
+## git强行还原
+有时候自己对仓库做了修改，但不需要这些修改，可以强行还原。
+```js
+git fetch --all && git reset --hard origin/master && git pull
+```
+## git 配置代理
+有时候公司内网不能直连外网，需要配置git的网络代理。
+```sh
+git config --global http.proxy 'socks5://127.0.0.1:10888'
+git config --global https.proxy 'socks5://127.0.0.1:10888'
+```
+## git初始化子模块
+```js
+git submodule update --init --recursive
+```
+
+
+
+## git 单仓库配置多个远程仓库
+我在GitHub和coding上都建了仓库，想单次push到2个仓库，于是需要设置remote
+
+```sh
+git remote add all https://xxx.xxxx.git
+```
+```sh
+$ git remote -v
+all     https://e.coding.net/xxxx.git (fetch)
+all     https://e.coding.net/xxxx.git (push)
+origin  https://github.com/xxxx.git (fetch)
+origin  https://github.com/xxxx.git (push)
+```
+```sh
+git push all master
+```
+
+
+
+## git 设置/重置用户名和密码
+有时候输入的用户名或者密码错误了，但git已经保存了，无法直接更改。
+
+一种方法是直接删除用户，再输入：
+```sh
+git config --global --unset user.password
+```
+如果是Windows用户，可以在如下位置找到保存的密码：
+`Control Panel`->`All Control Panel Items`->`Credential Manager`->`Windows Credentials` 
+或者直接搜索凭据管理器，可以直接修改用户名和密码。
+
+## 使用ssh连接GitHub上的git服务器
+
+先配置git的用户名和邮箱：
+```
+git config --global user.name "your_name"
+git config --global user.email "your_email@xxx.com"
+```
+先查看本地是否已经配置了公钥和私钥，如果已经存在私钥，无需再次生成。
+```
+cd ~/.ssh
+```
+生成密钥：
+```
+-> % ssh-keygen -t rsa -b 4096 -C your_email@xxx.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/ubuntu/.ssh/id_rsa.
+Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:14HZgHvg4z5qnFwlcrUeZ7AzxOpp+cka9oEMPrr04YQ zhang0peter@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|         o.      |
+|        o ==     |
+|       . *o+o    |
+|      . B O.o.   |
+|      .=SO.*.    |
+|     o oBo.      |
+|    Eo===o..     |
+|   . ==+oo+.     |
+|    oo+..o.      |
++----[SHA256]-----+
+```
+生成密钥后拷贝公钥id_rsa.pub的内容，到GitHub上新建ssh的key：GitHub SSH and GPG keys
+
+新建完成后就可以登录GitHub了：
+```
+-> % ssh -T git@github.com
+The authenticity of host 'github.com (13.229.188.59)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,13.229.188.59' (RSA) to the list of known hosts.
+Hi zhang0peter! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+
+{% raw %}
+***          
+{% endraw %}
+参考： 
+
+- [Git - 子模块](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97)
+
+- [git submodule init does absolutely nothing - Stack Overflow](https://stackoverflow.com/questions/39765663/git-submodule-init-does-absolutely-nothing/39766926)
+
+- [github - How to link folder from a git repo to another repo? - Stack Overflow](https://stackoverflow.com/questions/36554810/how-to-link-folder-from-a-git-repo-to-another-repo)
+
+- [macos - How do I update the password for Git? - Stack Overflow](https://stackoverflow.com/questions/20195304/how-do-i-update-the-password-for-git)
+              
+- [github - Git - Pushing code to two remotes - Stack Overflow](https://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes)
+
+
+
+
+
+

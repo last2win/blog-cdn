@@ -34,7 +34,7 @@ Enter same passphrase again:
 Your identification has been saved in /home/ubuntu/.ssh/id_rsa.
 Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub.
 The key fingerprint is:
-SHA256:14HZgHvg4z5qnFwlcrUeZ7AzxOpp+cka9oEMPrr04YQ zsd780885029@gmail.com
+SHA256:14HZgHvg4z5qnFwlcrUeZ7AzxOpp+cka9oEMPrr04YQ zhang0peter@gmail.com
 The key's randomart image is:
 +---[RSA 4096]----+
 |         o.      |
