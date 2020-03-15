@@ -66,8 +66,9 @@
           target="{{ nav.target | default: _self }}">{{ nav.label }}</a>
       </li>
       {% endfor %}
-      <li><a href="{{ site.url }}{{ site.subscribe_rss }}"><span class="octicon octicon-rss"
-            style="color:orange;"></span></a></li>
+      <li><a href="{{ site.url }}{{ site.subscribe_rss }}" title="RSS订阅">
+          <!--<span class="octicon octicon-rss"style="color:orange;">-->
+          RSS订阅</span></a></li>
     </ul>
 
   </div>

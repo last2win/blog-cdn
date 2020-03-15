@@ -34,10 +34,6 @@ navs:
     href: /categories/
     label: 分类
 
-#   -
-#     href: /archives/
-#     label: 归档 
-
   -
     href: /wiki/
     label: 维基
@@ -53,11 +49,15 @@ navs:
     href: /news/
     label: 思考
   -
-    href: /24-game/
-    label: 24点小游戏
+    href: /btc/
+    label:  投资
   -
-    href: /atom.xml
-    label: RSS订阅
+    href: /24-game/
+    label: 24点游戏
+    # -
+  #   href: /atom.xml
+  #   label: RSS
+
 # ---------------- #
 #       RSS        #
 # ---------------- #
@@ -67,7 +67,7 @@ feed:
 # ---------------- #
 #      Jekyll      #
 # ---------------- #
-#github: [metadata]
+github: [metadata]
 markdown: kramdown
 kramdown:
     input: GFM
