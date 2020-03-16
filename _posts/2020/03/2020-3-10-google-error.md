@@ -25,6 +25,23 @@ description: ""
 
 等我解决了问题再写这篇文章。
 
+{% raw %}
+***          
+{% endraw %}
+
+我随后写了这篇文章：[nginx-代理/转发-GitHub Pages 静态页面博客](https://zhang0peter.com/2020/03/16/github-pages-nginx-cdn-proxy/)
+
+发现使用Nginx后问题没有解决。
 
 
+{% raw %}
+***          
+{% endraw %}
 
+我配置`robots.txt`:
+
+```txt
+# allow google
+User-agent: *
+Allow: /
+```
