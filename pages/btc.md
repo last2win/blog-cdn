@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "投资"
-categories: [btc]
+categories: [btc,投资]
 description: ""
 comments: true
 menu: btc
@@ -10,11 +10,9 @@ permalink: /btc/
 
 此文首发于我的Jekyll博客：[zhang0peter的个人博客](https://zhang0peter.com)         
 
-{% raw %}
-***          
-{% endraw %}
 
-2020-3-15：
+## 2020-3-15：买入一万元比特币
+
 
 最近随着美股的暴跌，比特币的价格也随之暴跌。于是我打算入手一些虚拟货币。
 
@@ -98,4 +96,7 @@ w -   :PnV  r3Pz    rÉ ,O  Π0= v  or  " A 7 4G  e  ¥   or tO    ; vù]  4Θ �
 需要强调的是一个区块确认并不一定会是最终的确认，一般来说一个区块的确认可以保证交易的完成，最保险的做法是确认4个区块。
 
 所以我本地最终收到`0.246`比特币，花费1万元，平均单价4万RMB.那么等到比特币涨到5万RMB每个时，我出手。
+
+
+
 
