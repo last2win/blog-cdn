@@ -45,3 +45,12 @@ description: ""
 User-agent: *
 Allow: /
 ```
+
+{% raw %}
+***          
+{% endraw %}
+
+然后我发现了一个测试网站：[富媒体搜索结果测试 - Google Search Console](https://search.google.com/test/rich-results)         
+
+
+如果你的网站不能通过测试，那么自然无法爬取。我在添加了`robots.txt`后就，谷歌搜索就可以正常爬取我的博客了。
