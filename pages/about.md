@@ -22,7 +22,7 @@ permalink: /about/
 - 增加sitemap，方便搜索引擎索引
 - 对文章页面增加TOC目录      
 - 使用`jekyll 4.0`替换`github-pages`，编译速度大幅增加
-- 使用 cloudflare的CDNJS替换本地的jquery引用
+- 使用 jsDeliver的CDN替换本地的jquery引用
 - 修复Bug：meta 的keywords不起作用，因为原作者用的是Mac，而Mac与Windows平台的换行符不一样 
 - 使用谷歌的站内搜索替代`Simple-Jekyll-Search`插件，优势：可以全文索引，不用每个网页都加载用于搜索的数据
 - 增加SEO 插件：Jekyll SEO tag：[jekyll 博客对搜索引擎的SEO提升方法--head中的meta标签和Jekyll SEO Tag](https://zhang0peter.com/2020/01/19/GitHub-jekyll-SEO/)
