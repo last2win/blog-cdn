@@ -22,7 +22,8 @@
   <!-- Latest compiled and minified CSS -->
   <!--不加载字体-->
   <!-- <link rel="stylesheet" href="{{ site.url }}/assets/vendor/octicons/octicons/octicons.css"> -->
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/globals/common.css">
+
+
   {% for css in page.css %}
   <link rel="stylesheet" href="{{ site.url }}/assets/css/{{css}}">
   {% endfor %}
@@ -85,7 +86,19 @@
 
 </head>
 
+<!--
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/globals/common.css">
 
+-->
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/zhang0peter/zhang0peter.github.io/assets/css/globals/common.css">
+
+
+
+<!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+  integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous">
+-->
 {% include css.html %}
 
 <style>
