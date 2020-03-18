@@ -36,7 +36,7 @@ cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup
 ```sh
   server {
     listen 8080;
-    server_name zhang0peter.xyz;
+    server_name zhang0peter.com;
     root html;
     location / {
     #转发流量
