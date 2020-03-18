@@ -58,10 +58,12 @@ Allow: /
 以及这个网站可以查看谷歌爬虫的情况：[Search Console - Crawl Stats](https://www.google.com/webmasters/tools/crawl-stats)
 
 
+我使用GitHub Pages的jekyll静态博客自动配置的HTTPS，可以运行爬虫，参考：[GitHub Pages博客：自定义域名，HTTPS，CAA — zhang0peter的博客](https://zhang0peter.com/2020/02/21/github-pages-https/)
+
+`zhang0peter.com` -> `zhang0peter.github.io`  (GitHub CAA HTTPS)    √
 
 
-`zhang0peter.com` -> `zhang0peter.github.io`  √
-`cloudflare cdn`  -> `github pages`           √
+`cloudflare cdn`  -> `github pages`           ????
 
 
 
