@@ -48,9 +48,9 @@ navs:
   -
     href: /news/
     label: 思考
-  -
-    href: /btc/
-    label:  投资
+  # -
+  #   href: /btc/
+  #   label:  投资
   -
     href: /24-game/
     label: 24点游戏
