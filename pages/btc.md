@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "投资"
-categories: [btc,投资]
+title: "比特币投资"
+categories: [区块链]
 description: ""
 comments: true
 menu: btc
