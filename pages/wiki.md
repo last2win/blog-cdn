@@ -258,6 +258,41 @@ Warning: Permanently added 'github.com,13.229.188.59' (RSA) to the list of known
 Hi zhang0peter! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
+## git 常用操作
+
+Git操作参考：[Git的奇技淫巧](https://github.com/521xueweihan/git-tips)
+
+有一篇好文章：[一篇文章，教你学会Git](https://www.jianshu.com/p/072587b47515)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2020020316291123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly96aGFuZzBwZXRlci5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
+
+
+每次commit，git存储的是全新的文件快照而不是文件的变更部分。这是做了一个取舍，这样每次在切换分支的时候，读取文件是O(1)的时间复杂度，而不是O(N)的时间复杂度。
+
+git误操作如何恢复
+
+使用git reflog，修改HEAD的指针
+
+*   [**这才是真正的Git——Git内部原理揭秘！ - 知乎**](https://zhuanlan.zhihu.com/p/96631135?utm_source=qq&utm_medium=social&utm_oi=30019480977408)
+
+
+
+
+
+*   [Commit only part of a file in Git - Stack Overflow](https://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git)
+*   [Undo a Git merge that hasn't been pushed yet - Stack Overflow](https://stackoverflow.com/questions/2389361/undo-a-git-merge-that-hasnt-been-pushed-yet)      
+*   [git log - View the change history of a file using Git versioning - Stack Overflow](https://stackoverflow.com/questions/278192/view-the-change-history-of-a-file-using-git-versioning)      
+*   [Undoing a git rebase - Stack Overflow](https://stackoverflow.com/questions/134882/undoing-a-git-rebase)      
+*   [git add - Difference between "git add -A" and "git add ." - Stack Overflow](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add)      
+*   [version control - How do I force "git pull" to overwrite local files? - Stack Overflow](https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)      
+*   [What is the difference between 'git pull' and 'git fetch'? - Stack Overflow](https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190823165702987.png)
+
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190823165653973.png)
+
+
 
 {% raw %}
 ***          
