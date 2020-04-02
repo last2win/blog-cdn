@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "区块链发币"
+title: "5分钟在以太坊区块链上发行符合ERC-20标准的代币"
 categories: [区块链]
 description: ""
 ---
@@ -21,33 +21,71 @@ description: ""
 
 一般来说发币是发在以太坊上，因为以太坊可以执行智能合约。而以太坊的运行开销是ETH，所以使用ETH作为币的初始定价。
 
-根据我在网上看到的许多文章，都推荐使用Remix和MetaMask(可能大家的文章都是抄来抄去的)。
+## 钱包
+
+根据我在网上看到的许多文章，都推荐使用Remix和MetaMask。
 
 `MetaMask`钱包：[MetaMask Download](https://metamask.io/download.html)
 
 不推荐使用以太坊本地钱包，要外网：[Releases · ethereum/mist](https://github.com/ethereum/mist/releases)
 
-
-
-
-
+## ERC-20和实现代码
 
 以太坊已经有代币的标准`ERC-20`:[EIP 20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 
-开源实现：[openzeppelin-contracts/ERC20.sol  OpenZeppelin/openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+
+我参考了`OpenZeppelin`的`ERC20`的实现，代码放在仓库中：[ETH ERC20 代码示例](https://github.com/zhang0peter/ERC-20)
 
 
+代码如下：
+```js
+pragma solidity ^0.5.0;
 
-`solidity`在线IDE:[Remix - Ethereum IDE](https://remix.ethereum.org/)
+import "https://github.com/zhang0peter/ERC-20/blob/master/Context.sol";
+import "https://github.com/zhang0peter/ERC-20/blob/master/ERC20.sol";
+import "https://github.com/zhang0peter/ERC-20/blob/master/ERC20Detailed.sol";
 
 
+/**
+ * @title SimpleToken
+ * @dev Very simple ERC20 Token example, where all tokens are pre-assigned to the creator.
+ * Note they can later distribute these tokens as they wish using `transfer` and other
+ * `ERC20` functions.
+ */
+contract SimpleToken is Context, ERC20, ERC20Detailed {
 
-```java
-
+    /**
+     * @dev Constructor that gives _msgSender() all of existing tokens.
+     */
+    constructor () public ERC20Detailed("SimpleToken", "SIM", 18) {
+        _mint(_msgSender(), 10000 * (10 ** uint256(decimals())));
+    }
+}
 ```
 
 
 
+## 编译和部署
+
+先说明一下以太坊的运行逻辑：智能合约是一段代码，可以部署到以太坊上，部署完成后可以运行代码。部署智能合约和运行代码都是有开销的，需要花钱，所以需要一个以太坊钱包的地址来付钱。
+
+使用`solidity`在线IDE:[Remix - Ethereum IDE](https://remix.ethereum.org/)
+
+把代码放到IDE中，进行编译，部署。
+
+默认的部署环境是`Javascript VM`，也就是本地测试环境，可以随便部署，随便测试，建议本地测试成功后再部署到线上。
+
+在测试环境中，默认拥有5个账号，每个账号拥有100 ether。
+
+部署完成后，左下角会显示已经部署的智能合约：
+
+![图片]({% link /images/2020/2020-eth-1.png %})
+
+部署完成后，可以使用`balanceOf`函数查看自己拥有的钱，钱的地址是部署合约时的钱包地址。
+
+现在可以使用转账功能，给另外的钱包转账，转账完成后建议查看是否到账。
+
+![图片]({% link /images/2020/2020-eth-2.png %})
 
 
 
@@ -59,12 +97,13 @@ description: ""
 
 
 
+## 挖矿，众筹与购买
 
 
 
-{% raw %}
-***          
-{% endraw %}
+## 后记
+
+
 
 如果在没有外网的情况下使用mist，会报错如下：
 ```json
