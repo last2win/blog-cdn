@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ETH钱包mist报错："
+title: "ETH钱包mist报错：[ERROR] EthereumNode - Failed to start node Error: Node "geth" binPath is not available."
 categories: [行走的问题解决机,区块链]
 description: ""
 ---
