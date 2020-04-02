@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "ETH钱包mist报错：[ERROR] EthereumNode - Failed to start node Error: Node "geth" binPath is not available."
-categories: [行走的问题解决机,区块链]
+title: "ETH钱包mist报错：[ERROR] EthereumNode - Failed to start node Error: Node \"geth\" binPath is not available."
+categories: [行走的问题解决机]
 description: ""
 ---
 
@@ -10,7 +10,6 @@ description: ""
 {% raw %}
 ***          
 {% endraw %}
-
 
 
 如果在没有外网的情况下使用mist，会报错如下：
