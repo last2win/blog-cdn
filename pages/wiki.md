@@ -10,6 +10,21 @@ permalink: /wiki/
 > 记多少命令和快捷键会让脑袋爆炸呢？
 
 # Linux
+
+## Debian/Ubuntu/Raspbian 时间同步
+时区设置：
+```sh
+date -R
+dpkg-reconfigure tzdata
+```
+时间同步：
+```sh
+apt-get install ntpdate
+ntpdate ntp.sjtu.edu.cn
+date
+```
+## 其他
+
 *   [Linux下tar解压到当前目录，zip压缩,tar压缩，tar解压_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/94862801)                       
 *   [Linux系统vi操作指南 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95672890)             
 *   [在centos上安装最新的glibc - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96116219)                   
@@ -17,8 +32,7 @@ permalink: /wiki/
 *   [Linux: 使用bash命令ls按时间排序 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/93165265)             
 *   [在WinSCP中使用sudo进行sftp，不用输入密码，获得root权限 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95001286)                        
 *   [Linux下使用tee既在屏幕上显示输出，又把输出写进文件 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/90573567)             
-*   [技术 Linux 下如何处理包含空格和特殊字符的文件名](https://linux.cn/article-5777-1.html)                   
-*   [Debian/Ubuntu/Raspbian 时间同步 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/84134141)                       
+*   [技术 Linux 下如何处理包含空格和特殊字符的文件名](https://linux.cn/article-5777-1.html)                                       
 *   [在centos上通过yum直接安装最新版gcc和开发工具 ](https://blog.csdn.net/zhangpeterx/article/details/96141900)             
 *   [Linux系统16进制形式查看二进制文件 ](https://blog.csdn.net/zhangpeterx/article/details/95448494)                   
 *   [Windows使用CLion 远程调试Linux程序 ](https://blog.csdn.net/zhangpeterx/article/details/95809766)                       
