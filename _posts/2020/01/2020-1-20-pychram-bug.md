@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python-PyCharm 报错解决：ImportError: cannot import name 'InteractiveConsole' from 'code'"
-categories: [Python, 行走的问题解决机]
+categories: [行走的问题解决机]
 description: "Python-PyCharm 报错解决：ImportError: cannot import name 'InteractiveConsole' from 'code'-重命名解决问题"
 keywords: Python, PyCharm
 ---
