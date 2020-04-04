@@ -72,7 +72,7 @@ useradd vncviewer
 passwd vncviewer
 mkdir /home/vncviewer
 chown -R vncviewer:root /home/vncviewer
-sudo usermod -a -G vncviewer 
+sudo usermod -a -G sudo vncviewer
 su - vncviewer
 ```
 
@@ -80,6 +80,9 @@ su - vncviewer
 ```sh
 $localhost = "no";
 ```
+
+**警告：第一次登录时记得关闭待机和息屏保护！！**
+
 开启：
 ```sh
 vncviewer@ubuntu-s-1vcpu-1gb-sgp1-01:~$ vncserver 
