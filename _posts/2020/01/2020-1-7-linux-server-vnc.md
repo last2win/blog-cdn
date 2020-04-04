@@ -72,6 +72,7 @@ useradd vncviewer
 passwd vncviewer
 mkdir /home/vncviewer
 chown -R vncviewer:root /home/vncviewer
+sudo usermod -a -G vncviewer 
 su - vncviewer
 ```
 
