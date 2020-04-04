@@ -41,6 +41,7 @@ XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server "localhos
 桌面端不推荐`xfce4`，因为运行Chrome会有各种稀奇古怪的错误，推荐`gnome`或者`kubuntu`
 ```sh
 #安装一个即可
+apt install xfce4
 apt install ubuntu-gnome-desktop
 apt install kubuntu-desktop
 ```
@@ -62,7 +63,7 @@ apt install kubuntu-desktop
 
 安装运行：
 ```sh
-apt install tigervnc-common tigervnc-scraping-server tigervnc-standalone-server tigervnc-xorg-extension
+apt install tigervnc-common tigervnc-scraping-server tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer
 ```
 
 新建用户专门用来运行vnc，防止泄露不必要的信息。
