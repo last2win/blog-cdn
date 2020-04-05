@@ -63,7 +63,7 @@ apt install kubuntu-desktop
 
 安装运行：
 ```sh
-apt install tigervnc-common tigervnc-scraping-server tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer
+apt install tigervnc-common tigervnc-scraping-server tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer ttf-wqy-zenhei
 ```
 
 新建用户专门用来运行vnc，防止泄露不必要的信息。
