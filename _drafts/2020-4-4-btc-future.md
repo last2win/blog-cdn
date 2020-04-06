@@ -33,6 +33,16 @@ description: ""
 
 想要准确预测，精准的历史价格数据是必需的。
 
+创建数据表：
+```sql
+create database btc;
+use btc;
+create table if not exists btc_price
+(
+    time  DATETIME PRIMARY KEY,
+    price Double DEFAULT 0
+);
+```
 
 # 实现
 
