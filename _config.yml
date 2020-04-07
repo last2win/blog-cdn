@@ -160,7 +160,7 @@ excerpt_separator: ""
 sass:
   style: compressed #压缩css
 
-compress_html:     #压缩网页
+#compress_html:     #压缩网页
 #  comments:       ["<!--", "-->"]
 #  blanklines: true
  # clippings:      all
