@@ -47,6 +47,7 @@ Fork后的操作方法参考这篇博客：[在GitHub上搭建GitHub Pages博客
 
 
 ## 网站访问量与排名
+[博客访问量与排名变更(持续更新) — zhang0peter的博客](https://zhang0peter.com/blog/)
 
 2020-4-7：全球排名139万，中国排名29万
 
