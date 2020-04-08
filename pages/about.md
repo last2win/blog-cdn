@@ -35,7 +35,7 @@ Fork后的操作方法参考这篇博客：[在GitHub上搭建GitHub Pages博客
 
 其中自定义域名与HTTPS/TLS/CAA配置参考这篇博客：[GitHub Pages博客：自定义域名，HTTPS，CAA](https://zhang0peter.com/2020/02/21/github-pages-https/)        
 
-推荐 CDN: `nodecache`，注册链接：[Nodecache](https://console-api.nodecache.com/f?aff=4oMnb3)，通过该链接注册，送1T流量包
+
 
 ## 关于我
 
