@@ -12,6 +12,8 @@ timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 3  #主页展示的github仓库数量
 
+#github: [metadata]
+
 # ---------------- #
 #      Author      #
 # ---------------- #
@@ -67,7 +69,6 @@ feed:
 # ---------------- #
 #      Jekyll      #
 # ---------------- #
-#github: [metadata]
 markdown: kramdown
 kramdown:
     input: GFM
@@ -86,7 +87,7 @@ plugins:
     - jekyll-github-metadata
     - rouge
     - jekyll-paginate
-    - jekyll-feed
+#    - jekyll-feed
 #    - jemoji
     - jekyll-seo-tag
 #    - jekyll-toc
@@ -149,7 +150,7 @@ google:
 baidu-site-verification: coWtJoj5ZQ
 
 
-excerpt_separator: ""
+#excerpt_separator: ""
 # ---------------- #
 #    sitemap       #
 # ---------------- #

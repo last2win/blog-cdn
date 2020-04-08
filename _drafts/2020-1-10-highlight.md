@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GitHub 博客-- Jekyll--代码高亮，Liquid 转义字符
-categories: [git, 杂类,Jekyll]
+categories: [博客, Jekyll]
 description: "GitHub 博客-- Jekyll--代码高亮，Liquid 转义字符--在markdown文件中高亮代码--code-highlight, Syntax-Highlight"
 keywords: code-highlight, Syntax-Highlight
 ---
