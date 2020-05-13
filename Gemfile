@@ -17,6 +17,7 @@ group :jekyll_plugins do
     gem 'jekyll-github-metadata'
     gem 'rouge'
     gem 'jekyll-paginate'
+    gem 'jekyll-commonmark-ghpages'
 #    gem 'jemoji'
 #    gem 'jekyll-toc'
   end

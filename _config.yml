@@ -69,7 +69,11 @@ feed:
 # ---------------- #
 #      Jekyll      #
 # ---------------- #
-markdown: kramdown
+#markdown: kramdown
+markdown: CommonMarkGhPages
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 kramdown:
     input: GFM
     parse_block_html: true
