@@ -31,11 +31,21 @@ keywords: node, YouTube
 
 打开`chrome://version`，查看`Profile Path`:`C:\Users\peter\AppData\Local\Chromium\User Data\Default`, 删除 `Default`， 剩下的路径是 user_Data_Dir: `C:\Users\peter\AppData\Local\Chromium\User Data`。
 
+
+`Windows Profile Path`:`C:\Users\peter\AppData\Local\Chromium\User Data\Default`      
+`Windows user Data Dir`: `C:\Users\peter\AppData\Local\Chromium\User Data`   
+
+`Linux Profile Path`:`/home/vncviewer/.config/chromium/Default`      
+`Linux user Data Dir`: `/home/vncviewer/.config/chromium/`   
+
 如果你没有桌面端，或者图像界面，可以把`User Data`目录上传到linux服务器，这样可以直接操作。
 
 第二个难点，我使用`puppeteer`帮我进行浏览器的操作，从而实现了批量上传。
 
-最初版本的代码如下：
+代码和操作指南见仓库:[Youtube Uploader: auto upload multiple youtube videos 批量自动上传youtube视频](https://github.com/zhang0peter/youtube-upload-multi-videos)
+
+
+初始版本代码如下：
 
 ```js
 const fs = require("fs");
@@ -52,8 +62,35 @@ const upload_file_directory = "your video directory";
 // change user data directory to your directory
 const chrome_user_data_directory = "C:\\Users\\user\\AppData\\Local\\Chromium\\User Data";
 
-const title_prefix="video title prefix ";
-const video_description="";
+const title_prefix = "video title prefix ";
+const video_description = "";
+
+const DEFAULT_ARGS = [
+    '--disable-background-networking',
+    '--enable-features=NetworkService,NetworkServiceInProcess',
+    '--disable-background-timer-throttling',
+    '--disable-backgrounding-occluded-windows',
+    '--disable-breakpad',
+    '--disable-client-side-phishing-detection',
+    '--disable-component-extensions-with-background-pages',
+    '--disable-default-apps',
+    '--disable-dev-shm-usage',
+    '--disable-extensions',
+    // BlinkGenPropertyTrees disabled due to crbug.com/937609
+    '--disable-features=TranslateUI,BlinkGenPropertyTrees',
+    '--disable-hang-monitor',
+    '--disable-ipc-flooding-protection',
+    '--disable-popup-blocking',
+    '--disable-prompt-on-repost',
+    '--disable-renderer-backgrounding',
+    '--disable-sync',
+    '--force-color-profile=srgb',
+    '--metrics-recording-only',
+    '--no-first-run',
+    '--enable-automation',
+    '--password-store=basic',
+    '--use-mock-keychain',
+];
 
 let files = [];
 fs.readdir(upload_file_directory, function (err, temp_files) {
@@ -73,11 +110,12 @@ try {
                 'headless': false,    // have window
                 executablePath: null,
                 userDataDir: chrome_user_data_directory,
-                ignoreDefaultArgs: ["--enable-automation"],
+                ignoreDefaultArgs: DEFAULT_ARGS,
                 autoClose: false,
                 args: ['--lang=en-US,en',
                     `--window-size=${window_width},${window_height}`,
                     '--enable-audio-service-sandbox',
+                    '--no-sandbox',
                 ],
             }
         );
@@ -87,7 +125,7 @@ try {
 
         for (let i = 0; i < files.length; i++) {
             const file_name = files[i];
-            console.log("now process file:\t"+file_name);
+            console.log("now process file:\t" + file_name);
 
             //click create icon
             await page.click('#create-icon');
@@ -100,16 +138,19 @@ try {
                 page.waitForFileChooser(),
                 page.click('#select-files-button > div'), // some button that triggers file selection
             ]);
-            await fileChooser.accept([upload_file_directory+file_name]);
+            await fileChooser.accept([upload_file_directory + file_name]);
 
             // wait 10 seconds
             await sleep(10_000);
 
             // title content
-            await page.type('#textbox', title_prefix + file_name.replace('.mp4',''));
+            const text_box = await page.$x("//*[@id=\"textbox\"]");
+            await text_box[0].type(title_prefix + file_name.replace('.mp4', ''));
+            //  await page.type('#textbox', title_prefix + file_name.replace('.mp4',''));
             await sleep(1000);
-            // Description content, default to be null
-            await page.type('#child-input', video_description);
+
+            // Description content
+            await text_box[1].type(video_description);
 
             await sleep(1000);
             // add video to the second playlists
@@ -126,7 +167,7 @@ try {
             await page.click('#dialog > div > ytcp-animatable.button-area.metadata-fade-in-section.style-scope.ytcp-uploads-dialog > div > div.right-button-area.style-scope.ytcp-uploads-dialog');
             await sleep(1000);
             //click publish now and public
-            await page.click('#publish-now-container');
+            await page.click('#first-container');
             await page.click('#privacy-radios > paper-radio-button:nth-child(1)');
             await page.click('#done-button');
             await sleep(5000);
@@ -143,14 +184,8 @@ try {
     console.log(error);
 }
 
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 ```
-
-运行方法很简单：
-```sh
-node upload.js
-```
-
-脚本后续更新见仓库：[Youtube Uploader: auto upload multiple youtube videos 批量自动上传youtube视频](https://github.com/zhang0peter/youtube-upload-multi-videos)
