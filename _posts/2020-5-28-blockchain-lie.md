@@ -3,7 +3,7 @@ layout: post
 title: "区块链/币圈/虚拟货币常见骗局(2020/05/28持续更新)"
 categories: [投资, 区块链]
 description: ""
-permalink: /wiki/
+permalink: /blockchain-lie/
 ---
 
 此文首发于我的Jekyll博客：[zhang0peter的个人博客](https://zhang0peter.com)         
