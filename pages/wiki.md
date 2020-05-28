@@ -304,6 +304,14 @@ Warning: Permanently added 'github.com,13.229.188.59' (RSA) to the list of known
 Hi zhang0peter! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
+如果另外一个服务器已经有公钥和私钥，你不想重新生成，可以直接拷贝过来：
+```sh
+cd ~/.ssh
+nano id_rsa
+chmod 0600 id_rsa
+ssh -T git@github.com
+```
+
 ## git 常用操作
 
 Git操作参考：[Git的奇技淫巧](https://github.com/521xueweihan/git-tips)
