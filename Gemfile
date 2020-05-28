@@ -18,6 +18,7 @@ group :jekyll_plugins do
     gem 'rouge'
     gem 'jekyll-paginate'
     gem 'jekyll-commonmark-ghpages'
+    gem 'jekyll-redirect-from'
 #    gem 'jemoji'
 #    gem 'jekyll-toc'
   end

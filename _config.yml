@@ -98,6 +98,7 @@ plugins:
 #     - jekyll-mentions
 #     - jekyll-html-pipeline
     - jekyll-sitemap   #sitemap
+    - jekyll-redirect-from
 # collections:
 #     wiki:
 #         output: true
