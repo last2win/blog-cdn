@@ -15,12 +15,10 @@ permalink: /about/
 {% endraw %}
 此博客基于该模板搭建而成：[My Blog / Jekyll Themes / GitHub Pages 博客模板](https://github.com/mzlogin/mzlogin.github.io)
 
-做的改动如下： 
-- 增加SEO 插件：Jekyll SEO tag：[jekyll 博客对搜索引擎的SEO提升方法--head中的meta标签和Jekyll SEO Tag](https://zhang0peter.com/2020/01/19/GitHub-jekyll-SEO/)
-- 增加谷歌广告：[GitHub静态博客Jekyll-安装谷歌广告-Google AdSense-advertisement — zhang0peter的个人博客](https://zhang0peter.com/2020/01/24/jekyll-google-advertisement/)
-- 自动化博客访问量统计：[Jekyll博客统计访问量，阅读量工具总结--LeanCloud，不蒜子，Valine，Google Analytics](https://zhang0peter.com/2020/01/19/GitHub-jekyll-view-counter/)
+做的改动如下：               
+- 自动化博客访问量统计：[Jekyll博客统计访问量，阅读量工具总结--LeanCloud，不蒜子，Valine，Google Analytics](https://zhang0peter.com/2020/01/19/GitHub-jekyll-view-counter/)                 
 - [jekyll静态博客提升访问速度：内嵌CSS，异步加载js，压缩HTML](https://zhang0peter.com/2020/01/27/jekyll-inline-css/)
-- 自定义域名与HTTPS/TLS/CAA配置参考这篇博客：[GitHub Pages博客：自定义域名，HTTPS，CAA](https://zhang0peter.com/2020/02/21/github-pages-https/)        
+- 自定义域名与HTTPS/TLS/CAA配置参考这篇博客：[GitHub Pages博客：自定义域名，HTTPS，CAA](https://zhang0peter.com/2020/02/21/github-pages-https/)                           
 
 
 
