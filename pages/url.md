@@ -4,7 +4,7 @@ title: 页面链接汇总
 description: 页面链接汇总
 keywords: url
 comments: false
-permalink: /urls/
+permalink: /urls-xxxxxxxxxxxxxxxxxxxxxxxxx/
 ---
 
 ```txt
