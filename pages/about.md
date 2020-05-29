@@ -15,25 +15,13 @@ permalink: /about/
 {% endraw %}
 此博客基于该模板搭建而成：[My Blog / Jekyll Themes / GitHub Pages 博客模板](https://github.com/mzlogin/mzlogin.github.io)
 
-我的博客项目地址：[zhang0peter- 基于GitHub的Jeykll静态博客](https://github.com/zhang0peter/zhang0peter.github.io)
-
 做的改动如下： 
-- 修改网页背景色为`#FFF7DB`   
-- 增加sitemap，方便搜索引擎索引
-- 对文章页面增加TOC目录      
-- 使用`jekyll 4.0`替换`github-pages`，编译速度大幅增加
-- 使用 jsDeliver的CDN替换本地的jquery引用
-- 修复Bug：meta 的keywords不起作用，因为原作者用的是Mac，而Mac与Windows平台的换行符不一样 
-- 使用谷歌的站内搜索替代`Simple-Jekyll-Search`插件，优势：可以全文索引，不用每个网页都加载用于搜索的数据
 - 增加SEO 插件：Jekyll SEO tag：[jekyll 博客对搜索引擎的SEO提升方法--head中的meta标签和Jekyll SEO Tag](https://zhang0peter.com/2020/01/19/GitHub-jekyll-SEO/)
 - 增加谷歌广告：[GitHub静态博客Jekyll-安装谷歌广告-Google AdSense-advertisement — zhang0peter的个人博客](https://zhang0peter.com/2020/01/24/jekyll-google-advertisement/)
 - 自动化博客访问量统计：[Jekyll博客统计访问量，阅读量工具总结--LeanCloud，不蒜子，Valine，Google Analytics](https://zhang0peter.com/2020/01/19/GitHub-jekyll-view-counter/)
 - [jekyll静态博客提升访问速度：内嵌CSS，异步加载js，压缩HTML](https://zhang0peter.com/2020/01/27/jekyll-inline-css/)
+- 自定义域名与HTTPS/TLS/CAA配置参考这篇博客：[GitHub Pages博客：自定义域名，HTTPS，CAA](https://zhang0peter.com/2020/02/21/github-pages-https/)        
 
-
-Fork后的操作方法参考这篇博客：[在GitHub上搭建GitHub Pages博客-- Jekyll](https://zhang0peter.blog.csdn.net/article/details/103903611)
-
-其中自定义域名与HTTPS/TLS/CAA配置参考这篇博客：[GitHub Pages博客：自定义域名，HTTPS，CAA](https://zhang0peter.com/2020/02/21/github-pages-https/)        
 
 
 
