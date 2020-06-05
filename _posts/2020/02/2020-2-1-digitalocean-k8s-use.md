@@ -24,7 +24,7 @@ keywords: k8s, kubernetes,
 
 `digitalocean`的`kubernetes`集群提供3台ubuntu虚拟机(node)，每台1核CPU，2G内存，共30\$一个月，体验一天只要1\$。
 
-**通过我的链接在`digitalocean`注册的新用户，可以获得100美元的2个月使用权，相当于前2个月免费用：[DigitalOcean – sign up](https://m.do.co/c/7682952ca1c8)**
+**通过我的链接在`digitalocean`注册的新用户，可以获得100美元的2个月使用权，相当于前2个月免费用：[DigitalOcean – sign up](https://m.do.co/c/cd843946e47a)**
 
 创建kubernetes集群后，DO会提醒你使用`kubectl`或者`doctl`操作集群，我推荐`kubectl`这个通用工具。
 

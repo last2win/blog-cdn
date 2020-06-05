@@ -46,4 +46,14 @@ permalink: /about/
 如果你有什么想说的，欢迎在此留言。
 
 
+## 广告
+
+如果你觉得我的博客对你有帮助，以下是广告内容：
+
+通过我的链接在`digitalocean`注册的新用户，可以获得100美元的2个月使用权，相当于前2个月免费用：[DigitalOcean – sign up](https://m.do.co/c/cd843946e47a)
+
+通过此链接下载并使用Brave浏览器：[Secure, Fast & Private Web Browser with Adblocker | Brave Browser](https://brave.com/moo963)
+
+Brave浏览器由Brendan Eich(JavaScript设计者，Mozilla基金会创建者之一)开发，使用Chromium内核，内嵌广告屏蔽插件，自带Tor浏览模式。
+
 
