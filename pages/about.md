@@ -39,11 +39,6 @@ permalink: /about/
 
 ![图片]({% link /images/2020/2020-5-8.png %})
 
-{% raw %}
-***          
-{% endraw %}
-
-如果你有什么想说的，欢迎在此留言。
 
 
 ## 广告
@@ -54,6 +49,11 @@ permalink: /about/
 
 通过此链接下载并使用Brave浏览器：[Secure, Fast & Private Web Browser with Adblocker | Brave Browser](https://brave.com/moo963)
 
-Brave浏览器由Brendan Eich(JavaScript设计者，Mozilla基金会创建者之一)开发，使用Chromium内核，内嵌广告屏蔽插件，自带Tor浏览模式。
+Brave浏览器由Brendan Eich(JavaScript设计者，Mozilla基金会创建者之一)开发，使用Chromium内核，内嵌广告屏蔽插件，自带Tor浏览模式。使用Brave浏览器后可以体验自动屏蔽广告带来的清爽的网页。
 
 
+{% raw %}
+***          
+{% endraw %}
+
+如果你有什么想说的，欢迎在此留言。
