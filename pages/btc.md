@@ -5,6 +5,7 @@ categories: [区块链,投资]
 description: ""
 comments: true
 permalink: /btc/
+sitemap: false
 ---
 
 此文首发于我的Jekyll博客：[zhang0peter的个人博客](https://zhang0peter.com)         
