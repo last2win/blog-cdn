@@ -6,34 +6,6 @@
       <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
     </div>
 
-    <!--
-    {% if site.url contains 'zhang0peter' and page.url == "/" %}
-    <script async defer src="https://api.zhang0peter.com/app.js"></script>
-    <script type="text/javascript">
-      $.ajax({
-        url: "https://simpleanalytics.com/zhang0peter.com.json?start=2020-01-01",
-        success: function (data) {
-          $("#site_uv").text(data.pageviews);
-        }
-      });
-    </script>
-    <span id="container_site_uv">本站总访问量<span id="site_uv"></span></span>
-    {% elsif site.url contains 'zhang0peter' %}
-    <script async defer src="https://api.zhang0peter.com/app.js"></script>
-    <script type="text/javascript">
-      $.ajax({
-        url: "https://simpleanalytics.com/zhang0peter.com{{ page.url }}.json?start=2020-01-01",
-        success: function (data) {
-          $("#site_uv").text(data.pageviews);
-        }
-      });
-    </script>
-    <span id="container_site_uv">本页面访问量<span id="site_uv"></span></span>
-    {% else %}
-    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span></span>
-    {% endif %}
-
-    -->
 
     <!--不蒜子统计脚本-->
     <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

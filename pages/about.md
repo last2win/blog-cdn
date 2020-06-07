@@ -22,7 +22,6 @@ permalink: /about/
 
 
 
-
 ## 关于我
 
 {% for website in site.data.social %}
