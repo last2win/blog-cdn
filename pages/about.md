@@ -34,9 +34,9 @@ permalink: /about/
 ## 网站访问量与排名
 [博客访问量与排名变更(持续更新) — zhang0peter的博客](https://zhang0peter.com/blog/)
 
-2020-5-8：全球排名138万，中国排名26万
+2020-6-8：全球排名91万，中国排名10万
 
-![图片]({% link /images/2020/2020-5-8.png %})
+![图片]({% link /images/2020/2020-6-8.png %})
 
 
 
