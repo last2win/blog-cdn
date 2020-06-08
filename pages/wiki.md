@@ -174,7 +174,7 @@ sudo nano /etc/hosts     #将新的hostname指向127.0.0.1
 *   [有用薄膜键盘敲代码的吗?比例大概是多少? - V2EX](https://www.v2ex.com/t/565789?p=1)              
 *   [mysql gui 客户端推荐一个 - V2EX](https://www.v2ex.com/t/565368)                              
 *   [各位在用什么邮箱客户端？ - V2EX](https://www.v2ex.com/t/634423)             
-*   []()                   
+*   [请问这种 Git 流程图是用什么工具画的呢？ - V2EX](https://www.v2ex.com/t/665886)                   
 *   []()                       
 *   []()             
 *   []()                   
