@@ -2,7 +2,7 @@
 layout: post
 title: "Linux环境下删除卸载caddy-Linux remove/uninstall caddy"
 categories: [行走的问题解决机]
-description: ""
+description: "直接删除caddy的二进制文件，并停止服务"
 ---
 
 此文首发于我的Jekyll博客：[zhang0peter的个人博客](https://zhang0peter.com)         
