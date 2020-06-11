@@ -8,7 +8,7 @@ menu: 关于
 permalink: /about/
 ---
 
-学生，喜欢Python，在学Java
+喜欢Python，工作用Java
 
 {% raw %}
 ***          
