@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "Ubutnu 20.04 安装和使用单机版hadoop 3.2"
-categories: [ Hadoop]
-description: "安装Java-配置ssh-编辑配置文件-启动Hadoop单机伪集群"
-permalink: /ubuntu-20.04-install-hadoop/
+title: "win10安装和使用Hadoop 3.2"
+categories: [Hadoop]
+description: ""
+permalink: /windows-install-hadoop/
 ---
-
-
 
 此文首发于我的Jekyll博客：[zhang0peter的个人博客](https://zhang0peter.com)         
 
@@ -14,7 +12,6 @@ permalink: /ubuntu-20.04-install-hadoop/
 ***          
 {% endraw %}
 
-ubuntu 20.04出来有一段时间了，正好最近在学习Hadoop的使用，于是打算在ubuntu 20.04上安装和使用hadoop。
 
 ## 安装Java
 
@@ -195,5 +192,7 @@ curl 127.0.0.1:9870
 </html>
 
 ```
+
+
 
 
