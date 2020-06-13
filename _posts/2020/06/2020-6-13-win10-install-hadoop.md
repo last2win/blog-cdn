@@ -2,7 +2,7 @@
 layout: post
 title: "win10安装和使用Hadoop 3.2"
 categories: [Hadoop]
-description: ""
+description: "安装Java-配置ssh-编辑配置文件-启动Hadoop单机伪集群-查看集群状态"
 permalink: /windows-install-hadoop/
 ---
 
@@ -35,13 +35,25 @@ OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.7+10, mixed mode)
 
 Hadoop 官网：[Apache  Hadoop releases list](http://hadoop.apache.org/releases.html)
 
-当前最新版本为3.2.1，下载二进制包：
+**注意：最新版本 3.2.1在Windows下存在bug，无法正常使用**
+
+当前最新版本为2.9.2，下载二进制包：
 
 ```sh
-wget https://downloads.apache.org/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
+wget https://downloads.apache.org/hadoop/common/hadoop-2.9.2/hadoop-2.9.2.tar.gz
 tar xvzf hadoop-*.tar.gz
-mv hadoop-3.2.1 hadoop
+mv hadoop-2.9.2 hadoop
 ```
+
+## 下载 winutils
+
+Hadoop在Windows上不能直接运行，需要额外下载`winutils`
+
+官方不直接提供`winutils`，第三方GitHub上有已经编译完成的：[cdarlint/winutils: winutils.exe hadoop.dll and hdfs.dll binaries for hadoop windows](https://github.com/cdarlint/winutils)
+
+下载后找到自己版本Hadoop的`winutils`，并把文件夹中的内容放置到`hadoop/bin`下。
+
+如果Hadoop版本较新，没有第三方编译好的`winutils`，需要自己手动编译，比较繁琐，不推荐。
 
 ## 配置Hadoop
 
@@ -98,7 +110,7 @@ set PATH=%PATH%;%HADOOP_PREFIX%\bin
 ```
 
 ***************
-配置文件`hadoop/etc/hadoop/mapred-site.xml`：
+修改配置文件名`hadoop/etc/hadoop/mapred-site.xml.template`到`mapred-site.xml`：
 
 
 ```xml
@@ -139,44 +151,20 @@ hadoop/bin/hadoop.cmd namenode -format
 20/06/13 14:51:19 INFO namenode.NameNode: SHUTDOWN_MSG:
 ```
 
+### 启动服务
 ```sh
-cd $HADOOP_HOME/sbin
-./start-dfs.sh 
-./start-yarn.sh 
+hadoop/sbin/start-all.cmd
 ```
+
+随后会跳出4个弹窗，每个弹窗应该都没有报错，正常运行。
 
 ## 查看集群状态
-```sh
-curl 127.0.0.1:9870
-```
-```html
-<!--
-   Licensed to the Apache Software Foundation (ASF) under one or more
-   contributor license agreements.  See the NOTICE file distributed with
-   this work for additional information regarding copyright ownership.
-   The ASF licenses this file to You under the Apache License, Version 2.0
-   (the "License"); you may not use this file except in compliance with
-   the License.  You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+访问页面`http://localhost:50070/`
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
--->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="REFRESH" content="0;url=dfshealth.html" />
-<title>Hadoop Administration</title>
-</head>
-</html>
+![图片]({% link /images/2020/2020-6-13-1.png %})
 
-```
+访问页面：`http://localhost:8088/`
 
-
-
+![图片]({% link /images/2020/2020-6-13-2.png %})
 
