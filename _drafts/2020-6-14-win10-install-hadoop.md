@@ -13,33 +13,24 @@ permalink: /windows-install-hadoop/
 {% endraw %}
 
 
+我之前已经写了一篇博客：[Ubutnu 20.04 安装和使用单机版hadoop 3.2](https://zhang0peter.com/ubuntu-20.04-install-hadoop/)
+
+但对于Windows用户来说，直接在Windows上安装和使用Hadoop会更加方便，毕竟Hadoop是Java写的，拥有跨平台的能力。
+
 ## 安装Java
 
 Hadoop基于Java，需要先安装Java。Java 8是推荐版本，Java 11也可以使用。
 
-```sh
-apt update &&apt upgrade
-apt install openjdk-11-jdk
-```
-## 创建专门用户并配置ssh
+我选择的是Java 11.
 
-为Hadoop专门创建用户：
 ```sh
-sudo useradd -m hadoop -s /bin/bash
-sudo passwd hadoop
-sudo adduser hadoop sudo
+PS C:\Users\peter> java -version
+openjdk version "11.0.7" 2020-04-14
+OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.7+10)
+OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.7+10, mixed mode)
 ```
 
-因为hadoop需要使用ssh,因此推荐使用密钥免认证ssh:
-```sh
-su - hadoop 
-ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
-cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-chmod 0600 ~/.ssh/authorized_keys
-```
 ## 下载Hadoop
-
-**不要切换用户，继续用新创建的hadoop用户**
 
 
 Hadoop 官网：[Apache  Hadoop releases list](http://hadoop.apache.org/releases.html)
@@ -56,36 +47,23 @@ mv hadoop-3.2.1 hadoop
 
 ### 编辑环境变量
 
-修改`~/.bashrc`，最后添加：
-```js
-export HADOOP_HOME=/home/hadoop/hadoop
-export HADOOP_INSTALL=$HADOOP_HOME
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
-```
-生效：
+
+设置`JAVA_HOME `环境变量和其他变量，编辑文件`/hadoop/etc/hadoop/hadoop-env.cmd `
+
+**windowsd的cmd不允许设置变量路径带有空格，所以Java的安装目录需要不带空格**
+
 ```sh
-source ~/.bashrc
-```
-设置`JAVA_HOME `环境变量：
-```sh
-nano ~/hadoop/etc/hadoop/hadoop-env.sh 
-```
-```sh
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+set JAVA_HOME=D:\AdoptOpenJDK\jdk-11.0.7.10-hotspot
+set HADOOP_PREFIX=D:\hadoop
+set HADOOP_CONF_DIR=%HADOOP_PREFIX%\etc\hadoop
+set YARN_CONF_DIR=%HADOOP_CONF_DIR%
+set PATH=%PATH%;%HADOOP_PREFIX%\bin
 ```
 
-### 设置配置文件
+### 编辑配置文件
 
-设置配置文件：
-```sh
-cd $HADOOP_HOME/etc/hadoop
-nano core-site.xml
-```
+设置配置文件`hadoop/etc/hadoop/core-site.xml`：
+
 ```xml
 <configuration>
 <property>
@@ -96,10 +74,10 @@ nano core-site.xml
 ```
 
 **********
+配置文件`hadoop/etc/hadoop/hdfs-site.xml`：
 
-```js
-nano hdfs-site.xml
-```
+**修改路径为你的目录**
+
 ```xml
 <configuration>
 <property>
@@ -109,21 +87,20 @@ nano hdfs-site.xml
 
 <property>
   <name>dfs.name.dir</name>
-    <value>file:///home/hadoop/hadoopdata/hdfs/namenode</value>
+    <value>/D:/hadoop/hadoop/hadoopdata/hdfs/namenode</value>
 </property>
 
 <property>
   <name>dfs.data.dir</name>
-    <value>file:///home/hadoop/hadoopdata/hdfs/datanode</value>
+    <value>/D:/hadoop/hadoopdata/hdfs/datanode</value>
 </property>
 </configuration>
 ```
 
 ***************
+配置文件`hadoop/etc/hadoop/mapred-site.xml`：
 
-```js
-nano mapred-site.xml
-```
+
 ```xml
 <configuration>
  <property>
@@ -133,9 +110,10 @@ nano mapred-site.xml
 </configuration>
 ```
 ********
-```js
-nano yarn-site.xml
-```
+
+配置文件`hadoop/etc/hadoop/yarn-site.xml`：
+
+
 ```xml
 <configuration>
  <property>
@@ -147,13 +125,19 @@ nano yarn-site.xml
 
 **********
 
-### 格式化 namenode 
-```sh
-cd ~
-hdfs namenode -format
-```
+
 
 ## 启动Hadoop单机伪集群
+
+### 格式化 namenode 
+```sh
+hadoop/bin/hadoop.cmd namenode -format
+```
+```js
+20/06/13 14:51:19 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+20/06/13 14:51:19 INFO namenode.FSImage: FSImageSaver clean checkpoint: txid = 0 when meet shutdown.
+20/06/13 14:51:19 INFO namenode.NameNode: SHUTDOWN_MSG:
+```
 
 ```sh
 cd $HADOOP_HOME/sbin
