@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "win10安装和使用Hadoop 3.2"
-categories: [Hadoop]
+categories: [大数据]
 description: "安装Java-配置ssh-编辑配置文件-启动Hadoop单机伪集群-查看集群状态"
 permalink: /windows-install-hadoop/
 ---
