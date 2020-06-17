@@ -48,11 +48,13 @@ permalink: /about/
 
 通过此链接下载并使用Brave浏览器：[Secure, Fast & Private Web Browser with Adblocker | Brave Browser](https://brave.com/moo963)。Brave浏览器由Brendan Eich(JavaScript设计者，Mozilla基金会创建者之一)开发，使用Chromium内核，内嵌广告屏蔽插件，自带Tor浏览模式。使用Brave浏览器后可以体验自动屏蔽广告带来的清爽的网页。
 
-极客时间专栏：
+通过以下链接购买极客时间专栏有优惠：
 
 *  [《从0开始学大数据》](http://gk.link/a/10e6c)           
 *    [《深入剖析Kubernetes》](http://gk.link/a/10d6O)          
 *    [《白话法律42讲》](http://gk.link/a/10fCt)              
+*    [《Kafka核心技术与实战》](https://time.geekbang.org/column/intro/191?code=EfTLosEJaJdj1PBbbIXG3AiqX3ae6Yb4TMSHg2XE3DA%3D&utm_term=SPoster)                
+
 {% raw %}
 ***          
 {% endraw %}
