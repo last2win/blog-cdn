@@ -74,3 +74,4 @@ adduser --system  hadoop
 su - hadoop -s /bin/bash
 ```
 现在就切换到bash，可以正常运行了。
+

@@ -86,6 +86,10 @@ systemctl reload ssh
 *   [Linux下的十个好用的命令工具：查看系统版本，显示目录的大小，查看硬盘HDD/SSD，硬盘测速，ssh时自动输入密码，查看程序的内存使用情况，查看I/O的速度，查看ssh密码错误日志，查找文件](https://blog.csdn.net/zhangpeterx/article/details/96279648)             
 *   [linux下bash脚本常用的十个技巧：显示执行脚本花费的时间，在脚本退出时杀死后台运行的程序，在脚本退出时跳出循环，读取命令行参数来决定循环次数](https://blog.csdn.net/zhangpeterx/article/details/96278020)                   
 *   [Linux/ubuntu server 18.04 安装远程桌面--vnc server-tightvncserver](https://zhang0peter.com/2020/01/07/linux-server-vnc/)                       
+*   [Linux的useradd与adduser命令区别](https://zhang0peter.com/2020/06/20/linux-useradd-adduser/)  
+*   []()  
+*   []()  
+*   []()  
 *   []()  
 
 
