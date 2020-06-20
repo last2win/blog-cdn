@@ -48,6 +48,21 @@ sudo hostname hk-ubuntu  #暂时修改 hostname，重启则失效
 sudo nano /etc/hostname  #永久修改hostname，重启生效
 sudo nano /etc/hosts     #将新的hostname指向127.0.0.1
 ```
+
+## 设置指定用户禁止ssh密码登录
+
+有时候我们需要有些用户可以ssh登录时使用密码，而有些用户只能使用密钥登录，编辑文件`/etc/ssh/sshd_config`
+
+在**文件最后**添加如下内容：
+```sh
+Match   User    user1,user2
+        PasswordAuthentication  no
+```
+重启服务：
+```sh
+systemctl reload ssh
+```
+
 ## 其他
 
 *   [Linux下tar解压到当前目录，zip压缩,tar压缩，tar解压_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/94862801)                       
