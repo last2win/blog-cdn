@@ -99,6 +99,10 @@ Use xtigervncviewer -SecurityTypes VncAuth,TLSVnc -passwd /home/vncviewer/.vnc/p
 ```sh
 vncserver -kill :1
 ```
+
+Windows上的vnc客户端推荐`realvnc`的`VNC Viewer`
+
+
 {% raw %}
 ***          
 {% endraw %}
