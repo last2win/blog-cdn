@@ -49,6 +49,51 @@ sudo nano /etc/hostname  #永久修改hostname，重启生效
 sudo nano /etc/hosts     #将新的hostname指向127.0.0.1
 ```
 
+## debian 9/ ubuntu 添加swap分区
+
+
+Linux 中 Swap（交换分区），类似于 Windows 的虚拟内存，就是当内存不足的时候，把一部分硬盘空间虚拟成内存使用,从而解决内存容量不足的情况。
+
+先查看是否已经存在swap分区了：
+```js
+sudo swapon --show
+```
+没有结果表示不存在swap分区，有结果表示已经有一个swap分区了，一般来说一个系统不需要第二个swap分区。
+
+***
+
+创建1G大小的swap分区文件,并更改权限：
+```js
+sudo dd if=/dev/zero of=/swapfile bs=1024 count=1024k
+sudo chmod 600 /swapfile
+```
+***
+加载swap分区：
+```js
+sudo mkswap /swapfile
+sudo swapon /swapfile
+```
+如果想要重启后swap分区扔自动加载，修改文件：
+```js
+sudo nano /etc/fstab
+```
+最后增加一行：
+```js
+/swapfile swap swap defaults 0 0
+```
+***
+查看swap分区是否加载成功：
+```js
+sudo swapon --show
+```
+***
+一般来说如果是服务器，swappiness 不要太高，修改swappiness 的值：
+```js
+sudo sysctl vm.swappiness=10
+```
+***
+参考资料:[How To Add Swap Space on Debian 9 | Linuxize](https://linuxize.com/post/how-to-add-swap-space-on-debian-9/)
+
 ## 设置指定用户禁止ssh密码登录
 
 有时候我们需要有些用户可以ssh登录时使用密码，而有些用户只能使用密钥登录，编辑文件`/etc/ssh/sshd_config`
