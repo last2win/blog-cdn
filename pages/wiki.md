@@ -328,6 +328,7 @@ Hi zhang0peter! You've successfully authenticated, but GitHub does not provide s
 cd ~/.ssh
 nano id_rsa
 chmod 0600 id_rsa
+cd ..
 ssh -T git@github.com
 ```
 
