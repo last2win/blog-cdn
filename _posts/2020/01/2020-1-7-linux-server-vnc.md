@@ -66,21 +66,23 @@ apt install kubuntu-desktop
 apt install tigervnc-common tigervnc-scraping-server tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer ttf-wqy-zenhei
 ```
 
-新建用户专门用来运行vnc，防止泄露不必要的信息。
-
-```sh
-useradd vncviewer
-passwd vncviewer
-mkdir /home/vncviewer
-chown -R vncviewer:root /home/vncviewer
-sudo usermod -a -G sudo vncviewer
-su - vncviewer
-```
-
 因为默认配置是只允许本地访问，编辑文件`/etc/vnc.conf`，添加
 ```sh
 $localhost = "no";
 ```
+
+新建用户专门用来运行vnc，防止泄露不必要的信息。
+
+```sh
+adduser --home /home/vncviewer --shell /bin/bash vncviewer
+#passwd vncviewer
+#mkdir /home/vncviewer
+#chown -R vncviewer:root /home/vncviewer
+sudo usermod -a -G sudo vncviewer
+su - vncviewer
+```
+
+
 
 **警告：第一次登录时记得关闭待机和息屏保护！！**
 
