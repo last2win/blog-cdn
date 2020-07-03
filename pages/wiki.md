@@ -11,6 +11,25 @@ permalink: /wiki/
 
 # Linux
 
+## bash脚本常用指令
+
+```sh
+#!/bin/bash
+
+timeout=240; 
+node new_search.js 2>&1 | tee -a search.log &
+sleep 10
+while true; do 
+	if [ -z "`find search.log -newermt @$[$(date +%s)-${timeout}]`" ]; 
+		then 
+				killall --regexp -TERM 'node *'
+				node new_search.js 2>&1 | tee -a search.log &	
+	fi
+	sleep 60
+done
+
+```
+
 ## Debian/Ubuntu/Raspbian 时间同步
 时区设置：
 ```sh
@@ -63,32 +82,32 @@ sudo swapon --show
 ***
 
 创建1G大小的swap分区文件,并更改权限：
-```js
+```sh
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=1024k
 sudo chmod 600 /swapfile
 ```
 ***
 加载swap分区：
-```js
+```sh
 sudo mkswap /swapfile
 sudo swapon /swapfile
 ```
 如果想要重启后swap分区扔自动加载，修改文件：
-```js
+```sh
 sudo nano /etc/fstab
 ```
 最后增加一行：
-```js
+```sh
 /swapfile swap swap defaults 0 0
 ```
 ***
 查看swap分区是否加载成功：
-```js
+```sh
 sudo swapon --show
 ```
 ***
 一般来说如果是服务器，swappiness 不要太高，修改swappiness 的值：
-```js
+```sh
 sudo sysctl vm.swappiness=10
 ```
 ***
@@ -108,6 +127,29 @@ Match   User    user1,user2
 systemctl reload ssh
 ```
 
+
+## Linux下使用tee既在屏幕上显示输出，又把输出写进文件
+
+Linux下的tee是一个很好用的工具，可以把重定向屏幕输出到文件的同时在屏幕上显示输出
+
+使用示例如下：
+```sh
+command  | tee stdout.log
+```
+
+**这里有一个需要注意的坑点，上面的命令只是把标准输出，也就是 STDOUT 写进文件，并没有处理错误输出，也就是 STDERR**
+
+如果需要处理错误输出，命令如下：
+```sh
+command > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)
+```
+如果你想把标准输出和错误输出都重定向到一个文件，那么命令如下：
+```sh
+command  2>&1 | tee -a log
+```
+
+参考文章：[linux - How do I write stderr to a file while using "tee" with a pipe? - Stack Overflow](https://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe)
+
 ## 其他
 
 *   [Linux下tar解压到当前目录，zip压缩,tar压缩，tar解压_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/94862801)                       
@@ -115,8 +157,7 @@ systemctl reload ssh
 *   [在centos上安装最新的glibc - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96116219)                   
 *   [Linux在shell终端中清空DNS缓存,刷新DNS的方法(ubuntu,debian) - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/83895446)                       
 *   [Linux: 使用bash命令ls按时间排序 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/93165265)             
-*   [在WinSCP中使用sudo进行sftp，不用输入密码，获得root权限 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95001286)                        
-*   [Linux下使用tee既在屏幕上显示输出，又把输出写进文件 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/90573567)             
+*   [在WinSCP中使用sudo进行sftp，不用输入密码，获得root权限 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/95001286)                           
 *   [技术 Linux 下如何处理包含空格和特殊字符的文件名](https://linux.cn/article-5777-1.html)                                       
 *   [在centos上通过yum直接安装最新版gcc和开发工具 ](https://blog.csdn.net/zhangpeterx/article/details/96141900)             
 *   [Linux系统16进制形式查看二进制文件 ](https://blog.csdn.net/zhangpeterx/article/details/95448494)                   
