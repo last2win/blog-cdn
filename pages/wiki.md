@@ -30,6 +30,12 @@ done
 
 ```
 
+
+参考：
+
+[linux - How to kill a process on no output for some period of time - Stack Overflow](https://stackoverflow.com/questions/37958140/how-to-kill-a-process-on-no-output-for-some-period-of-time)
+
+
 ## Debian/Ubuntu/Raspbian 时间同步
 时区设置：
 ```sh
