@@ -156,6 +156,21 @@ command  2>&1 | tee -a log
 
 参考文章：[linux - How do I write stderr to a file while using "tee" with a pipe? - Stack Overflow](https://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe)
 
+
+## Linux查询DNS
+
+在Linux系统里查询DNS使用如下命令
+```sh
+dig baidu.com @114.114.114.114
+```
+
+
+或者使用系统默认的DNS服务器查询
+
+```sh
+nslookup baidu.com
+```
+
 ## 其他
 
 *   [Linux下tar解压到当前目录，zip压缩,tar压缩，tar解压_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/94862801)                       
@@ -172,7 +187,6 @@ command  2>&1 | tee -a log
 *   [在CentOS/Debian/Ubuntu上编译安装最新版gnu make 和GNU binutils (as and ld)_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/96135667)                   
 *   [一日一技：在Linux系统中如何查询正在运行的程序的路径](https://mp.weixin.qq.com/s?__biz=MzI2MzEwNTY3OQ==&mid=2648978154&idx=1&sn=53488342b4b67fbd97ffd73affd69fd5&chksm=f2506f0ac527e61c8b7cd11e13aff279fa7e29f1f9bacbe990c012274f73e3dd48f5f8edfd89&mpshare=1&scene=23&srcid=0119f0M6FbJ86dEq34KZNtb2&sharer_sharetime=1579425817650&sharer_shareid=19fe229c09c2cd2c6445c2856dcf3d6d#rd)                                    
 *   [网络测速工具 iperf  须臾之学](https://blog.xizhibei.me/2020/01/13/speed-test-tool-iperf/)                       
-*   [使用ssh连接GitHub上的git服务器](https://zhang0peter.com/2020/02/03/git-github-ssh/)             
 *   [在Linux上使用图形界面的GitHub Desktop](https://blog.csdn.net/zhangpeterx/article/details/95889349)                   
 *   [Linux查看可执行文件的各个段：.BSS，.TEXT，.DATA的大小](https://blog.csdn.net/zhangpeterx/article/details/102657265)                       
 *   [Linux下的十个好用的命令工具：查看系统版本，显示目录的大小，查看硬盘HDD/SSD，硬盘测速，ssh时自动输入密码，查看程序的内存使用情况，查看I/O的速度，查看ssh密码错误日志，查找文件](https://blog.csdn.net/zhangpeterx/article/details/96279648)             
