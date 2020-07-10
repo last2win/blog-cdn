@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "win10安装和使用 Logstash 7.8.0"
+title: "ubuntu 安装和使用 Logstash 7.8.0"
 categories: [大数据]
 description: "下载Logstash-安装Logstash插件-启动Logstash-使用 dev tools"
-permalink: /windows-install-Logstash/
+permalink: /ubuntu-install-Logstash/
 ---
 
 此文首发于我的Jekyll博客：[zhang0peter的个人博客](https://zhang0peter.com)         
@@ -12,19 +12,31 @@ permalink: /windows-install-Logstash/
 ***          
 {% endraw %}
 
-前置教程：[win10安装和使用 Elasticsearch 7.8.0](https://zhang0peter.com/windows-install-Elasticsearch/)
+前置教程：
 
+[win10安装和使用 Elasticsearch 7.8.0](https://zhang0peter.com/windows-install-Elasticsearch/)
 
+[win10安装和使用 Kibana 7.8.0](https://zhang0peter.com/windows-install-Kibana/)
 
-## 下载Logstash
+本来想在win10上安装和使用 Logstash，结果官方不提供Windows的安装包，只能在Linux下使用了。
 
+## 下载 Elasticsearch, Kibana ,Logstash
+
+我使用的Linux系统版本是ubuntu 18.04
+
+```sh
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.8.0-amd64.deb
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.8.0-amd64.deb.sha512
+shasum -a 512 -c elasticsearch-7.8.0-amd64.deb.sha512
+sudo dpkg -i elasticsearch-7.8.0-amd64.deb
+```
 
 Logstash 官网：[Download Logstash Free | Get Started Now | Elastic | Elastic](https://www.elastic.co/cn/downloads/Logstash)
 
 
 当前最新版本为7.8.0，下载windows版本的二进制包，解压。
 
-
+https://time.geekbang.org/course/detail/100030501-102665
 
 
 ## 启动 Logstash
