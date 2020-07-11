@@ -9,6 +9,8 @@ sitemap: false
 redirect_from:
   - /98
   - /98/
+  - /cc98/
+  - /cc98
 ---
 
 # 日记
