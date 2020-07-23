@@ -202,6 +202,23 @@ nslookup baidu.com
 
 # Windows
 
+## powershell-zsh-git
+
+
+https://zhuanlan.zhihu.com/p/76436374
+
+Set-Theme ys
+
+https://blog.walterlv.com/post/beautify-powershell-like-zsh.html
+
+将美化进行到底，把 PowerShell 做成 oh-my-zsh 的样子
+
+
+
+{% raw %}
+***          
+{% endraw %}
+
 *   [WSL系列操作：安装，卸载_zhang0peter的博客-CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/97616268)                       
 *   [Windows系统下多版本GCC的安装： MinGW Cygwin Msys2 和 VS: MSVC ](https://blog.csdn.net/zhangpeterx/article/details/95591302)             
 *   [Windows使用MSVC，命令行编译，链接64位dll，Python调用](https://blog.csdn.net/zhangpeterx/article/details/100591270)                   
@@ -217,6 +234,71 @@ nslookup baidu.com
 
 # Java
 
+## jetbrains intellij IDEA 常用插件和配置
+
+***
+
+代码自动格式化快捷键：
+
+对于Windows: `Ctrl`+ `Alt`+`L`。
+
+对于ubuntu: `Ctrl`+ `Alt`+ `windows`+ `L`。
+
+对于Mac: `Command+ Option`+ `L`。
+
+*注意Windows上的快捷键会和TIM的快捷键冲突*
+
+如果你不喜欢自带的快捷键，可以到settings中的keymap的Code的reformat code，修改快捷键，我个人比较喜欢`Alt`+`F`
+
+***
+
+在`file`->`setings`->`editor`->`font`中把字体改为第一个`consolas`，这样会好看很多，也可以改为`simhei`。字号的大小根据自己喜好。
+
+***
+
+文件全局搜索使用快捷键`Ctrl`+ `Shift`+`F`，如果快捷键冲突，重新配置快捷键。
+
+下面推荐一些好用的插件，在在`file`->`setings`->`Plugins`中进行搜索安装
+
+##  1. CodeGlance
+效果是像sublime一样，右边显示缩小版的代码图。
+## 2.Markdown support
+装了这个插件就可以用IDEA写markdown了。
+## 3.MyBatis Log Plugin
+可以在console直接输出MyBatis 运行的sql语句
+## 4.FindBugs-IDEA
+可以自动查找BUG，安装完成后IDEA左下角会出现FindBugs的图标
+## 5.Rainbow Brackets
+这个插件我在vs code和sublime上都装了，很好用。
+括号的颜色很好看。
+## 6.VisualVM Launcher
+可以在调试的时候查看堆的情况
+## 7.Maven Helper
+查看Maven依赖
+
+## 8.Alibaba Java Coding Guidelines
+阿里巴巴代码开发规范，可以帮助Java初学者完善自己的代码规范。
+
+
+
+
+
+## IDEA 控制台乱码
+
+*   [解决IntelliJ IDEA控制台输出中文乱码问题](https://blog.csdn.net/liu865033503/article/details/81094575)
+*   [【IntellJ IDEA】idea的Terminal窗口中文乱码 解决方法](https://www.cnblogs.com/sxdcgaq8080/p/9071282.html)
+*   [IntelliJ IDEA 控制台中文乱码解决方案](https://blog.csdn.net/wo541075754/article/details/51150035)
+
+
+
+
+
+
+{% raw %}
+***          
+{% endraw %}
+
+
 *   [Java源码下载和阅读（JDK1.8/Java 11)_zhang0peter的博客-CSDN博客](https://zhang0peter.blog.csdn.net/article/details/88823585)             
 *   [有关groupId，artifactId和版本的命名约定的指南](https://maven.apache.org/guides/mini/guide-naming-conventions.html)                   
 *   [jetbrains intellij IDEA 常用插件 - zhang0peter的博客 - CSDN博客](https://blog.csdn.net/zhangpeterx/article/details/88787181)                       
@@ -226,7 +308,8 @@ nslookup baidu.com
 *   [Java数组排序： Array-ArrayList-List-Collections.sort()/List.sort()/Arrays.sort()](https://zhang0peter.com/2020/02/07/java-array-list-sort/)             
 *   [Sort an array in Java - Stack Overflow](https://stackoverflow.com/questions/8938235/sort-an-array-in-java)            
 *   [java - How to sort an ArrayList? - Stack Overflow](https://stackoverflow.com/questions/16252269/how-to-sort-an-arraylist)   
-
+*   []()
+*   []()
 
 
 # C++
