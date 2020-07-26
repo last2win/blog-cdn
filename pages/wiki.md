@@ -119,6 +119,28 @@ sudo sysctl vm.swappiness=10
 ***
 参考资料:[How To Add Swap Space on Debian 9 | Linuxize](https://linuxize.com/post/how-to-add-swap-space-on-debian-9/)
 
+
+
+## ubuntu/debian 安装SSH，并开启
+
+注意：如果使用的是WSL安装的ubuntu/debian，那么你需要先卸载：`apt remove openssh-server`
+```sh
+sudo apt install openssh-server
+```
+
+安装完成后SSH 服务默认开启
+手动启动：
+```sh
+systemctl start ssh.service
+```
+修改配置：
+```sh
+nano /etc/ssh/sshd_config
+
+PermitRootLogin yes
+PasswordAuthentication yes
+```
+
 ## 设置指定用户禁止ssh密码登录
 
 有时候我们需要有些用户可以ssh登录时使用密码，而有些用户只能使用密钥登录，编辑文件`/etc/ssh/sshd_config`
@@ -204,14 +226,22 @@ nslookup baidu.com
 
 ## powershell-zsh-git
 
-
-https://zhuanlan.zhihu.com/p/76436374
-
+```sh
+Install-Module posh-git
+Install-Module oh-my-posh
+```
+打开`~\Documents\WindowsPowerShell`，编辑文件`Microsoft.PowerShell_profile.ps1`，编写如下内容：
+```sh
+Import-Module posh-git
+Import-Module oh-my-posh
 Set-Theme ys
+```
 
-https://blog.walterlv.com/post/beautify-powershell-like-zsh.html
+参考：
 
-将美化进行到底，把 PowerShell 做成 oh-my-zsh 的样子
+*   [Windows Terminal 美化实例 - 知乎](https://zhuanlan.zhihu.com/p/76436374)          
+*   [将美化进行到底，把 PowerShell 做成 oh-my-zsh 的样子 - walterlv](https://blog.walterlv.com/post/beautify-powershell-like-zsh.html)          
+
 
 
 
