@@ -226,6 +226,12 @@ nslookup baidu.com
 
 ## powershell-zsh-git
 
+管理员模式打开powershell
+```sh
+set-executionpolicy remotesigned
+```
+选择 yes
+
 ```sh
 Install-Module posh-git
 Install-Module oh-my-posh
