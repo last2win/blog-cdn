@@ -455,6 +455,16 @@ ffmpeg -i input.mp4 output.mp3
 
 # git
 
+## git 强行更新，覆盖已存在的commit
+
+```sh
+git push -f <remote> <branch>
+git push -f origin master
+```
+
+参考：[Force "git push" to overwrite remote files - Stack Overflow](https://stackoverflow.com/questions/10510462/force-git-push-to-overwrite-remote-files)
+
+
 ## git强行还原
 有时候自己对仓库做了修改，但不需要这些修改，可以强行还原。
 ```js
