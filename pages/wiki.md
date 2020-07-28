@@ -421,7 +421,7 @@ Set-Theme ys
 *   [mysql gui 客户端推荐一个 - V2EX](https://www.v2ex.com/t/565368)                              
 *   [各位在用什么邮箱客户端？ - V2EX](https://www.v2ex.com/t/634423)             
 *   [请问这种 Git 流程图是用什么工具画的呢？ - V2EX](https://www.v2ex.com/t/665886)                   
-*   []()                       
+*   [求推荐年轻人的第一张信用卡 - V2EX](https://www.v2ex.com/t/693452)                       
 *   []()             
 *   []()                   
 
@@ -455,6 +455,30 @@ ffmpeg -i input.mp4 output.mp3
 
 # git
 
+## git对不同仓库配置不同email和
+
+编辑`~/.gitconfig`
+```sh
+# ~/.gitconfig
+[include]
+    path = user.gitconfig
+[includeIf "gitdir/i:d:/"]
+    path = work.gitconfig
+```
+编辑`~/user.gitconfig`
+```sh
+[user]
+	name = zhang0peter
+	email = zhang0peter@gmail.com
+```
+编辑`~/work.gitconfig`
+```sh
+[user]
+	name = xxx
+	email = xxxxx
+```
+
+参考：[git - Can I specify multiple users for myself in .gitconfig? - Stack Overflow](https://stackoverflow.com/questions/4220416/can-i-specify-multiple-users-for-myself-in-gitconfig)
 ## git 强行更新，覆盖已存在的commit
 
 ```sh
