@@ -465,13 +465,17 @@ ffmpeg -i input.mp4 output.mp3
 [includeIf "gitdir/i:d:/"]
     path = work.gitconfig
 ```
+
 编辑`~/user.gitconfig`
+
 ```sh
 [user]
 	name = zhang0peter
 	email = zhang0peter@gmail.com
 ```
+
 编辑`~/work.gitconfig`
+
 ```sh
 [user]
 	name = xxx
