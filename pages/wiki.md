@@ -296,26 +296,40 @@ Set-Theme ys
 
 下面推荐一些好用的插件，在在`file`->`setings`->`Plugins`中进行搜索安装
 
-###  1. CodeGlance
+1. CodeGlance
+
 效果是像sublime一样，右边显示缩小版的代码图。
-### 2.Markdown support
+
+2.Markdown support
+
 装了这个插件就可以用IDEA写markdown了。
-### 3.MyBatis Log Plugin
+
+3.MyBatis Log Plugin
+
 可以在console直接输出MyBatis 运行的sql语句
-### 4.FindBugs-IDEA
+
+4.FindBugs-IDEA
+
 可以自动查找BUG，安装完成后IDEA左下角会出现FindBugs的图标
-### 5.Rainbow Brackets
+
+5.Rainbow Brackets
+
 这个插件我在vs code和sublime上都装了，很好用。
+
 括号的颜色很好看。
-### 6.VisualVM Launcher
+
+6.VisualVM Launcher
+
 可以在调试的时候查看堆的情况
-### 7.Maven Helper
+
+7.Maven Helper
+
 查看Maven依赖
 
-### 8.Alibaba Java Coding Guidelines
+8.Alibaba Java Coding Guidelines
 阿里巴巴代码开发规范，可以帮助Java初学者完善自己的代码规范。
 
-### 9.Choose Runtime
+9.Choose Runtime
 
 选择IDEA的运行Java的版本：[【工具使用】IDEA 2019 导入gradle工程问题_人生所向，皆是美好-CSDN博客_the project uses gradle 2.14.1 which is incompatib](https://blog.csdn.net/jiajane/article/details/103014036)
 
@@ -328,7 +342,19 @@ Set-Theme ys
 *   [IntelliJ IDEA 控制台中文乱码解决方案](https://blog.csdn.net/wo541075754/article/details/51150035)
 
 
+## Java 奇技淫巧
 
+不需要先判断对象是否为null，可以直接判断两个对象是否相等：
+
+```java
+boolean result = Objects.equals( object1 , object12 ) ; 
+```
+实现如下：
+```java
+    public static boolean equals(Object a, Object b) {
+        return (a == b) || (a != null && a.equals(b));
+    }
+```
 
 
 
