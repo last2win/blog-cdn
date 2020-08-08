@@ -344,7 +344,7 @@ Set-Theme ys
 
 ## Java 奇技淫巧
 
-不需要先判断对象是否为null，可以直接判断两个对象是否相等：
+### 不需要先判断对象是否为null，可以直接判断两个对象是否相等
 
 ```java
 boolean result = Objects.equals( object1 , object12 ) ; 
@@ -354,6 +354,57 @@ boolean result = Objects.equals( object1 , object12 ) ;
     public static boolean equals(Object a, Object b) {
         return (a == b) || (a != null && a.equals(b));
     }
+```
+
+
+
+### Java的set或者map的key需要是不可变量，或者hash值固定的变量
+
+从Python角度理解，list作为可变变量不能作为字典的key。
+
+```java
+public class Test {
+
+    public static void main(String[] args) {
+        Node app1 = new Node("1", "original");
+        HashSet<Node> sets = new HashSet<>();
+        HashMap<Node, Integer> map = new HashMap<>();
+        map.put(app1, 1);
+        sets.add(app1);
+        // 更改变量
+        app1.name = "changed";
+        // 输出 false null
+        System.out.println(sets.contains(app1));
+        System.out.println(map.get(app1));
+    }
+
+    static class Node {
+        private final String id;
+        public String name;
+
+        public Node(String id, String name) {
+            this.id = id;
+            this.name = name;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+            Node node = (Node) o;
+            return Objects.equals(id, node.id) && Objects.equals(name, node.name);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(id, name);
+        }
+    }
+}
 ```
 
 
@@ -448,7 +499,7 @@ boolean result = Objects.equals( object1 , object12 ) ;
 *   [各位在用什么邮箱客户端？ - V2EX](https://www.v2ex.com/t/634423)             
 *   [请问这种 Git 流程图是用什么工具画的呢？ - V2EX](https://www.v2ex.com/t/665886)                   
 *   [求推荐年轻人的第一张信用卡 - V2EX](https://www.v2ex.com/t/693452)                       
-*   []()             
+*   [求推荐你们的宝藏播客 - V2EX](https://www.v2ex.com/t/695730)             
 *   []()                   
 
 
@@ -517,6 +568,19 @@ git push -f origin master
 ```
 
 参考：[Force "git push" to overwrite remote files - Stack Overflow](https://stackoverflow.com/questions/10510462/force-git-push-to-overwrite-remote-files)
+
+
+# 删除最新的commit，恢复到之前的状态
+
+git reset --hard HEAD~1
+
+git push origin test --force
+
+git push <origin> <branch> --force
+
+git revert是用一次新的commit来回滚之前的commit，git reset是直接删除指定的commit。
+
+参考：[git rebase - Delete commits from a branch in Git - Stack Overflow](https://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git)
 
 
 ## git强行还原
