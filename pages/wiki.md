@@ -500,6 +500,14 @@ public class Test {
 *   [请问这种 Git 流程图是用什么工具画的呢？ - V2EX](https://www.v2ex.com/t/665886)                   
 *   [求推荐年轻人的第一张信用卡 - V2EX](https://www.v2ex.com/t/693452)                       
 *   [求推荐你们的宝藏播客 - V2EX](https://www.v2ex.com/t/695730)             
+
+# 生活
+*   [迫于脸上开始爆痘，想咨询一下各位是怎么处理的 - V2EX](https://v2ex.com/t/595104?p=1)                   
+*   [头发两天就特别油，有什么好的洗发水推荐吗？ - V2EX](https://www.v2ex.com/t/593863?p=1)                   
+*   [大家整天对着电脑，皮肤油大吗？长痘吗？ 什么牌子的男士洗面奶好用？ - V2EX](https://www.v2ex.com/t/302835?p=1)                   
+*   [推荐环节：敲一天代码脸很油，什么水控油能好一点？ - V2EX](https://global.v2ex.com/t/636346?p=1)                   
+*   [冬天洗完脸有紧绷感，应该擦什么？ - V2EX](https://www.v2ex.com/t/521903)                   
+*   [男士油性皮肤用什么洗面奶比较好？ - V2EX](https://www.v2ex.com/t/620636?p=1)                   
 *   []()                   
 
 
