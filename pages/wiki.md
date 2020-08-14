@@ -248,7 +248,13 @@ Set-Theme ys
 *   [Windows Terminal 美化实例 - 知乎](https://zhuanlan.zhihu.com/p/76436374)          
 *   [将美化进行到底，把 PowerShell 做成 oh-my-zsh 的样子 - walterlv](https://blog.walterlv.com/post/beautify-powershell-like-zsh.html)          
 
+## powerhsell 中文
 
+```txt
+chcp 65001   #Unicode (UTF-8)
+chcp 936	 #中国 - 简体中文(GB2312)
+chcp 437	 #美国
+```
 
 
 {% raw %}
@@ -509,7 +515,7 @@ public class Test {
 *   [冬天洗完脸有紧绷感，应该擦什么？ - V2EX](https://www.v2ex.com/t/521903)                   
 *   [男士油性皮肤用什么洗面奶比较好？ - V2EX](https://www.v2ex.com/t/620636?p=1)                   
 *   [男士护肤用什么 - V2EX](https://www.v2ex.com/t/479549?p=1)                   
-*   []()                   
+*   [咳咳，老生长谈 男士应该买什么洗面*等 XD - V2EX](https://www.v2ex.com/t/454852?p=1)                   
 *   []()                   
 *   []()                   
 *   []()                   
@@ -545,7 +551,7 @@ ffmpeg -i input.mp4 output.mp3
 
 # git
 
-## git对不同仓库配置不同email和
+## git对不同仓库配置不同email和name
 
 编辑`~/.gitconfig`
 ```sh
@@ -573,6 +579,7 @@ ffmpeg -i input.mp4 output.mp3
 ```
 
 参考：[git - Can I specify multiple users for myself in .gitconfig? - Stack Overflow](https://stackoverflow.com/questions/4220416/can-i-specify-multiple-users-for-myself-in-gitconfig)
+
 ## git 强行更新，覆盖已存在的commit
 
 ```sh
@@ -594,6 +601,29 @@ git push <origin> <branch> --force
 git revert是用一次新的commit来回滚之前的commit，git reset是直接删除指定的commit。
 
 参考：[git rebase - Delete commits from a branch in Git - Stack Overflow](https://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git)
+
+## git 查看所有文件修改历史
+
+```sh
+git log --full-history -- [file path]
+git log --full-history --patch -- [file path]
+```
+即使文件已经删除，也可以查看历史修改记录。
+
+
+*   [Find when a file was deleted in Git - Stack Overflow](https://stackoverflow.com/questions/6839398/find-when-a-file-was-deleted-in-git)             
+
+## powershell git log 中文乱码配置
+```sh
+git config --global core.quotepath false
+git config --global gui.encoding utf-8
+git config --global i18n.commit.encoding utf-8
+git config --global i18n.logoutputencoding utf-8
+$env:LESSCHARSET='utf-8'
+```
+新增环境变量： LESSCHARSET ，值为 utf-8
+
+*   [PowerShell | git log 中文乱码问题解决_FollowGodSteps的博客-CSDN博客_powershell git 中文乱码](https://blog.csdn.net/FollowGodSteps/article/details/96271359)   
 
 
 ## git强行还原
