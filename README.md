@@ -1,2 +1,3 @@
+此博客基于该模板搭建而成：[My Blog / Jekyll Themes / GitHub Pages 博客模板](https://github.com/mzlogin/mzlogin.github.io)   
 
-这是我的个人博客：[zhang0peter的个人博客](https://zhang0peter.com)    ，欢迎star或者fork.
+推荐clone原博客。
