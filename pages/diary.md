@@ -484,9 +484,13 @@ clickhouse的文章是上年在腾讯实习期间写的，因为有周末时间�
 > 我听说pdd调薪都是一次调10k左右？     
 > 想多了，拿2调薪6k到8k，拿7调薪3k到5k，拿1没调薪       
 
-还有另一个贴： *   [坐标拼多多，就因为请了两天病假月绩效直接给了1？真牛逼](https://maimai.cn/web/gossip_detail?src=app&webid=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZ2lkIjoiNTkwZDY1MzRhM2EyMTFlYTg0ZmUyNDZlOTZiNDgwODgiLCJ1IjoyMTkyMDQwNDEsImlkIjoyNjMxNDg4OH0.xVo30ZMlioK-KW3EedvnWlFilwV3ATUuMTKp4UFAyg8)         
+还有另一个贴：    [坐标拼多多，就因为请了两天病假月绩效直接给了1？真牛逼](https://maimai.cn/web/gossip_detail?src=app&webid=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZ2lkIjoiNTkwZDY1MzRhM2EyMTFlYTg0ZmUyNDZlOTZiNDgwODgiLCJ1IjoyMTkyMDQwNDEsImlkIjoyNjMxNDg4OH0.xVo30ZMlioK-KW3EedvnWlFilwV3ATUuMTKp4UFAyg8)         
 
 >  我知道的不多啊，我就是经历过我个人觉得调薪幅度和你半年绩效自己base有关，年终就只和你全年绩效有关。加班时间HR会拉个月时间表给总监，看他看重不看重吧，一般都会看重，毕竟也没啥其他量化的东西你说对吧，总监都不一定真的看过你的月报           
+
+{% raw %}
+***          
+{% endraw %}
 
 
 
