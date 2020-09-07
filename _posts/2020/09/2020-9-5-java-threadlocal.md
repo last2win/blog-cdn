@@ -19,7 +19,7 @@ description: "使用ThreadLocal进行跨类传递线程全局变量"
 
 ThreadLocal实现的就是一个线程中的全局变量，与真正的全局变量的区别在于ThreadLocal的变量是每个线程中的全局变量，也就是说不同线程访问到的值是不一样的。
 
-ThreadLocal最朴素的实现是`Map<ThreadId, variable>`，每个线程id对应唯一的一个变量，Java源码中也是使用的类似实现，感兴趣的可以去看源码。
+ThreadLocal最朴素的实现是`Map<ThreadId, variable>`，每个线程id对应唯一的一个变量。但Java源码并不是Map<ThreadId, variable>的实现。这是因为如果多个线程访问同一个map，这个map需要是线程安全的，构造比较麻烦。Java采用了更简单粗暴的做法：每个线程都有自己的ThreadLocal专属map，里面可以存放多个ThreadLocal变量，这样就解决了多线程同时操作一个map带来的多线程并发问题。
 
 因为要把ThreadLocal的变量当做全局变量使用，需要把变量与初始化函数写在通用的类中，如DDD领域模型中写在Common模块。
 
