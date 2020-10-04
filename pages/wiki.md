@@ -602,7 +602,7 @@ git push -f origin master
 参考：[Force "git push" to overwrite remote files - Stack Overflow](https://stackoverflow.com/questions/10510462/force-git-push-to-overwrite-remote-files)
 
 
-# 删除最新的commit，恢复到之前的状态
+## 删除最新的commit，恢复到之前的状态
 
 git reset --hard HEAD~1
 
