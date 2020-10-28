@@ -30,7 +30,7 @@ permalink: /about/
 
 * 邮箱：[zhang0peter@foxmail.com](mailto:zhang0peter@foxmail.com)
 
-
+* 个人微信：`ZmlnaHRpbmd0b2RlYXRo`，base64编码
 
 
 {% raw %}
